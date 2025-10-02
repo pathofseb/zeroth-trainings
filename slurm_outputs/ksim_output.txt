@@ -1,9 +1,10 @@
 Running from directory: /cluster/work/sebasrb/zbot-policy-walking
 Job name: ksim-zbot-train
-Job ID: 23103375
+Job ID: 23103459
 Node(s): idun-01-03
 Requirement already satisfied: ksim==0.1.99 in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 4)) (0.1.99)
-Requirement already satisfied: xax in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 5)) (0.3.0)
+Collecting xax==0.4.3 (from -r requirements.txt (line 5))
+  Using cached xax-0.4.3-py3-none-any.whl.metadata (1.3 kB)
 Requirement already satisfied: mujoco-scenes in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 6)) (0.0.16)
 Requirement already satisfied: warp-lang in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 7)) (1.9.1)
 Requirement already satisfied: kinfer[jax] in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 10)) (0.5.6)
@@ -22,19 +23,19 @@ Requirement already satisfied: mujoco-mjx in /cluster/home/sebasrb/.local/lib/py
 Requirement already satisfied: kmv in ./ksim-env/lib/python3.11/site-packages (from ksim==0.1.99->-r requirements.txt (line 4)) (0.3.21)
 Requirement already satisfied: bvhio in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.99->-r requirements.txt (line 4)) (1.5.3)
 Requirement already satisfied: pyglm in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.99->-r requirements.txt (line 4)) (2.8.2)
-Requirement already satisfied: attrs in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (25.3.0)
-Requirement already satisfied: chex in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (0.1.91)
-Requirement already satisfied: dpshdl in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (0.0.21)
-Requirement already satisfied: equinox in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (0.13.0)
-Requirement already satisfied: importlib-resources in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (6.5.2)
-Requirement already satisfied: jaxtyping in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (0.3.2)
-Requirement already satisfied: orbax-checkpoint in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (0.11.25)
-Requirement already satisfied: pillow in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (11.3.0)
-Requirement already satisfied: omegaconf in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (2.3.0)
-Requirement already satisfied: gitpython in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (3.1.45)
-Requirement already satisfied: tensorboard in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (2.19.0)
-Requirement already satisfied: psutil in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (7.1.0)
-Requirement already satisfied: requests in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (2.32.5)
+Requirement already satisfied: attrs in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.4.3->-r requirements.txt (line 5)) (25.3.0)
+Requirement already satisfied: chex in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.4.3->-r requirements.txt (line 5)) (0.1.91)
+Requirement already satisfied: dpshdl in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.4.3->-r requirements.txt (line 5)) (0.0.21)
+Requirement already satisfied: equinox in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.4.3->-r requirements.txt (line 5)) (0.13.0)
+Requirement already satisfied: importlib-resources in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.4.3->-r requirements.txt (line 5)) (6.5.2)
+Requirement already satisfied: jaxtyping in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.4.3->-r requirements.txt (line 5)) (0.3.2)
+Requirement already satisfied: orbax-checkpoint in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.4.3->-r requirements.txt (line 5)) (0.11.25)
+Requirement already satisfied: pillow in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.4.3->-r requirements.txt (line 5)) (11.3.0)
+Requirement already satisfied: omegaconf in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.4.3->-r requirements.txt (line 5)) (2.3.0)
+Requirement already satisfied: gitpython in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.4.3->-r requirements.txt (line 5)) (3.1.45)
+Requirement already satisfied: tensorboard in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.4.3->-r requirements.txt (line 5)) (2.19.0)
+Requirement already satisfied: psutil in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.4.3->-r requirements.txt (line 5)) (7.1.0)
+Requirement already satisfied: requests in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.4.3->-r requirements.txt (line 5)) (2.32.5)
 Requirement already satisfied: etils in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from mujoco-scenes->-r requirements.txt (line 6)) (1.13.0)
 Requirement already satisfied: onnx in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 10)) (1.17.0)
 Requirement already satisfied: onnxruntime==1.20.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 10)) (1.20.0)
@@ -47,17 +48,17 @@ Requirement already satisfied: protobuf in /cluster/home/sebasrb/.local/lib/pyth
 Requirement already satisfied: sympy in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10)) (1.14.0)
 Requirement already satisfied: six in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tf2onnx>=1.16.0->kinfer[jax]->-r requirements.txt (line 10)) (1.17.0)
 Requirement already satisfied: spatial-transform==1.3.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from bvhio->ksim==0.1.99->-r requirements.txt (line 4)) (1.3.1)
-Requirement already satisfied: absl-py>=2.3.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from chex->xax->-r requirements.txt (line 5)) (2.3.1)
-Requirement already satisfied: typing_extensions>=4.15.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from chex->xax->-r requirements.txt (line 5)) (4.15.0)
-Requirement already satisfied: jaxlib>=0.7.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from chex->xax->-r requirements.txt (line 5)) (0.7.1)
-Requirement already satisfied: toolz>=1.0.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from chex->xax->-r requirements.txt (line 5)) (1.0.0)
+Requirement already satisfied: absl-py>=2.3.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from chex->xax==0.4.3->-r requirements.txt (line 5)) (2.3.1)
+Requirement already satisfied: typing_extensions>=4.15.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from chex->xax==0.4.3->-r requirements.txt (line 5)) (4.15.0)
+Requirement already satisfied: jaxlib>=0.7.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from chex->xax==0.4.3->-r requirements.txt (line 5)) (0.7.1)
+Requirement already satisfied: toolz>=1.0.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from chex->xax==0.4.3->-r requirements.txt (line 5)) (1.0.0)
 Requirement already satisfied: ml_dtypes>=0.5.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax->ksim==0.1.99->-r requirements.txt (line 4)) (0.5.3)
 Requirement already satisfied: opt_einsum in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax->ksim==0.1.99->-r requirements.txt (line 4)) (3.4.0)
 Requirement already satisfied: humanfriendly>=9.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from coloredlogs->onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10)) (10.0)
 Requirement already satisfied: tfp-nightly in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from distrax->ksim==0.1.99->-r requirements.txt (line 4)) (0.26.0.dev20250930)
-Requirement already satisfied: wadler-lindig>=0.1.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from equinox->xax->-r requirements.txt (line 5)) (0.1.7)
-Requirement already satisfied: gitdb<5,>=4.0.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from gitpython->xax->-r requirements.txt (line 5)) (4.0.12)
-Requirement already satisfied: smmap<6,>=3.0.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from gitdb<5,>=4.0.1->gitpython->xax->-r requirements.txt (line 5)) (5.0.2)
+Requirement already satisfied: wadler-lindig>=0.1.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from equinox->xax==0.4.3->-r requirements.txt (line 5)) (0.1.7)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from gitpython->xax==0.4.3->-r requirements.txt (line 5)) (4.0.12)
+Requirement already satisfied: smmap<6,>=3.0.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from gitdb<5,>=4.0.1->gitpython->xax==0.4.3->-r requirements.txt (line 5)) (5.0.2)
 Requirement already satisfied: PySide6==6.9.0 in ./ksim-env/lib/python3.11/site-packages (from kmv->ksim==0.1.99->-r requirements.txt (line 4)) (6.9.0)
 Requirement already satisfied: pyqtgraph in ./ksim-env/lib/python3.11/site-packages (from kmv->ksim==0.1.99->-r requirements.txt (line 4)) (0.13.7)
 Requirement already satisfied: colorlogging in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kmv->ksim==0.1.99->-r requirements.txt (line 4)) (0.0.2)
@@ -112,28 +113,28 @@ Requirement already satisfied: pyopengl in /cluster/home/sebasrb/.local/lib/pyth
 Requirement already satisfied: fsspec in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from etils[epath]->mujoco->ksim==0.1.99->-r requirements.txt (line 4)) (2025.9.0)
 Requirement already satisfied: zipp in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from etils[epath]->mujoco->ksim==0.1.99->-r requirements.txt (line 4)) (3.23.0)
 Requirement already satisfied: trimesh in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from mujoco-mjx->ksim==0.1.99->-r requirements.txt (line 4)) (4.8.3)
-Requirement already satisfied: antlr4-python3-runtime==4.9.* in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from omegaconf->xax->-r requirements.txt (line 5)) (4.9.3)
-Requirement already satisfied: PyYAML>=5.1.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from omegaconf->xax->-r requirements.txt (line 5)) (6.0.3)
-Requirement already satisfied: msgpack in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax->-r requirements.txt (line 5)) (1.1.1)
-Requirement already satisfied: tensorstore>=0.1.71 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax->-r requirements.txt (line 5)) (0.1.77)
-Requirement already satisfied: nest_asyncio in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax->-r requirements.txt (line 5)) (1.6.0)
-Requirement already satisfied: humanize in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax->-r requirements.txt (line 5)) (4.13.0)
-Requirement already satisfied: simplejson>=3.16.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax->-r requirements.txt (line 5)) (3.20.2)
+Requirement already satisfied: antlr4-python3-runtime==4.9.* in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from omegaconf->xax==0.4.3->-r requirements.txt (line 5)) (4.9.3)
+Requirement already satisfied: PyYAML>=5.1.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from omegaconf->xax==0.4.3->-r requirements.txt (line 5)) (6.0.3)
+Requirement already satisfied: msgpack in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.4.3->-r requirements.txt (line 5)) (1.1.1)
+Requirement already satisfied: tensorstore>=0.1.71 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.4.3->-r requirements.txt (line 5)) (0.1.77)
+Requirement already satisfied: nest_asyncio in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.4.3->-r requirements.txt (line 5)) (1.6.0)
+Requirement already satisfied: humanize in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.4.3->-r requirements.txt (line 5)) (4.13.0)
+Requirement already satisfied: simplejson>=3.16.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.4.3->-r requirements.txt (line 5)) (3.20.2)
 Requirement already satisfied: annotated-types>=0.6.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from pydantic->kscale->ksim==0.1.99->-r requirements.txt (line 4)) (0.7.0)
 Requirement already satisfied: pydantic-core==2.33.2 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from pydantic->kscale->ksim==0.1.99->-r requirements.txt (line 4)) (2.33.2)
 Requirement already satisfied: typing-inspection>=0.4.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from pydantic->kscale->ksim==0.1.99->-r requirements.txt (line 4)) (0.4.1)
-Requirement already satisfied: charset_normalizer<4,>=2 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from requests->xax->-r requirements.txt (line 5)) (3.4.3)
-Requirement already satisfied: urllib3<3,>=1.21.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from requests->xax->-r requirements.txt (line 5)) (2.5.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from requests->xax==0.4.3->-r requirements.txt (line 5)) (3.4.3)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from requests->xax==0.4.3->-r requirements.txt (line 5)) (2.5.0)
 Requirement already satisfied: executing>=1.2.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from stack_data->ipython->mediapy->ksim==0.1.99->-r requirements.txt (line 4)) (2.2.1)
 Requirement already satisfied: asttokens>=2.1.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from stack_data->ipython->mediapy->ksim==0.1.99->-r requirements.txt (line 4)) (3.0.0)
 Requirement already satisfied: pure-eval in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from stack_data->ipython->mediapy->ksim==0.1.99->-r requirements.txt (line 4)) (0.2.3)
 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from sympy->onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10)) (1.3.0)
-Requirement already satisfied: grpcio>=1.48.2 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorboard->xax->-r requirements.txt (line 5)) (1.75.1)
-Requirement already satisfied: markdown>=2.6.8 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorboard->xax->-r requirements.txt (line 5)) (3.9)
-Requirement already satisfied: setuptools>=41.0.0 in ./ksim-env/lib/python3.11/site-packages (from tensorboard->xax->-r requirements.txt (line 5)) (78.1.1)
-Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorboard->xax->-r requirements.txt (line 5)) (0.7.2)
-Requirement already satisfied: werkzeug>=1.0.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorboard->xax->-r requirements.txt (line 5)) (3.1.3)
-Requirement already satisfied: MarkupSafe>=2.1.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from werkzeug>=1.0.1->tensorboard->xax->-r requirements.txt (line 5)) (3.0.3)
+Requirement already satisfied: grpcio>=1.48.2 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorboard->xax==0.4.3->-r requirements.txt (line 5)) (1.75.1)
+Requirement already satisfied: markdown>=2.6.8 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorboard->xax==0.4.3->-r requirements.txt (line 5)) (3.9)
+Requirement already satisfied: setuptools>=41.0.0 in ./ksim-env/lib/python3.11/site-packages (from tensorboard->xax==0.4.3->-r requirements.txt (line 5)) (78.1.1)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorboard->xax==0.4.3->-r requirements.txt (line 5)) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorboard->xax==0.4.3->-r requirements.txt (line 5)) (3.1.3)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from werkzeug>=1.0.1->tensorboard->xax==0.4.3->-r requirements.txt (line 5)) (3.0.3)
 Requirement already satisfied: astunparse>=1.6.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (1.6.3)
 Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (0.6.0)
 Requirement already satisfied: google-pasta>=0.1.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (0.2.0)
@@ -151,6 +152,13 @@ Requirement already satisfied: markdown-it-py>=2.2.0 in /cluster/home/sebasrb/.l
 Requirement already satisfied: mdurl~=0.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (0.1.2)
 Requirement already satisfied: cloudpickle>=1.3 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tfp-nightly->distrax->ksim==0.1.99->-r requirements.txt (line 4)) (3.1.1)
 Requirement already satisfied: dm-tree in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tfp-nightly->distrax->ksim==0.1.99->-r requirements.txt (line 4)) (0.1.9)
+Using cached xax-0.4.3-py3-none-any.whl (119 kB)
+Installing collected packages: xax
+  Attempting uninstall: xax
+    Found existing installation: xax 0.3.0
+    Uninstalling xax-0.3.0:
+      Successfully uninstalled xax-0.3.0
+Successfully installed xax-0.4.3
 Requirement already satisfied: jax[cuda12] in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (0.7.1)
 Requirement already satisfied: jaxlib<=0.7.1,>=0.7.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax[cuda12]) (0.7.1)
 Requirement already satisfied: ml_dtypes>=0.5.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax[cuda12]) (0.5.3)
@@ -397,30 +405,11 @@ websocket-client==1.8.0
 Werkzeug==3.1.3
 widgetsnbextension==4.0.14
 wrapt==1.17.3
-xax==0.3.0
+xax==0.4.3
 yarl==1.20.1
 zipp==3.23.0
 Checking JAX backend:
 gpu
 Set MUJOCO_GL=osmesa for headless rendering
-  [1;36mINFO[0m  [90m2025-10-02 22:00:23[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX logging level to INFO
-  [1;36mINFO[0m  [90m2025-10-02 22:00:23[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX compilation cache directory to /cluster/home/sebasrb/.cache/jax/jaxcache
-  [1;36mINFO[0m  [90m2025-10-02 22:00:23[0m [[1;34mxax.task.mixins.compile[0m] Configuring JAX compilation cache parameters
-  [1;36mINFO[0m  [90m2025-10-02 22:00:23[0m [[1;34mjax._src.xla_bridge[0m] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
- [1;32mSTATUS[0m [90m2025-10-02 22:00:24[0m [[1;34mxax.task.mixins.artifacts[0m] /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_2
-{"status": {"message": "/cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_2", "filename": "artifacts.py", "lineno": 83}}
- [1;32mSTATUS[0m [90m2025-10-02 22:00:24[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/zbot-policy-walking/train.py
-{"status": {"message": "/cluster/work/sebasrb/zbot-policy-walking/train.py", "filename": "train.py", "lineno": 709}}
- [1;32mSTATUS[0m [90m2025-10-02 22:00:24[0m [[1;34mxax.task.mixins.train[0m] zbot_walking_task
-{"status": {"message": "zbot_walking_task", "filename": "train.py", "lineno": 710}}
- [1;32mSTATUS[0m [90m2025-10-02 22:00:24[0m [[1;34mxax.task.mixins.train[0m] JAX devices: [CudaDevice(id=0)]
-{"status": {"message": "JAX devices: [CudaDevice(id=0)]", "filename": "train.py", "lineno": 711}}
-  [1;36mINFO[0m  [90m2025-10-02 22:00:24[0m [[1;34mxax.task.mixins.train[0m] Starting a new training run
-  [1;35mPING[0m  [90m2025-10-02 22:00:25[0m [[1;34mksim.task.rl[0m] Model size: 1,095,597 parameters
-{"ping": {"message": "Model size: 1,095,597 parameters", "filename": "rl.py", "lineno": 2089}}
-  [1;35mPING[0m  [90m2025-10-02 22:00:25[0m [[1;34mksim.task.rl[0m] Optimizer size: 2,191,194 parameters
-{"ping": {"message": "Optimizer size: 2,191,194 parameters", "filename": "rl.py", "lineno": 2090}}
-  [1;36mINFO[0m  [90m2025-10-02 22:00:25[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
-[1;33mWARNING[0m [90m2025-10-02 22:00:25[0m [[1;34mksim.engine[0m] `max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`
-{"ping": {"message": "`max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`", "filename": "engine.py", "lineno": 358}}
+Job finished
 Job finished
