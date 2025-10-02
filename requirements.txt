@@ -2,7 +2,7 @@
 
 # Training dependencies
 ksim==0.1.99
-xax=0.4.3
+xax==0.4.3
 mujoco-scenes
 warp-lang
 
