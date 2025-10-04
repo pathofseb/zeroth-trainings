@@ -52,7 +52,7 @@ export MUJOCO_GL=osmesa
 echo "Set MUJOCO_GL=osmesa for headless rendering"
 
 # Run training
-python -m train load_from_ckpt_path=zbot_walking_task/run_5/checkpoints/ckpt.bin
+python -m train load_from_ckpt_path=zbot_walking_task/run_6/checkpoints/ckpt.bin
 
 
 
