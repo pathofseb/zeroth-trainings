@@ -1,11 +1,13 @@
-2025-10-31 16:20:11.801196: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-10-31 16:52:35.420691: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1761924012.057060 2793455 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1761924012.362504 2793455 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1761924013.456646 2793455 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1761924013.456694 2793455 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1761924013.456712 2793455 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1761924013.456725 2793455 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+E0000 00:00:1761925955.445993 2804334 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1761925955.454116 2804334 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1761925955.475752 2804334 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761925955.475796 2804334 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761925955.475812 2804334 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761925955.475825 2804334 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/utils/experiments.py:32: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
 /cluster/work/sebasrb/zbot-policy-walking/train.py:881: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   num_inputs: int = eqx.static_field()
 /cluster/work/sebasrb/zbot-policy-walking/train.py:882: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
@@ -18,14 +20,16 @@ W0000 00:00:1761924013.456725 2793455 computation_placer.cc:177] computation pla
   max_std: float = eqx.static_field()
 /cluster/work/sebasrb/zbot-policy-walking/train.py:886: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   var_scale: float = eqx.static_field()
-2025-10-31 16:22:22.430765: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-10-31 16:52:57.261883: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1761924142.453517 2793472 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1761924142.461467 2793472 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1761924142.482803 2793472 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1761924142.482851 2793472 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1761924142.482867 2793472 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1761924142.482878 2793472 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+E0000 00:00:1761925977.285340 2804340 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1761925977.293381 2804340 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1761925977.314828 2804340 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761925977.314872 2804340 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761925977.314888 2804340 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761925977.314900 2804340 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/utils/experiments.py:32: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
 /cluster/work/sebasrb/zbot-policy-walking/train.py:881: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   num_inputs: int = eqx.static_field()
 /cluster/work/sebasrb/zbot-policy-walking/train.py:882: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
@@ -38,55 +42,63 @@ W0000 00:00:1761924142.482878 2793472 computation_placer.cc:177] computation pla
   max_std: float = eqx.static_field()
 /cluster/work/sebasrb/zbot-policy-walking/train.py:886: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   var_scale: float = eqx.static_field()
-2025-10-31 16:22:37.455019: I external/xla/xla/pjrt/pjrt_api.cc:118] GetPjrtApi was found for cuda at /cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax_plugins/xla_cuda12/xla_cuda_plugin.so
-2025-10-31 16:22:37.455611: I external/xla/xla/pjrt/pjrt_api.cc:96] PJRT_Api is set for device type cuda
-INFO:2025-10-31 16:22:37,460:jax._src.xla_bridge:822: Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
-2025-10-31 16:22:37.461214: I external/xla/xla/pjrt/pjrt_api.cc:167] The PJRT plugin has PJRT API version 0.75. The framework PJRT API version is 0.75.
-2025-10-31 16:22:37.738902: I external/xla/xla/service/service.cc:163] XLA service 0x7f3e250 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
-2025-10-31 16:22:37.738998: I external/xla/xla/service/service.cc:171]   StreamExecutor device (0): NVIDIA A100-PCIE-40GB, Compute Capability 8.0
-2025-10-31 16:22:37.753124: I external/xla/xla/stream_executor/cuda/cuda_dnn.cc:473] Loaded cuDNN version 91301
-2025-10-31 16:22:37.753480: I external/xla/xla/pjrt/pjrt_c_api_client.cc:133] PjRtCApiClient created.
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/cluster/work/sebasrb/zbot-policy-walking/train.py", line 1816, in <module>
-    ZbotWalkingTask.launch(
-  File "/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/task/mixins/runnable.py", line 50, in launch
-    launcher.launch(cls, *cfgs, use_cli=use_cli)
-  File "/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/task/launchers/cli.py", line 40, in launch
-    SingleProcessLauncher().launch(task, *cfgs, use_cli=use_cli_next)
-  File "/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 31, in launch
-    run_single_process_training(task, *cfgs, use_cli=use_cli)
-  File "/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 21, in run_single_process_training
-    task_obj.run()
-  File "/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1026, in run
-    self.run_training()
-  File "/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 2158, in run_training
-    constants, carry, state = self.initialize_rl_training(mj_model, rng)
-                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 2071, in initialize_rl_training
-    models, optimizers, opt_states, state = self.load_initial_state(model_rng, load_optimizer=True)
-                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/task/mixins/train.py", line 379, in load_initial_state
-    model, state, config = self.load_ckpt(init_ckpt_path, part="model_state_config")
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/task/mixins/train.py", line 486, in load_ckpt
-    model, state, config = load_ckpt(path, part="model_state_config", model_templates=model_specs)
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/task/mixins/checkpointing.py", line 179, in load_ckpt
-    return get_model(), get_state(), get_config()
-           ^^^^^^^^^^^
-  File "/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/task/mixins/checkpointing.py", line 134, in get_model
-    models.append(eqx.tree_deserialise_leaves(io.BytesIO(model.read()), model_template))
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/equinox/_serialisation.py", line 333, in tree_deserialise_leaves
-    jtu.tree_map_with_path(_assert_same(array_impl_type), out, like, is_leaf=is_leaf)
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/tree_util.py", line 1199, in tree_map_with_path
-    return treedef.unflatten(f(*xs) for xs in zip(*all_keypath_leaves))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/tree_util.py", line 1199, in <genexpr>
-    return treedef.unflatten(f(*xs) for xs in zip(*all_keypath_leaves))
-                             ^^^^^^
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/equinox/_serialisation.py", line 178, in _assert_same_impl
-    raise RuntimeError(
-RuntimeError: Deserialised leaf at path (GetAttrKey(name='actor'), GetAttrKey(name='input_proj'), GetAttrKey(name='weight')) has changed shape from (128, 42) in `like` to (128, 50) on disk.
+2025-10-31 16:53:20.801857: I external/xla/xla/pjrt/pjrt_api.cc:118] GetPjrtApi was found for cuda at /cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax_plugins/xla_cuda12/xla_cuda_plugin.so
+2025-10-31 16:53:20.802446: I external/xla/xla/pjrt/pjrt_api.cc:96] PJRT_Api is set for device type cuda
+INFO:2025-10-31 16:53:20,807:jax._src.xla_bridge:822: Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2025-10-31 16:53:20.808035: I external/xla/xla/pjrt/pjrt_api.cc:167] The PJRT plugin has PJRT API version 0.75. The framework PJRT API version is 0.75.
+2025-10-31 16:53:21.085329: I external/xla/xla/service/service.cc:163] XLA service 0xa20ac50 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2025-10-31 16:53:21.085442: I external/xla/xla/service/service.cc:171]   StreamExecutor device (0): NVIDIA A100-PCIE-40GB, Compute Capability 8.0
+2025-10-31 16:53:21.099673: I external/xla/xla/stream_executor/cuda/cuda_dnn.cc:473] Loaded cuDNN version 91301
+2025-10-31 16:53:21.100027: I external/xla/xla/pjrt/pjrt_c_api_client.cc:133] PjRtCApiClient created.
+2025-10-31 16:54:36.018436: I external/xla/xla/stream_executor/cuda/subprocess_compilation.cc:349] ptxas warning : Registers are spilled to local memory in function 'input_reduce_fusion_2', 4 bytes spill stores, 4 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_subtract_transpose_fusion', 12 bytes spill stores, 12 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_transpose_fusion_5', 16 bytes spill stores, 16 bytes spill loads
+
+2025-10-31 16:54:52.200838: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-10-31 16:54:52.211381: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1761926092.280302 2804616 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1761926092.286323 2804617 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1761926092.306503 2804616 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+E0000 00:00:1761926092.312285 2804617 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1761926092.364941 2804616 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761926092.364986 2804616 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761926092.365002 2804616 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761926092.365013 2804616 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761926092.369221 2804617 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761926092.369266 2804617 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761926092.369282 2804617 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761926092.369294 2804617 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-10-31 16:54:52.389130: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-31 16:54:52.390877: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/utils/experiments.py:32: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/utils/experiments.py:32: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/cluster/work/sebasrb/zbot-policy-walking/train.py:881: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking/train.py:882: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_outputs: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking/train.py:883: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_mixtures: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking/train.py:884: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  min_std: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking/train.py:885: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  max_std: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking/train.py:886: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  var_scale: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking/train.py:881: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking/train.py:882: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_outputs: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking/train.py:883: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_mixtures: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking/train.py:884: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  min_std: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking/train.py:885: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  max_std: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking/train.py:886: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  var_scale: float = eqx.static_field()

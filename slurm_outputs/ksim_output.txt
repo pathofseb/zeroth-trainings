@@ -1,162 +1,1111 @@
 Running from directory: /cluster/work/sebasrb/zbot-policy-walking
 Job name: ksim-zbot-train
-Job ID: 23194842
+Job ID: 23194883
 Node(s): idun-09-16
-Requirement already satisfied: ksim==0.1.95 in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 4)) (0.1.95)
-Requirement already satisfied: xax==0.3.5 in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 5)) (0.3.5)
-Requirement already satisfied: mujoco-scenes in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 6)) (0.0.16)
-Requirement already satisfied: warp-lang in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 7)) (1.9.1)
-Requirement already satisfied: kinfer[jax] in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 10)) (0.5.6)
-Requirement already satisfied: numpy in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (1.26.4)
-Requirement already satisfied: matplotlib in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (3.10.6)
-Requirement already satisfied: tqdm in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (4.67.1)
-Requirement already satisfied: tabulate in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (0.9.0)
-Requirement already satisfied: kscale in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (0.3.18)
-Requirement already satisfied: distrax in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (0.1.7)
-Requirement already satisfied: jax in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (0.7.1)
-Requirement already satisfied: mediapy in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (1.2.4)
-Requirement already satisfied: optax in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (0.2.6)
-Requirement already satisfied: scipy in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (1.16.2)
-Requirement already satisfied: mujoco in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (3.3.6)
-Requirement already satisfied: mujoco-mjx in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (3.3.6)
-Requirement already satisfied: kmv in ./ksim-env/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (0.3.21)
-Requirement already satisfied: bvhio in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (1.5.3)
-Requirement already satisfied: pyglm in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.95->-r requirements.txt (line 4)) (2.8.2)
-Requirement already satisfied: attrs in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.3.5->-r requirements.txt (line 5)) (25.3.0)
-Requirement already satisfied: chex in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.3.5->-r requirements.txt (line 5)) (0.1.91)
-Requirement already satisfied: dpshdl in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.3.5->-r requirements.txt (line 5)) (0.0.21)
-Requirement already satisfied: equinox in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.3.5->-r requirements.txt (line 5)) (0.13.0)
-Requirement already satisfied: importlib-resources in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.3.5->-r requirements.txt (line 5)) (6.5.2)
-Requirement already satisfied: jaxtyping in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.3.5->-r requirements.txt (line 5)) (0.3.2)
-Requirement already satisfied: orbax-checkpoint in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.3.5->-r requirements.txt (line 5)) (0.11.25)
-Requirement already satisfied: pillow in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.3.5->-r requirements.txt (line 5)) (11.3.0)
-Requirement already satisfied: omegaconf in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.3.5->-r requirements.txt (line 5)) (2.3.0)
-Requirement already satisfied: gitpython in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.3.5->-r requirements.txt (line 5)) (3.1.45)
-Requirement already satisfied: tensorboard in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.3.5->-r requirements.txt (line 5)) (2.19.0)
-Requirement already satisfied: psutil in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.3.5->-r requirements.txt (line 5)) (7.1.0)
-Requirement already satisfied: requests in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from xax==0.3.5->-r requirements.txt (line 5)) (2.32.5)
-Requirement already satisfied: etils in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from mujoco-scenes->-r requirements.txt (line 6)) (1.13.0)
-Requirement already satisfied: onnx in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 10)) (1.17.0)
-Requirement already satisfied: onnxruntime==1.20.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 10)) (1.20.0)
-Requirement already satisfied: tensorflow in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 10)) (2.19.1)
-Requirement already satisfied: tf2onnx>=1.16.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 10)) (1.16.1)
-Requirement already satisfied: coloredlogs in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10)) (15.0.1)
-Requirement already satisfied: flatbuffers in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10)) (25.9.23)
-Requirement already satisfied: packaging in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10)) (25.0)
-Requirement already satisfied: protobuf in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10)) (3.20.3)
-Requirement already satisfied: sympy in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10)) (1.14.0)
-Requirement already satisfied: six in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tf2onnx>=1.16.0->kinfer[jax]->-r requirements.txt (line 10)) (1.17.0)
-Requirement already satisfied: spatial-transform==1.3.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from bvhio->ksim==0.1.95->-r requirements.txt (line 4)) (1.3.1)
-Requirement already satisfied: absl-py>=2.3.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from chex->xax==0.3.5->-r requirements.txt (line 5)) (2.3.1)
-Requirement already satisfied: typing_extensions>=4.15.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from chex->xax==0.3.5->-r requirements.txt (line 5)) (4.15.0)
-Requirement already satisfied: jaxlib>=0.7.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from chex->xax==0.3.5->-r requirements.txt (line 5)) (0.7.1)
-Requirement already satisfied: toolz>=1.0.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from chex->xax==0.3.5->-r requirements.txt (line 5)) (1.0.0)
-Requirement already satisfied: ml_dtypes>=0.5.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax->ksim==0.1.95->-r requirements.txt (line 4)) (0.5.3)
-Requirement already satisfied: opt_einsum in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax->ksim==0.1.95->-r requirements.txt (line 4)) (3.4.0)
-Requirement already satisfied: humanfriendly>=9.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from coloredlogs->onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10)) (10.0)
-Requirement already satisfied: tfp-nightly in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from distrax->ksim==0.1.95->-r requirements.txt (line 4)) (0.26.0.dev20250930)
-Requirement already satisfied: wadler-lindig>=0.1.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from equinox->xax==0.3.5->-r requirements.txt (line 5)) (0.1.7)
-Requirement already satisfied: gitdb<5,>=4.0.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from gitpython->xax==0.3.5->-r requirements.txt (line 5)) (4.0.12)
-Requirement already satisfied: smmap<6,>=3.0.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from gitdb<5,>=4.0.1->gitpython->xax==0.3.5->-r requirements.txt (line 5)) (5.0.2)
-Requirement already satisfied: PySide6==6.9.0 in ./ksim-env/lib/python3.11/site-packages (from kmv->ksim==0.1.95->-r requirements.txt (line 4)) (6.9.0)
-Requirement already satisfied: pyqtgraph in ./ksim-env/lib/python3.11/site-packages (from kmv->ksim==0.1.95->-r requirements.txt (line 4)) (0.13.7)
-Requirement already satisfied: colorlogging in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kmv->ksim==0.1.95->-r requirements.txt (line 4)) (0.0.2)
-Requirement already satisfied: shiboken6==6.9.0 in ./ksim-env/lib/python3.11/site-packages (from PySide6==6.9.0->kmv->ksim==0.1.95->-r requirements.txt (line 4)) (6.9.0)
-Requirement already satisfied: PySide6-Essentials==6.9.0 in ./ksim-env/lib/python3.11/site-packages (from PySide6==6.9.0->kmv->ksim==0.1.95->-r requirements.txt (line 4)) (6.9.0)
-Requirement already satisfied: PySide6-Addons==6.9.0 in ./ksim-env/lib/python3.11/site-packages (from PySide6==6.9.0->kmv->ksim==0.1.95->-r requirements.txt (line 4)) (6.9.0)
-Requirement already satisfied: email_validator in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kscale->ksim==0.1.95->-r requirements.txt (line 4)) (2.3.0)
-Requirement already satisfied: aiohttp in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kscale->ksim==0.1.95->-r requirements.txt (line 4)) (3.12.15)
-Requirement already satisfied: cryptography in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kscale->ksim==0.1.95->-r requirements.txt (line 4)) (46.0.1)
-Requirement already satisfied: httpx in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kscale->ksim==0.1.95->-r requirements.txt (line 4)) (0.28.1)
-Requirement already satisfied: pydantic in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kscale->ksim==0.1.95->-r requirements.txt (line 4)) (2.11.9)
-Requirement already satisfied: pyjwt in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kscale->ksim==0.1.95->-r requirements.txt (line 4)) (2.10.1)
-Requirement already satisfied: yarl in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kscale->ksim==0.1.95->-r requirements.txt (line 4)) (1.20.1)
-Requirement already satisfied: aiofiles in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kscale->ksim==0.1.95->-r requirements.txt (line 4)) (24.1.0)
-Requirement already satisfied: click in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kscale->ksim==0.1.95->-r requirements.txt (line 4)) (8.3.0)
-Requirement already satisfied: async-lru in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kscale->ksim==0.1.95->-r requirements.txt (line 4)) (2.0.5)
-Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (2.6.1)
-Requirement already satisfied: aiosignal>=1.4.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (1.4.0)
-Requirement already satisfied: frozenlist>=1.1.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (1.7.0)
-Requirement already satisfied: multidict<7.0,>=4.5 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (6.6.4)
-Requirement already satisfied: propcache>=0.2.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (0.3.2)
-Requirement already satisfied: idna>=2.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from yarl->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (3.10)
-Requirement already satisfied: cffi>=2.0.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from cryptography->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (2.0.0)
-Requirement already satisfied: pycparser in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (2.23)
-Requirement already satisfied: dnspython>=2.0.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from email_validator->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (2.8.0)
-Requirement already satisfied: anyio in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (4.11.0)
-Requirement already satisfied: certifi in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (2025.8.3)
-Requirement already satisfied: httpcore==1.* in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (1.0.9)
-Requirement already satisfied: h11>=0.16 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from httpcore==1.*->httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (0.16.0)
-Requirement already satisfied: sniffio>=1.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from anyio->httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (1.3.1)
-Requirement already satisfied: contourpy>=1.0.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4)) (1.3.3)
-Requirement already satisfied: cycler>=0.10 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4)) (0.12.1)
-Requirement already satisfied: fonttools>=4.22.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4)) (4.60.1)
-Requirement already satisfied: kiwisolver>=1.3.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4)) (1.4.9)
-Requirement already satisfied: pyparsing>=2.3.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4)) (3.2.5)
-Requirement already satisfied: python-dateutil>=2.7 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4)) (2.9.0.post0)
-Requirement already satisfied: ipython in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (9.6.0)
-Requirement already satisfied: decorator in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (5.2.1)
-Requirement already satisfied: ipython-pygments-lexers in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (1.1.1)
-Requirement already satisfied: jedi>=0.16 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (0.19.2)
-Requirement already satisfied: matplotlib-inline in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (0.1.7)
-Requirement already satisfied: pexpect>4.3 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (4.9.0)
-Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (3.0.52)
-Requirement already satisfied: pygments>=2.4.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (2.19.2)
-Requirement already satisfied: stack_data in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (0.6.3)
-Requirement already satisfied: traitlets>=5.13.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (5.14.3)
-Requirement already satisfied: wcwidth in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (0.2.14)
-Requirement already satisfied: parso<0.9.0,>=0.8.4 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jedi>=0.16->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (0.8.5)
-Requirement already satisfied: ptyprocess>=0.5 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from pexpect>4.3->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (0.7.0)
-Requirement already satisfied: glfw in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from mujoco->ksim==0.1.95->-r requirements.txt (line 4)) (2.10.0)
-Requirement already satisfied: pyopengl in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from mujoco->ksim==0.1.95->-r requirements.txt (line 4)) (3.1.10)
-Requirement already satisfied: fsspec in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from etils[epath]->mujoco->ksim==0.1.95->-r requirements.txt (line 4)) (2025.9.0)
-Requirement already satisfied: zipp in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from etils[epath]->mujoco->ksim==0.1.95->-r requirements.txt (line 4)) (3.23.0)
-Requirement already satisfied: trimesh in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from mujoco-mjx->ksim==0.1.95->-r requirements.txt (line 4)) (4.8.3)
-Requirement already satisfied: antlr4-python3-runtime==4.9.* in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from omegaconf->xax==0.3.5->-r requirements.txt (line 5)) (4.9.3)
-Requirement already satisfied: PyYAML>=5.1.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from omegaconf->xax==0.3.5->-r requirements.txt (line 5)) (6.0.3)
-Requirement already satisfied: msgpack in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5)) (1.1.1)
-Requirement already satisfied: tensorstore>=0.1.71 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5)) (0.1.77)
-Requirement already satisfied: nest_asyncio in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5)) (1.6.0)
-Requirement already satisfied: humanize in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5)) (4.13.0)
-Requirement already satisfied: simplejson>=3.16.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5)) (3.20.2)
-Requirement already satisfied: annotated-types>=0.6.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from pydantic->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (0.7.0)
-Requirement already satisfied: pydantic-core==2.33.2 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from pydantic->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (2.33.2)
-Requirement already satisfied: typing-inspection>=0.4.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from pydantic->kscale->ksim==0.1.95->-r requirements.txt (line 4)) (0.4.1)
-Requirement already satisfied: charset_normalizer<4,>=2 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from requests->xax==0.3.5->-r requirements.txt (line 5)) (3.4.3)
-Requirement already satisfied: urllib3<3,>=1.21.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from requests->xax==0.3.5->-r requirements.txt (line 5)) (2.5.0)
-Requirement already satisfied: executing>=1.2.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from stack_data->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (2.2.1)
-Requirement already satisfied: asttokens>=2.1.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from stack_data->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (3.0.0)
-Requirement already satisfied: pure-eval in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from stack_data->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4)) (0.2.3)
-Requirement already satisfied: mpmath<1.4,>=1.1.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from sympy->onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10)) (1.3.0)
-Requirement already satisfied: grpcio>=1.48.2 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorboard->xax==0.3.5->-r requirements.txt (line 5)) (1.75.1)
-Requirement already satisfied: markdown>=2.6.8 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorboard->xax==0.3.5->-r requirements.txt (line 5)) (3.9)
-Requirement already satisfied: setuptools>=41.0.0 in ./ksim-env/lib/python3.11/site-packages (from tensorboard->xax==0.3.5->-r requirements.txt (line 5)) (78.1.1)
-Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorboard->xax==0.3.5->-r requirements.txt (line 5)) (0.7.2)
-Requirement already satisfied: werkzeug>=1.0.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorboard->xax==0.3.5->-r requirements.txt (line 5)) (3.1.3)
-Requirement already satisfied: MarkupSafe>=2.1.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from werkzeug>=1.0.1->tensorboard->xax==0.3.5->-r requirements.txt (line 5)) (3.0.3)
-Requirement already satisfied: astunparse>=1.6.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (1.6.3)
-Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (0.6.0)
-Requirement already satisfied: google-pasta>=0.1.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (0.2.0)
-Requirement already satisfied: libclang>=13.0.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (18.1.1)
-Requirement already satisfied: termcolor>=1.1.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (3.1.0)
-Requirement already satisfied: wrapt>=1.11.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (1.17.3)
-Requirement already satisfied: keras>=3.5.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (3.11.3)
-Requirement already satisfied: h5py>=3.11.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (3.14.0)
-Requirement already satisfied: tensorflow-io-gcs-filesystem>=0.23.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (0.37.1)
-Requirement already satisfied: wheel<1.0,>=0.23.0 in ./ksim-env/lib/python3.11/site-packages (from astunparse>=1.6.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (0.45.1)
-Requirement already satisfied: rich in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (14.1.0)
-Requirement already satisfied: namex in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (0.1.0)
-Requirement already satisfied: optree in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (0.17.0)
-Requirement already satisfied: markdown-it-py>=2.2.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from rich->keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (4.0.0)
-Requirement already satisfied: mdurl~=0.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10)) (0.1.2)
-Requirement already satisfied: cloudpickle>=1.3 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tfp-nightly->distrax->ksim==0.1.95->-r requirements.txt (line 4)) (3.1.1)
-Requirement already satisfied: dm-tree in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from tfp-nightly->distrax->ksim==0.1.95->-r requirements.txt (line 4)) (0.1.9)
-Requirement already satisfied: jax[cuda12] in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (0.7.1)
-Requirement already satisfied: jaxlib<=0.7.1,>=0.7.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax[cuda12]) (0.7.1)
-Requirement already satisfied: ml_dtypes>=0.5.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax[cuda12]) (0.5.3)
-Requirement already satisfied: numpy>=1.26 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax[cuda12]) (1.26.4)
-Requirement already satisfied: opt_einsum in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax[cuda12]) (3.4.0)
-Requirement already satisfied: scipy>=1.12 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax[cuda12]) (1.16.2)
+Collecting ksim==0.1.95 (from -r requirements.txt (line 4))
+  Using cached ksim-0.1.95-py3-none-any.whl
+Collecting xax==0.3.5 (from -r requirements.txt (line 5))
+  Using cached xax-0.3.5-py3-none-any.whl.metadata (1.2 kB)
+Collecting mujoco-scenes (from -r requirements.txt (line 6))
+  Downloading mujoco_scenes-0.0.17-py3-none-any.whl.metadata (1.5 kB)
+Collecting warp-lang (from -r requirements.txt (line 7))
+  Using cached warp_lang-1.9.1-py3-none-manylinux_2_28_x86_64.whl.metadata (32 kB)
+Collecting kinfer[jax] (from -r requirements.txt (line 10))
+  Downloading kinfer-0.6.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (2.1 kB)
+Collecting numpy (from ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting matplotlib (from ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting tqdm (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting tabulate (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+Collecting kscale (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached kscale-0.3.18-py3-none-any.whl.metadata (2.4 kB)
+Collecting distrax (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached distrax-0.1.7-py3-none-any.whl.metadata (14 kB)
+Collecting jax (from ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading jax-0.8.0-py3-none-any.whl.metadata (13 kB)
+Collecting mediapy (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached mediapy-1.2.4-py3-none-any.whl.metadata (4.8 kB)
+Collecting optax (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached optax-0.2.6-py3-none-any.whl.metadata (7.6 kB)
+Collecting scipy (from ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+Collecting mujoco (from ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading mujoco-3.3.7-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+Collecting mujoco-mjx (from ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading mujoco_mjx-3.3.7-py3-none-any.whl.metadata (3.4 kB)
+Collecting kmv (from ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading kmv-0.3.22.tar.gz (28 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting bvhio (from ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading bvhio-1.5.4-py3-none-any.whl.metadata (20 kB)
+Collecting pyglm (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pyglm-2.8.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+Collecting attrs (from xax==0.3.5->-r requirements.txt (line 5))
+  Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+Collecting chex (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached chex-0.1.91-py3-none-any.whl.metadata (18 kB)
+Collecting dpshdl (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached dpshdl-0.0.21-py3-none-any.whl.metadata (4.2 kB)
+Collecting equinox (from xax==0.3.5->-r requirements.txt (line 5))
+  Downloading equinox-0.13.2-py3-none-any.whl.metadata (19 kB)
+Collecting importlib-resources (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached importlib_resources-6.5.2-py3-none-any.whl.metadata (3.9 kB)
+Collecting jaxtyping (from xax==0.3.5->-r requirements.txt (line 5))
+  Downloading jaxtyping-0.3.3-py3-none-any.whl.metadata (7.8 kB)
+Collecting orbax-checkpoint (from xax==0.3.5->-r requirements.txt (line 5))
+  Downloading orbax_checkpoint-0.11.26-py3-none-any.whl.metadata (2.4 kB)
+Collecting pillow (from xax==0.3.5->-r requirements.txt (line 5))
+  Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+Collecting omegaconf (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached omegaconf-2.3.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting gitpython (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached gitpython-3.1.45-py3-none-any.whl.metadata (13 kB)
+Collecting tensorboard (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached tensorboard-2.20.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting psutil (from xax==0.3.5->-r requirements.txt (line 5))
+  Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+Collecting requests (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting etils (from mujoco-scenes->-r requirements.txt (line 6))
+  Using cached etils-1.13.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting onnx (from kinfer[jax]->-r requirements.txt (line 10))
+  Downloading onnx-1.19.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (7.0 kB)
+Collecting onnxruntime==1.20.0 (from kinfer[jax]->-r requirements.txt (line 10))
+  Using cached onnxruntime-1.20.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (4.4 kB)
+Collecting tensorflow (from kinfer[jax]->-r requirements.txt (line 10))
+  Using cached tensorflow-2.20.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.5 kB)
+Collecting tf2onnx>=1.16.0 (from kinfer[jax]->-r requirements.txt (line 10))
+  Using cached tf2onnx-1.16.1-py3-none-any.whl.metadata (1.3 kB)
+Collecting numpy (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting coloredlogs (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached coloredlogs-15.0.1-py2.py3-none-any.whl.metadata (12 kB)
+Collecting flatbuffers (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached flatbuffers-25.9.23-py2.py3-none-any.whl.metadata (875 bytes)
+Collecting packaging (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting protobuf (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Downloading protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+Collecting sympy (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting six (from tf2onnx>=1.16.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting protobuf (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached protobuf-3.20.3-py2.py3-none-any.whl.metadata (720 bytes)
+INFO: pip is looking at multiple versions of onnx to determine which version is compatible with other requirements. This could take a while.
+Collecting onnx (from kinfer[jax]->-r requirements.txt (line 10))
+  Using cached onnx-1.19.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (7.0 kB)
+  Using cached onnx-1.18.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.9 kB)
+  Using cached onnx-1.17.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (16 kB)
+Collecting spatial-transform==1.3.3 (from bvhio->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading spatial_transform-1.3.3-py3-none-any.whl.metadata (8.7 kB)
+Collecting absl-py>=2.3.1 (from chex->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached absl_py-2.3.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting typing_extensions>=4.15.0 (from chex->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting jaxlib>=0.7.0 (from chex->xax==0.3.5->-r requirements.txt (line 5))
+  Downloading jaxlib-0.8.0-cp311-cp311-manylinux_2_27_x86_64.whl.metadata (1.3 kB)
+Collecting toolz>=1.0.0 (from chex->xax==0.3.5->-r requirements.txt (line 5))
+  Downloading toolz-1.1.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting ml_dtypes>=0.5.0 (from jax->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+INFO: pip is looking at multiple versions of jax to determine which version is compatible with other requirements. This could take a while.
+Collecting jax (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached jax-0.7.2-py3-none-any.whl.metadata (13 kB)
+Collecting jaxlib>=0.7.0 (from chex->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached jaxlib-0.7.2-cp311-cp311-manylinux_2_27_x86_64.whl.metadata (1.3 kB)
+Collecting jax (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached jax-0.7.1-py3-none-any.whl.metadata (13 kB)
+Collecting jaxlib>=0.7.0 (from chex->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached jaxlib-0.7.1-cp311-cp311-manylinux_2_27_x86_64.whl.metadata (1.3 kB)
+Collecting opt_einsum (from jax->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting humanfriendly>=9.1 (from coloredlogs->onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached humanfriendly-10.0-py2.py3-none-any.whl.metadata (9.2 kB)
+Collecting tfp-nightly (from distrax->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading tfp_nightly-0.26.0.dev20251031-py2.py3-none-any.whl.metadata (13 kB)
+Collecting wadler-lindig>=0.1.0 (from equinox->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached wadler_lindig-0.1.7-py3-none-any.whl.metadata (17 kB)
+Collecting equinox (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached equinox-0.13.1-py3-none-any.whl.metadata (19 kB)
+  Using cached equinox-0.13.0-py3-none-any.whl.metadata (18 kB)
+Collecting gitdb<5,>=4.0.1 (from gitpython->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached smmap-5.0.2-py3-none-any.whl.metadata (4.3 kB)
+Collecting PySide6==6.9.0 (from kmv->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached PySide6-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting pyqtgraph (from kmv->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pyqtgraph-0.13.7-py3-none-any.whl.metadata (1.3 kB)
+Collecting colorlogging (from kmv->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached colorlogging-0.0.2-py3-none-any.whl.metadata (2.4 kB)
+Collecting shiboken6==6.9.0 (from PySide6==6.9.0->kmv->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached shiboken6-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting PySide6-Essentials==6.9.0 (from PySide6==6.9.0->kmv->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached PySide6_Essentials-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (3.9 kB)
+Collecting PySide6-Addons==6.9.0 (from PySide6==6.9.0->kmv->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached PySide6_Addons-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (4.2 kB)
+Collecting email_validator (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached email_validator-2.3.0-py3-none-any.whl.metadata (26 kB)
+Collecting aiohttp (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading aiohttp-3.13.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+Collecting cryptography (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+Collecting httpx (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting pydantic (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading pydantic-2.12.3-py3-none-any.whl.metadata (87 kB)
+Collecting pyjwt (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting yarl (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (75 kB)
+Collecting aiofiles (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading aiofiles-25.1.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting click (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting async-lru (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached async_lru-2.0.5-py3-none-any.whl.metadata (4.5 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+Collecting propcache>=0.2.0 (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+Collecting idna>=2.0 (from yarl->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting cffi>=2.0.0 (from cryptography->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+Collecting dnspython>=2.0.0 (from email_validator->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting anyio (from httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached anyio-4.11.0-py3-none-any.whl.metadata (4.1 kB)
+Collecting certifi (from httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting sniffio>=1.1 (from anyio->httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting contourpy>=1.0.1 (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+Collecting pyparsing>=3 (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+Collecting python-dateutil>=2.7 (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting ipython (from mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached ipython-9.6.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting decorator (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting ipython-pygments-lexers (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached ipython_pygments_lexers-1.1.1-py3-none-any.whl.metadata (1.1 kB)
+Collecting jedi>=0.16 (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached jedi-0.19.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting matplotlib-inline (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading matplotlib_inline-0.2.1-py3-none-any.whl.metadata (2.3 kB)
+Collecting pexpect>4.3 (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting prompt_toolkit<3.1.0,>=3.0.41 (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+Collecting pygments>=2.4.0 (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting stack_data (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+Collecting traitlets>=5.13.0 (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+Collecting wcwidth (from prompt_toolkit<3.1.0,>=3.0.41->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+Collecting parso<0.9.0,>=0.8.4 (from jedi>=0.16->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached parso-0.8.5-py2.py3-none-any.whl.metadata (8.3 kB)
+Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting glfw (from mujoco->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached glfw-2.10.0-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38.p39.p310.p311.p312.p313-none-manylinux_2_28_x86_64.whl.metadata (5.4 kB)
+Collecting pyopengl (from mujoco->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pyopengl-3.1.10-py3-none-any.whl.metadata (3.3 kB)
+Collecting fsspec (from etils[epath]->mujoco->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading fsspec-2025.10.0-py3-none-any.whl.metadata (10 kB)
+Collecting zipp (from etils[epath]->mujoco->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+Collecting trimesh (from mujoco-mjx->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading trimesh-4.9.0-py3-none-any.whl.metadata (18 kB)
+Collecting antlr4-python3-runtime==4.9.* (from omegaconf->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached antlr4_python3_runtime-4.9.3-py3-none-any.whl
+Collecting PyYAML>=5.1.0 (from omegaconf->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting msgpack (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5))
+  Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+Collecting tensorstore>=0.1.71 (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5))
+  Downloading tensorstore-0.1.78-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (21 kB)
+Collecting nest_asyncio (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting humanize (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5))
+  Downloading humanize-4.14.0-py3-none-any.whl.metadata (7.8 kB)
+Collecting simplejson>=3.16.0 (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached simplejson-3.20.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.2 kB)
+Collecting annotated-types>=0.6.0 (from pydantic->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.41.4 (from pydantic->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading pydantic_core-2.41.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+Collecting typing-inspection>=0.4.2 (from pydantic->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting charset_normalizer<4,>=2 (from requests->xax==0.3.5->-r requirements.txt (line 5))
+  Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting executing>=1.2.0 (from stack_data->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+Collecting asttokens>=2.1.0 (from stack_data->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached asttokens-3.0.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting pure-eval (from stack_data->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy->onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting grpcio>=1.48.2 (from tensorboard->xax==0.3.5->-r requirements.txt (line 5))
+  Downloading grpcio-1.76.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+Collecting markdown>=2.6.8 (from tensorboard->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached markdown-3.9-py3-none-any.whl.metadata (5.1 kB)
+Collecting setuptools>=41.0.0 (from tensorboard->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+Collecting werkzeug>=1.0.1 (from tensorboard->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting MarkupSafe>=2.1.1 (from werkzeug>=1.0.1->tensorboard->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting astunparse>=1.6.0 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached gast-0.6.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting google_pasta>=0.1.1 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+Collecting libclang>=13.0.0 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl.metadata (5.2 kB)
+INFO: pip is looking at multiple versions of tensorflow to determine which version is compatible with other requirements. This could take a while.
+Collecting tensorflow (from kinfer[jax]->-r requirements.txt (line 10))
+  Using cached tensorflow-2.19.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting termcolor>=1.1.0 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Downloading termcolor-3.2.0-py3-none-any.whl.metadata (6.4 kB)
+Collecting wrapt>=1.11.0 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.8 kB)
+Collecting tensorboard (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached tensorboard-2.19.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting keras>=3.5.0 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Downloading keras-3.12.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting h5py>=3.11.0 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting tensorflow-io-gcs-filesystem>=0.23.1 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached tensorflow_io_gcs_filesystem-0.37.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (14 kB)
+Collecting wheel<1.0,>=0.23.0 (from astunparse>=1.6.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Downloading wheel-0.45.1-py3-none-any.whl.metadata (2.3 kB)
+Collecting rich (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+Collecting namex (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+Collecting optree (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (33 kB)
+Collecting markdown-it-py>=2.2.0 (from rich->keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting cloudpickle>=1.3 (from tfp-nightly->distrax->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached cloudpickle-3.1.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting dm-tree (from tfp-nightly->distrax->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached dm_tree-0.1.9-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.2 kB)
+Using cached xax-0.3.5-py3-none-any.whl (109 kB)
+Downloading mujoco_scenes-0.0.17-py3-none-any.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 21.5 MB/s  0:00:00
+Using cached warp_lang-1.9.1-py3-none-manylinux_2_28_x86_64.whl (132.0 MB)
+Downloading kinfer-0.6.1-cp311-cp311-manylinux_2_28_x86_64.whl (685 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 685.1/685.1 kB 24.5 MB/s  0:00:00
+Using cached onnxruntime-1.20.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (13.3 MB)
+Using cached numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+Using cached tf2onnx-1.16.1-py3-none-any.whl (455 kB)
+Using cached protobuf-3.20.3-py2.py3-none-any.whl (162 kB)
+Using cached flatbuffers-25.9.23-py2.py3-none-any.whl (30 kB)
+Using cached onnx-1.17.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.0 MB)
+Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+Downloading bvhio-1.5.4-py3-none-any.whl (24 kB)
+Using cached pyglm-2.8.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (12.1 MB)
+Downloading spatial_transform-1.3.3-py3-none-any.whl (20 kB)
+Using cached chex-0.1.91-py3-none-any.whl (100 kB)
+Using cached absl_py-2.3.1-py3-none-any.whl (135 kB)
+Using cached jax-0.7.1-py3-none-any.whl (2.8 MB)
+Using cached jaxlib-0.7.1-cp311-cp311-manylinux_2_27_x86_64.whl (81.1 MB)
+Using cached ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.9 MB)
+Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 90.9 MB/s  0:00:00
+Downloading toolz-1.1.0-py3-none-any.whl (58 kB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Using cached coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+Using cached humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+Using cached distrax-0.1.7-py3-none-any.whl (312 kB)
+Using cached dpshdl-0.0.21-py3-none-any.whl (27 kB)
+Using cached equinox-0.13.0-py3-none-any.whl (177 kB)
+Downloading jaxtyping-0.3.3-py3-none-any.whl (55 kB)
+Using cached wadler_lindig-0.1.7-py3-none-any.whl (20 kB)
+Using cached etils-1.13.0-py3-none-any.whl (170 kB)
+Using cached gitpython-3.1.45-py3-none-any.whl (208 kB)
+Using cached gitdb-4.0.12-py3-none-any.whl (62 kB)
+Using cached smmap-5.0.2-py3-none-any.whl (24 kB)
+Using cached importlib_resources-6.5.2-py3-none-any.whl (37 kB)
+Using cached PySide6-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl (558 kB)
+Using cached PySide6_Addons-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl (166.3 MB)
+Using cached PySide6_Essentials-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl (94.2 MB)
+Using cached shiboken6-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl (206 kB)
+Using cached colorlogging-0.0.2-py3-none-any.whl (6.0 kB)
+Using cached kscale-0.3.18-py3-none-any.whl (30 kB)
+Downloading aiofiles-25.1.0-py3-none-any.whl (14 kB)
+Downloading aiohttp-3.13.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 20.1 MB/s  0:00:00
+Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (365 kB)
+Using cached aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+Downloading idna-3.11-py3-none-any.whl (71 kB)
+Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (210 kB)
+Using cached async_lru-2.0.5-py3-none-any.whl (6.1 kB)
+Using cached click-8.3.0-py3-none-any.whl (107 kB)
+Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 58.7 MB/s  0:00:00
+Using cached cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+Using cached email_validator-2.3.0-py3-none-any.whl (35 kB)
+Using cached dnspython-2.8.0-py3-none-any.whl (331 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached anyio-4.11.0-py3-none-any.whl (109 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 87.1 MB/s  0:00:00
+Using cached contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+Using cached kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+Using cached packaging-25.0-py3-none-any.whl (66 kB)
+Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 77.9 MB/s  0:00:00
+Using cached pyparsing-3.2.5-py3-none-any.whl (113 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached mediapy-1.2.4-py3-none-any.whl (26 kB)
+Using cached ipython-9.6.0-py3-none-any.whl (616 kB)
+Using cached prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+Using cached jedi-0.19.2-py2.py3-none-any.whl (1.6 MB)
+Using cached parso-0.8.5-py2.py3-none-any.whl (106 kB)
+Using cached pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Using cached pygments-2.19.2-py3-none-any.whl (1.2 MB)
+Using cached traitlets-5.14.3-py3-none-any.whl (85 kB)
+Using cached decorator-5.2.1-py3-none-any.whl (9.2 kB)
+Using cached ipython_pygments_lexers-1.1.1-py3-none-any.whl (8.1 kB)
+Downloading matplotlib_inline-0.2.1-py3-none-any.whl (9.5 kB)
+Downloading mujoco-3.3.7-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.8/6.8 MB 76.0 MB/s  0:00:00
+Downloading fsspec-2025.10.0-py3-none-any.whl (200 kB)
+Using cached glfw-2.10.0-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38.p39.p310.p311.p312.p313-none-manylinux_2_28_x86_64.whl (243 kB)
+Downloading mujoco_mjx-3.3.7-py3-none-any.whl (7.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 84.0 MB/s  0:00:00
+Using cached omegaconf-2.3.0-py3-none-any.whl (79 kB)
+Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+Using cached opt_einsum-3.4.0-py3-none-any.whl (71 kB)
+Using cached optax-0.2.6-py3-none-any.whl (367 kB)
+Downloading orbax_checkpoint-0.11.26-py3-none-any.whl (585 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 585.6/585.6 kB 18.1 MB/s  0:00:00
+Using cached simplejson-3.20.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+Downloading tensorstore-0.1.78-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (20.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.1/20.1 MB 53.3 MB/s  0:00:00
+Downloading humanize-4.14.0-py3-none-any.whl (132 kB)
+Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (426 kB)
+Using cached nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (258 kB)
+Using cached pycparser-2.23-py3-none-any.whl (118 kB)
+Downloading pydantic-2.12.3-py3-none-any.whl (462 kB)
+Downloading pydantic_core-2.41.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 34.6 MB/s  0:00:00
+Using cached annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+Using cached PyJWT-2.10.1-py3-none-any.whl (22 kB)
+Using cached pyopengl-3.1.10-py3-none-any.whl (3.2 MB)
+Using cached pyqtgraph-0.13.7-py3-none-any.whl (1.9 MB)
+Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+Using cached urllib3-2.5.0-py3-none-any.whl (129 kB)
+Using cached stack_data-0.6.3-py3-none-any.whl (24 kB)
+Using cached asttokens-3.0.0-py3-none-any.whl (26 kB)
+Using cached executing-2.2.1-py2.py3-none-any.whl (28 kB)
+Using cached pure_eval-0.2.3-py3-none-any.whl (11 kB)
+Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Using cached tabulate-0.9.0-py3-none-any.whl (35 kB)
+Using cached tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+Downloading grpcio-1.76.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 73.0 MB/s  0:00:00
+Using cached markdown-3.9-py3-none-any.whl (107 kB)
+Using cached setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+Using cached werkzeug-3.1.3-py3-none-any.whl (224 kB)
+Using cached markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Using cached tensorflow-2.19.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (644.9 MB)
+Using cached tensorboard-2.19.0-py3-none-any.whl (5.5 MB)
+Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Downloading wheel-0.45.1-py3-none-any.whl (72 kB)
+Using cached gast-0.6.0-py3-none-any.whl (21 kB)
+Using cached google_pasta-0.2.0-py3-none-any.whl (57 kB)
+Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 75.8 MB/s  0:00:00
+Downloading keras-3.12.0-py3-none-any.whl (1.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 47.0 MB/s  0:00:00
+Using cached libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl (24.5 MB)
+Using cached tensorflow_io_gcs_filesystem-0.37.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.1 MB)
+Downloading termcolor-3.2.0-py3-none-any.whl (7.7 kB)
+Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (114 kB)
+Using cached namex-0.1.0-py3-none-any.whl (5.9 kB)
+Using cached optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (402 kB)
+Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+Using cached markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading tfp_nightly-0.26.0.dev20251031-py2.py3-none-any.whl (7.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 84.2 MB/s  0:00:00
+Using cached cloudpickle-3.1.1-py3-none-any.whl (20 kB)
+Using cached dm_tree-0.1.9-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (152 kB)
+Using cached tqdm-4.67.1-py3-none-any.whl (78 kB)
+Downloading trimesh-4.9.0-py3-none-any.whl (736 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 736.5/736.5 kB 13.7 MB/s  0:00:00
+Using cached wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+Using cached zipp-3.23.0-py3-none-any.whl (10 kB)
+Building wheels for collected packages: kmv
+  Building wheel for kmv (pyproject.toml): started
+  Building wheel for kmv (pyproject.toml): finished with status 'done'
+  Created wheel for kmv: filename=kmv-0.3.22-py3-none-any.whl size=31947 sha256=8dbab495ce593e02c439a3d684578dc4b29fedd80112c2501d85f181293b2465
+  Stored in directory: /cluster/home/sebasrb/.cache/pip/wheels/8a/e7/6c/5ee809571cc5b42eaeba8fb36f837b93ac0a04aa5316bc3b5d
+Successfully built kmv
+Installing collected packages: pyopengl, pyglm, pure-eval, ptyprocess, namex, mpmath, libclang, glfw, flatbuffers, antlr4-python3-runtime, zipp, wrapt, wheel, wcwidth, wadler-lindig, urllib3, typing_extensions, traitlets, tqdm, toolz, termcolor, tensorflow-io-gcs-filesystem, tensorboard-data-server, tabulate, sympy, spatial-transform, sniffio, smmap, six, simplejson, shiboken6, setuptools, PyYAML, pyparsing, pyjwt, pygments, pycparser, psutil, protobuf, propcache, pillow, pexpect, parso, packaging, opt_einsum, numpy, nest_asyncio, multidict, msgpack, mdurl, MarkupSafe, markdown, kiwisolver, importlib-resources, idna, humanize, humanfriendly, h11, gast, fsspec, frozenlist, fonttools, executing, etils, dnspython, decorator, cycler, colorlogging, cloudpickle, click, charset_normalizer, certifi, attrs, async-lru, asttokens, annotated-types, aiohappyeyeballs, aiofiles, absl-py, yarl, werkzeug, warp-lang, typing-inspection, trimesh, stack_data, scipy, requests, python-dateutil, PySide6-Essentials, pyqtgraph, pydantic-core, prompt_toolkit, optree, onnx, omegaconf, ml_dtypes, matplotlib-inline, markdown-it-py, jedi, jaxtyping, ipython-pygments-lexers, httpcore, h5py, grpcio, google_pasta, gitdb, email_validator, dm-tree, contourpy, coloredlogs, cffi, bvhio, astunparse, anyio, aiosignal, tfp-nightly, tf2onnx, tensorstore, tensorboard, rich, PySide6-Addons, pydantic, onnxruntime, matplotlib, jaxlib, ipython, httpx, gitpython, dpshdl, cryptography, aiohttp, PySide6, mujoco, mediapy, kscale, kinfer, keras, jax, tensorflow, orbax-checkpoint, mujoco-scenes, mujoco-mjx, kmv, equinox, chex, optax, distrax, xax, ksim
+  Attempting uninstall: pyopengl
+    Found existing installation: PyOpenGL 3.1.10
+    Uninstalling PyOpenGL-3.1.10:
+      Successfully uninstalled PyOpenGL-3.1.10
+  Attempting uninstall: pyglm
+    Found existing installation: pyglm 2.8.2
+    Uninstalling pyglm-2.8.2:
+      Successfully uninstalled pyglm-2.8.2
+  Attempting uninstall: pure-eval
+    Found existing installation: pure_eval 0.2.3
+    Uninstalling pure_eval-0.2.3:
+      Successfully uninstalled pure_eval-0.2.3
+  Attempting uninstall: ptyprocess
+    Found existing installation: ptyprocess 0.7.0
+    Uninstalling ptyprocess-0.7.0:
+      Successfully uninstalled ptyprocess-0.7.0
+  Attempting uninstall: namex
+    Found existing installation: namex 0.1.0
+    Uninstalling namex-0.1.0:
+      Successfully uninstalled namex-0.1.0
+  Attempting uninstall: mpmath
+    Found existing installation: mpmath 1.3.0
+    Uninstalling mpmath-1.3.0:
+      Successfully uninstalled mpmath-1.3.0
+  Attempting uninstall: libclang
+    Found existing installation: libclang 18.1.1
+    Uninstalling libclang-18.1.1:
+      Successfully uninstalled libclang-18.1.1
+  Attempting uninstall: glfw
+    Found existing installation: glfw 2.10.0
+    Uninstalling glfw-2.10.0:
+      Successfully uninstalled glfw-2.10.0
+  Attempting uninstall: flatbuffers
+    Found existing installation: flatbuffers 25.9.23
+    Uninstalling flatbuffers-25.9.23:
+      Successfully uninstalled flatbuffers-25.9.23
+  Attempting uninstall: antlr4-python3-runtime
+    Found existing installation: antlr4-python3-runtime 4.9.3
+    Uninstalling antlr4-python3-runtime-4.9.3:
+      Successfully uninstalled antlr4-python3-runtime-4.9.3
+  Attempting uninstall: zipp
+    Found existing installation: zipp 3.23.0
+    Uninstalling zipp-3.23.0:
+      Successfully uninstalled zipp-3.23.0
+  Attempting uninstall: wrapt
+    Found existing installation: wrapt 1.17.3
+    Uninstalling wrapt-1.17.3:
+      Successfully uninstalled wrapt-1.17.3
+  Attempting uninstall: wheel
+    Found existing installation: wheel 0.45.1
+    Uninstalling wheel-0.45.1:
+      Successfully uninstalled wheel-0.45.1
+  Attempting uninstall: wcwidth
+    Found existing installation: wcwidth 0.2.14
+    Uninstalling wcwidth-0.2.14:
+      Successfully uninstalled wcwidth-0.2.14
+  Attempting uninstall: wadler-lindig
+    Found existing installation: wadler_lindig 0.1.7
+    Uninstalling wadler_lindig-0.1.7:
+      Successfully uninstalled wadler_lindig-0.1.7
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 2.5.0
+    Uninstalling urllib3-2.5.0:
+      Successfully uninstalled urllib3-2.5.0
+  Attempting uninstall: typing_extensions
+    Found existing installation: typing_extensions 4.15.0
+    Uninstalling typing_extensions-4.15.0:
+      Successfully uninstalled typing_extensions-4.15.0
+  Attempting uninstall: traitlets
+    Found existing installation: traitlets 5.14.3
+    Uninstalling traitlets-5.14.3:
+      Successfully uninstalled traitlets-5.14.3
+  Attempting uninstall: tqdm
+    Found existing installation: tqdm 4.67.1
+    Uninstalling tqdm-4.67.1:
+      Successfully uninstalled tqdm-4.67.1
+  Attempting uninstall: toolz
+    Found existing installation: toolz 1.0.0
+    Uninstalling toolz-1.0.0:
+      Successfully uninstalled toolz-1.0.0
+  Attempting uninstall: termcolor
+    Found existing installation: termcolor 3.1.0
+    Uninstalling termcolor-3.1.0:
+      Successfully uninstalled termcolor-3.1.0
+  Attempting uninstall: tensorflow-io-gcs-filesystem
+    Found existing installation: tensorflow-io-gcs-filesystem 0.37.1
+    Uninstalling tensorflow-io-gcs-filesystem-0.37.1:
+      Successfully uninstalled tensorflow-io-gcs-filesystem-0.37.1
+  Attempting uninstall: tensorboard-data-server
+    Found existing installation: tensorboard-data-server 0.7.2
+    Uninstalling tensorboard-data-server-0.7.2:
+      Successfully uninstalled tensorboard-data-server-0.7.2
+  Attempting uninstall: tabulate
+    Found existing installation: tabulate 0.9.0
+    Uninstalling tabulate-0.9.0:
+      Successfully uninstalled tabulate-0.9.0
+  Attempting uninstall: sympy
+    Found existing installation: sympy 1.14.0
+    Uninstalling sympy-1.14.0:
+      Successfully uninstalled sympy-1.14.0
+  Attempting uninstall: spatial-transform
+    Found existing installation: spatial-transform 1.3.1
+    Uninstalling spatial-transform-1.3.1:
+      Successfully uninstalled spatial-transform-1.3.1
+  Attempting uninstall: sniffio
+    Found existing installation: sniffio 1.3.1
+    Uninstalling sniffio-1.3.1:
+      Successfully uninstalled sniffio-1.3.1
+  Attempting uninstall: smmap
+    Found existing installation: smmap 5.0.2
+    Uninstalling smmap-5.0.2:
+      Successfully uninstalled smmap-5.0.2
+  Attempting uninstall: six
+    Found existing installation: six 1.17.0
+    Uninstalling six-1.17.0:
+      Successfully uninstalled six-1.17.0
+  Attempting uninstall: simplejson
+    Found existing installation: simplejson 3.20.2
+    Uninstalling simplejson-3.20.2:
+      Successfully uninstalled simplejson-3.20.2
+  Attempting uninstall: shiboken6
+    Found existing installation: shiboken6 6.9.0
+    Uninstalling shiboken6-6.9.0:
+      Successfully uninstalled shiboken6-6.9.0
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 78.1.1
+    Uninstalling setuptools-78.1.1:
+      Successfully uninstalled setuptools-78.1.1
+  Attempting uninstall: PyYAML
+    Found existing installation: PyYAML 6.0.3
+    Uninstalling PyYAML-6.0.3:
+      Successfully uninstalled PyYAML-6.0.3
+  Attempting uninstall: pyparsing
+    Found existing installation: pyparsing 3.2.5
+    Uninstalling pyparsing-3.2.5:
+      Successfully uninstalled pyparsing-3.2.5
+  Attempting uninstall: pyjwt
+    Found existing installation: PyJWT 2.10.1
+    Uninstalling PyJWT-2.10.1:
+      Successfully uninstalled PyJWT-2.10.1
+  Attempting uninstall: pygments
+    Found existing installation: Pygments 2.19.2
+    Uninstalling Pygments-2.19.2:
+      Successfully uninstalled Pygments-2.19.2
+  Attempting uninstall: pycparser
+    Found existing installation: pycparser 2.23
+    Uninstalling pycparser-2.23:
+      Successfully uninstalled pycparser-2.23
+  Attempting uninstall: psutil
+    Found existing installation: psutil 7.1.0
+    Uninstalling psutil-7.1.0:
+      Successfully uninstalled psutil-7.1.0
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 3.20.3
+    Uninstalling protobuf-3.20.3:
+      Successfully uninstalled protobuf-3.20.3
+  Attempting uninstall: propcache
+    Found existing installation: propcache 0.3.2
+    Uninstalling propcache-0.3.2:
+      Successfully uninstalled propcache-0.3.2
+  Attempting uninstall: pillow
+    Found existing installation: pillow 11.3.0
+    Uninstalling pillow-11.3.0:
+      Successfully uninstalled pillow-11.3.0
+  Attempting uninstall: pexpect
+    Found existing installation: pexpect 4.9.0
+    Uninstalling pexpect-4.9.0:
+      Successfully uninstalled pexpect-4.9.0
+  Attempting uninstall: parso
+    Found existing installation: parso 0.8.5
+    Uninstalling parso-0.8.5:
+      Successfully uninstalled parso-0.8.5
+  Attempting uninstall: packaging
+    Found existing installation: packaging 25.0
+    Uninstalling packaging-25.0:
+      Successfully uninstalled packaging-25.0
+  Attempting uninstall: opt_einsum
+    Found existing installation: opt_einsum 3.4.0
+    Uninstalling opt_einsum-3.4.0:
+      Successfully uninstalled opt_einsum-3.4.0
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.26.4
+    Uninstalling numpy-1.26.4:
+      Successfully uninstalled numpy-1.26.4
+  Attempting uninstall: nest_asyncio
+    Found existing installation: nest-asyncio 1.6.0
+    Uninstalling nest-asyncio-1.6.0:
+      Successfully uninstalled nest-asyncio-1.6.0
+  Attempting uninstall: multidict
+    Found existing installation: multidict 6.6.4
+    Uninstalling multidict-6.6.4:
+      Successfully uninstalled multidict-6.6.4
+  Attempting uninstall: msgpack
+    Found existing installation: msgpack 1.1.1
+    Uninstalling msgpack-1.1.1:
+      Successfully uninstalled msgpack-1.1.1
+  Attempting uninstall: mdurl
+    Found existing installation: mdurl 0.1.2
+    Uninstalling mdurl-0.1.2:
+      Successfully uninstalled mdurl-0.1.2
+  Attempting uninstall: MarkupSafe
+    Found existing installation: MarkupSafe 3.0.3
+    Uninstalling MarkupSafe-3.0.3:
+      Successfully uninstalled MarkupSafe-3.0.3
+  Attempting uninstall: markdown
+    Found existing installation: Markdown 3.9
+    Uninstalling Markdown-3.9:
+      Successfully uninstalled Markdown-3.9
+  Attempting uninstall: kiwisolver
+    Found existing installation: kiwisolver 1.4.9
+    Uninstalling kiwisolver-1.4.9:
+      Successfully uninstalled kiwisolver-1.4.9
+  Attempting uninstall: importlib-resources
+    Found existing installation: importlib_resources 6.5.2
+    Uninstalling importlib_resources-6.5.2:
+      Successfully uninstalled importlib_resources-6.5.2
+  Attempting uninstall: idna
+    Found existing installation: idna 3.10
+    Uninstalling idna-3.10:
+      Successfully uninstalled idna-3.10
+  Attempting uninstall: humanize
+    Found existing installation: humanize 4.13.0
+    Uninstalling humanize-4.13.0:
+      Successfully uninstalled humanize-4.13.0
+  Attempting uninstall: humanfriendly
+    Found existing installation: humanfriendly 10.0
+    Uninstalling humanfriendly-10.0:
+      Successfully uninstalled humanfriendly-10.0
+  Attempting uninstall: h11
+    Found existing installation: h11 0.16.0
+    Uninstalling h11-0.16.0:
+      Successfully uninstalled h11-0.16.0
+  Attempting uninstall: gast
+    Found existing installation: gast 0.6.0
+    Uninstalling gast-0.6.0:
+      Successfully uninstalled gast-0.6.0
+  Attempting uninstall: fsspec
+    Found existing installation: fsspec 2025.9.0
+    Uninstalling fsspec-2025.9.0:
+      Successfully uninstalled fsspec-2025.9.0
+  Attempting uninstall: frozenlist
+    Found existing installation: frozenlist 1.7.0
+    Uninstalling frozenlist-1.7.0:
+      Successfully uninstalled frozenlist-1.7.0
+  Attempting uninstall: fonttools
+    Found existing installation: fonttools 4.60.1
+    Uninstalling fonttools-4.60.1:
+      Successfully uninstalled fonttools-4.60.1
+  Attempting uninstall: executing
+    Found existing installation: executing 2.2.1
+    Uninstalling executing-2.2.1:
+      Successfully uninstalled executing-2.2.1
+  Attempting uninstall: etils
+    Found existing installation: etils 1.13.0
+    Uninstalling etils-1.13.0:
+      Successfully uninstalled etils-1.13.0
+  Attempting uninstall: dnspython
+    Found existing installation: dnspython 2.8.0
+    Uninstalling dnspython-2.8.0:
+      Successfully uninstalled dnspython-2.8.0
+  Attempting uninstall: decorator
+    Found existing installation: decorator 5.2.1
+    Uninstalling decorator-5.2.1:
+      Successfully uninstalled decorator-5.2.1
+  Attempting uninstall: cycler
+    Found existing installation: cycler 0.12.1
+    Uninstalling cycler-0.12.1:
+      Successfully uninstalled cycler-0.12.1
+  Attempting uninstall: colorlogging
+    Found existing installation: colorlogging 0.0.2
+    Uninstalling colorlogging-0.0.2:
+      Successfully uninstalled colorlogging-0.0.2
+  Attempting uninstall: cloudpickle
+    Found existing installation: cloudpickle 3.1.1
+    Uninstalling cloudpickle-3.1.1:
+      Successfully uninstalled cloudpickle-3.1.1
+  Attempting uninstall: click
+    Found existing installation: click 8.3.0
+    Uninstalling click-8.3.0:
+      Successfully uninstalled click-8.3.0
+  Attempting uninstall: charset_normalizer
+    Found existing installation: charset-normalizer 3.4.3
+    Uninstalling charset-normalizer-3.4.3:
+      Successfully uninstalled charset-normalizer-3.4.3
+  Attempting uninstall: certifi
+    Found existing installation: certifi 2025.8.3
+    Uninstalling certifi-2025.8.3:
+      Successfully uninstalled certifi-2025.8.3
+  Attempting uninstall: attrs
+    Found existing installation: attrs 25.3.0
+    Uninstalling attrs-25.3.0:
+      Successfully uninstalled attrs-25.3.0
+  Attempting uninstall: async-lru
+    Found existing installation: async-lru 2.0.5
+    Uninstalling async-lru-2.0.5:
+      Successfully uninstalled async-lru-2.0.5
+  Attempting uninstall: asttokens
+    Found existing installation: asttokens 3.0.0
+    Uninstalling asttokens-3.0.0:
+      Successfully uninstalled asttokens-3.0.0
+  Attempting uninstall: annotated-types
+    Found existing installation: annotated-types 0.7.0
+    Uninstalling annotated-types-0.7.0:
+      Successfully uninstalled annotated-types-0.7.0
+  Attempting uninstall: aiohappyeyeballs
+    Found existing installation: aiohappyeyeballs 2.6.1
+    Uninstalling aiohappyeyeballs-2.6.1:
+      Successfully uninstalled aiohappyeyeballs-2.6.1
+  Attempting uninstall: aiofiles
+    Found existing installation: aiofiles 24.1.0
+    Uninstalling aiofiles-24.1.0:
+      Successfully uninstalled aiofiles-24.1.0
+  Attempting uninstall: absl-py
+    Found existing installation: absl-py 2.3.1
+    Uninstalling absl-py-2.3.1:
+      Successfully uninstalled absl-py-2.3.1
+  Attempting uninstall: yarl
+    Found existing installation: yarl 1.20.1
+    Uninstalling yarl-1.20.1:
+      Successfully uninstalled yarl-1.20.1
+  Attempting uninstall: werkzeug
+    Found existing installation: Werkzeug 3.1.3
+    Uninstalling Werkzeug-3.1.3:
+      Successfully uninstalled Werkzeug-3.1.3
+  Attempting uninstall: warp-lang
+    Found existing installation: warp-lang 1.9.1
+    Uninstalling warp-lang-1.9.1:
+      Successfully uninstalled warp-lang-1.9.1
+  Attempting uninstall: typing-inspection
+    Found existing installation: typing-inspection 0.4.1
+    Uninstalling typing-inspection-0.4.1:
+      Successfully uninstalled typing-inspection-0.4.1
+  Attempting uninstall: trimesh
+    Found existing installation: trimesh 4.8.3
+    Uninstalling trimesh-4.8.3:
+      Successfully uninstalled trimesh-4.8.3
+  Attempting uninstall: stack_data
+    Found existing installation: stack-data 0.6.3
+    Uninstalling stack-data-0.6.3:
+      Successfully uninstalled stack-data-0.6.3
+  Attempting uninstall: scipy
+    Found existing installation: scipy 1.16.2
+    Uninstalling scipy-1.16.2:
+      Successfully uninstalled scipy-1.16.2
+  Attempting uninstall: requests
+    Found existing installation: requests 2.32.5
+    Uninstalling requests-2.32.5:
+      Successfully uninstalled requests-2.32.5
+  Attempting uninstall: python-dateutil
+    Found existing installation: python-dateutil 2.9.0.post0
+    Uninstalling python-dateutil-2.9.0.post0:
+      Successfully uninstalled python-dateutil-2.9.0.post0
+  Attempting uninstall: PySide6-Essentials
+    Found existing installation: PySide6_Essentials 6.9.0
+    Uninstalling PySide6_Essentials-6.9.0:
+      Successfully uninstalled PySide6_Essentials-6.9.0
+  Attempting uninstall: pyqtgraph
+    Found existing installation: pyqtgraph 0.13.7
+    Uninstalling pyqtgraph-0.13.7:
+      Successfully uninstalled pyqtgraph-0.13.7
+  Attempting uninstall: pydantic-core
+    Found existing installation: pydantic_core 2.33.2
+    Uninstalling pydantic_core-2.33.2:
+      Successfully uninstalled pydantic_core-2.33.2
+  Attempting uninstall: prompt_toolkit
+    Found existing installation: prompt_toolkit 3.0.52
+    Uninstalling prompt_toolkit-3.0.52:
+      Successfully uninstalled prompt_toolkit-3.0.52
+  Attempting uninstall: optree
+    Found existing installation: optree 0.17.0
+    Uninstalling optree-0.17.0:
+      Successfully uninstalled optree-0.17.0
+  Attempting uninstall: onnx
+    Found existing installation: onnx 1.17.0
+    Uninstalling onnx-1.17.0:
+      Successfully uninstalled onnx-1.17.0
+  Attempting uninstall: omegaconf
+    Found existing installation: omegaconf 2.3.0
+    Uninstalling omegaconf-2.3.0:
+      Successfully uninstalled omegaconf-2.3.0
+  Attempting uninstall: ml_dtypes
+    Found existing installation: ml_dtypes 0.5.3
+    Uninstalling ml_dtypes-0.5.3:
+      Successfully uninstalled ml_dtypes-0.5.3
+  Attempting uninstall: matplotlib-inline
+    Found existing installation: matplotlib-inline 0.1.7
+    Uninstalling matplotlib-inline-0.1.7:
+      Successfully uninstalled matplotlib-inline-0.1.7
+  Attempting uninstall: markdown-it-py
+    Found existing installation: markdown-it-py 4.0.0
+    Uninstalling markdown-it-py-4.0.0:
+      Successfully uninstalled markdown-it-py-4.0.0
+  Attempting uninstall: jedi
+    Found existing installation: jedi 0.19.2
+    Uninstalling jedi-0.19.2:
+      Successfully uninstalled jedi-0.19.2
+  Attempting uninstall: jaxtyping
+    Found existing installation: jaxtyping 0.3.2
+    Uninstalling jaxtyping-0.3.2:
+      Successfully uninstalled jaxtyping-0.3.2
+  Attempting uninstall: ipython-pygments-lexers
+    Found existing installation: ipython_pygments_lexers 1.1.1
+    Uninstalling ipython_pygments_lexers-1.1.1:
+      Successfully uninstalled ipython_pygments_lexers-1.1.1
+  Attempting uninstall: httpcore
+    Found existing installation: httpcore 1.0.9
+    Uninstalling httpcore-1.0.9:
+      Successfully uninstalled httpcore-1.0.9
+  Attempting uninstall: h5py
+    Found existing installation: h5py 3.14.0
+    Uninstalling h5py-3.14.0:
+      Successfully uninstalled h5py-3.14.0
+  Attempting uninstall: grpcio
+    Found existing installation: grpcio 1.75.1
+    Uninstalling grpcio-1.75.1:
+      Successfully uninstalled grpcio-1.75.1
+  Attempting uninstall: google_pasta
+    Found existing installation: google-pasta 0.2.0
+    Uninstalling google-pasta-0.2.0:
+      Successfully uninstalled google-pasta-0.2.0
+  Attempting uninstall: gitdb
+    Found existing installation: gitdb 4.0.12
+    Uninstalling gitdb-4.0.12:
+      Successfully uninstalled gitdb-4.0.12
+  Attempting uninstall: email_validator
+    Found existing installation: email-validator 2.3.0
+    Uninstalling email-validator-2.3.0:
+      Successfully uninstalled email-validator-2.3.0
+  Attempting uninstall: dm-tree
+    Found existing installation: dm-tree 0.1.9
+    Uninstalling dm-tree-0.1.9:
+      Successfully uninstalled dm-tree-0.1.9
+  Attempting uninstall: contourpy
+    Found existing installation: contourpy 1.3.3
+    Uninstalling contourpy-1.3.3:
+      Successfully uninstalled contourpy-1.3.3
+  Attempting uninstall: coloredlogs
+    Found existing installation: coloredlogs 15.0.1
+    Uninstalling coloredlogs-15.0.1:
+      Successfully uninstalled coloredlogs-15.0.1
+  Attempting uninstall: cffi
+    Found existing installation: cffi 2.0.0
+    Uninstalling cffi-2.0.0:
+      Successfully uninstalled cffi-2.0.0
+  Attempting uninstall: bvhio
+    Found existing installation: bvhio 1.5.3
+    Uninstalling bvhio-1.5.3:
+      Successfully uninstalled bvhio-1.5.3
+  Attempting uninstall: astunparse
+    Found existing installation: astunparse 1.6.3
+    Uninstalling astunparse-1.6.3:
+      Successfully uninstalled astunparse-1.6.3
+  Attempting uninstall: anyio
+    Found existing installation: anyio 4.11.0
+    Uninstalling anyio-4.11.0:
+      Successfully uninstalled anyio-4.11.0
+  Attempting uninstall: aiosignal
+    Found existing installation: aiosignal 1.4.0
+    Uninstalling aiosignal-1.4.0:
+      Successfully uninstalled aiosignal-1.4.0
+  Attempting uninstall: tfp-nightly
+    Found existing installation: tfp-nightly 0.26.0.dev20250930
+    Uninstalling tfp-nightly-0.26.0.dev20250930:
+      Successfully uninstalled tfp-nightly-0.26.0.dev20250930
+  Attempting uninstall: tf2onnx
+    Found existing installation: tf2onnx 1.16.1
+    Uninstalling tf2onnx-1.16.1:
+      Successfully uninstalled tf2onnx-1.16.1
+  Attempting uninstall: tensorstore
+    Found existing installation: tensorstore 0.1.77
+    Uninstalling tensorstore-0.1.77:
+      Successfully uninstalled tensorstore-0.1.77
+  Attempting uninstall: tensorboard
+    Found existing installation: tensorboard 2.19.0
+    Uninstalling tensorboard-2.19.0:
+      Successfully uninstalled tensorboard-2.19.0
+  Attempting uninstall: rich
+    Found existing installation: rich 14.1.0
+    Uninstalling rich-14.1.0:
+      Successfully uninstalled rich-14.1.0
+  Attempting uninstall: PySide6-Addons
+    Found existing installation: PySide6_Addons 6.9.0
+    Uninstalling PySide6_Addons-6.9.0:
+      Successfully uninstalled PySide6_Addons-6.9.0
+  Attempting uninstall: pydantic
+    Found existing installation: pydantic 2.11.9
+    Uninstalling pydantic-2.11.9:
+      Successfully uninstalled pydantic-2.11.9
+  Attempting uninstall: onnxruntime
+    Found existing installation: onnxruntime 1.20.0
+    Uninstalling onnxruntime-1.20.0:
+      Successfully uninstalled onnxruntime-1.20.0
+  Attempting uninstall: matplotlib
+    Found existing installation: matplotlib 3.10.6
+    Uninstalling matplotlib-3.10.6:
+      Successfully uninstalled matplotlib-3.10.6
+  Attempting uninstall: jaxlib
+    Found existing installation: jaxlib 0.7.1
+    Uninstalling jaxlib-0.7.1:
+      Successfully uninstalled jaxlib-0.7.1
+  Attempting uninstall: ipython
+    Found existing installation: ipython 9.6.0
+    Uninstalling ipython-9.6.0:
+      Successfully uninstalled ipython-9.6.0
+  Attempting uninstall: httpx
+    Found existing installation: httpx 0.28.1
+    Uninstalling httpx-0.28.1:
+      Successfully uninstalled httpx-0.28.1
+  Attempting uninstall: gitpython
+    Found existing installation: GitPython 3.1.45
+    Uninstalling GitPython-3.1.45:
+      Successfully uninstalled GitPython-3.1.45
+  Attempting uninstall: dpshdl
+    Found existing installation: dpshdl 0.0.21
+    Uninstalling dpshdl-0.0.21:
+      Successfully uninstalled dpshdl-0.0.21
+  Attempting uninstall: cryptography
+    Found existing installation: cryptography 46.0.1
+    Uninstalling cryptography-46.0.1:
+      Successfully uninstalled cryptography-46.0.1
+  Attempting uninstall: aiohttp
+    Found existing installation: aiohttp 3.12.15
+    Uninstalling aiohttp-3.12.15:
+      Successfully uninstalled aiohttp-3.12.15
+  Attempting uninstall: PySide6
+    Found existing installation: PySide6 6.9.0
+    Uninstalling PySide6-6.9.0:
+      Successfully uninstalled PySide6-6.9.0
+  Attempting uninstall: mujoco
+    Found existing installation: mujoco 3.3.6
+    Uninstalling mujoco-3.3.6:
+      Successfully uninstalled mujoco-3.3.6
+  Attempting uninstall: mediapy
+    Found existing installation: mediapy 1.2.4
+    Uninstalling mediapy-1.2.4:
+      Successfully uninstalled mediapy-1.2.4
+  Attempting uninstall: kscale
+    Found existing installation: kscale 0.3.18
+    Uninstalling kscale-0.3.18:
+      Successfully uninstalled kscale-0.3.18
+  Attempting uninstall: kinfer
+    Found existing installation: kinfer 0.5.6
+    Uninstalling kinfer-0.5.6:
+      Successfully uninstalled kinfer-0.5.6
+  Attempting uninstall: keras
+    Found existing installation: keras 3.11.3
+    Uninstalling keras-3.11.3:
+      Successfully uninstalled keras-3.11.3
+  Attempting uninstall: jax
+    Found existing installation: jax 0.7.1
+    Uninstalling jax-0.7.1:
+      Successfully uninstalled jax-0.7.1
+  Attempting uninstall: tensorflow
+    Found existing installation: tensorflow 2.19.1
+    Uninstalling tensorflow-2.19.1:
+      Successfully uninstalled tensorflow-2.19.1
+  Attempting uninstall: orbax-checkpoint
+    Found existing installation: orbax-checkpoint 0.11.25
+    Uninstalling orbax-checkpoint-0.11.25:
+      Successfully uninstalled orbax-checkpoint-0.11.25
+  Attempting uninstall: mujoco-scenes
+    Found existing installation: mujoco-scenes 0.0.16
+    Uninstalling mujoco-scenes-0.0.16:
+      Successfully uninstalled mujoco-scenes-0.0.16
+  Attempting uninstall: mujoco-mjx
+    Found existing installation: mujoco-mjx 3.3.6
+    Uninstalling mujoco-mjx-3.3.6:
+      Successfully uninstalled mujoco-mjx-3.3.6
+  Attempting uninstall: kmv
+    Found existing installation: kmv 0.3.21
+    Uninstalling kmv-0.3.21:
+      Successfully uninstalled kmv-0.3.21
+  Attempting uninstall: equinox
+    Found existing installation: equinox 0.13.0
+    Uninstalling equinox-0.13.0:
+      Successfully uninstalled equinox-0.13.0
+  Attempting uninstall: chex
+    Found existing installation: chex 0.1.91
+    Uninstalling chex-0.1.91:
+      Successfully uninstalled chex-0.1.91
+  Attempting uninstall: optax
+    Found existing installation: optax 0.2.6
+    Uninstalling optax-0.2.6:
+      Successfully uninstalled optax-0.2.6
+  Attempting uninstall: distrax
+    Found existing installation: distrax 0.1.7
+    Uninstalling distrax-0.1.7:
+      Successfully uninstalled distrax-0.1.7
+  Attempting uninstall: xax
+    Found existing installation: xax 0.3.5
+    Uninstalling xax-0.3.5:
+      Successfully uninstalled xax-0.3.5
+  Attempting uninstall: ksim
+    Found existing installation: ksim 0.1.95
+    Uninstalling ksim-0.1.95:
+      Successfully uninstalled ksim-0.1.95
+
+Successfully installed MarkupSafe-3.0.3 PySide6-6.9.0 PySide6-Addons-6.9.0 PySide6-Essentials-6.9.0 PyYAML-6.0.3 absl-py-2.3.1 aiofiles-25.1.0 aiohappyeyeballs-2.6.1 aiohttp-3.13.2 aiosignal-1.4.0 annotated-types-0.7.0 antlr4-python3-runtime-4.9.3 anyio-4.11.0 asttokens-3.0.0 astunparse-1.6.3 async-lru-2.0.5 attrs-25.4.0 bvhio-1.5.4 certifi-2025.10.5 cffi-2.0.0 charset_normalizer-3.4.4 chex-0.1.91 click-8.3.0 cloudpickle-3.1.1 coloredlogs-15.0.1 colorlogging-0.0.2 contourpy-1.3.3 cryptography-46.0.3 cycler-0.12.1 decorator-5.2.1 distrax-0.1.7 dm-tree-0.1.9 dnspython-2.8.0 dpshdl-0.0.21 email_validator-2.3.0 equinox-0.13.0 etils-1.13.0 executing-2.2.1 flatbuffers-25.9.23 fonttools-4.60.1 frozenlist-1.8.0 fsspec-2025.10.0 gast-0.6.0 gitdb-4.0.12 gitpython-3.1.45 glfw-2.10.0 google_pasta-0.2.0 grpcio-1.76.0 h11-0.16.0 h5py-3.15.1 httpcore-1.0.9 httpx-0.28.1 humanfriendly-10.0 humanize-4.14.0 idna-3.11 importlib-resources-6.5.2 ipython-9.6.0 ipython-pygments-lexers-1.1.1 jax-0.7.1 jaxlib-0.7.1 jaxtyping-0.3.3 jedi-0.19.2 keras-3.12.0 kinfer-0.6.1 kiwisolver-1.4.9 kmv-0.3.22 kscale-0.3.18 ksim-0.1.95 libclang-18.1.1 markdown-3.9 markdown-it-py-4.0.0 matplotlib-3.10.7 matplotlib-inline-0.2.1 mdurl-0.1.2 mediapy-1.2.4 ml_dtypes-0.5.3 mpmath-1.3.0 msgpack-1.1.2 mujoco-3.3.7 mujoco-mjx-3.3.7 mujoco-scenes-0.0.17 multidict-6.7.0 namex-0.1.0 nest_asyncio-1.6.0 numpy-1.26.4 omegaconf-2.3.0 onnx-1.17.0 onnxruntime-1.20.0 opt_einsum-3.4.0 optax-0.2.6 optree-0.17.0 orbax-checkpoint-0.11.26 packaging-25.0 parso-0.8.5 pexpect-4.9.0 pillow-12.0.0 prompt_toolkit-3.0.52 propcache-0.4.1 protobuf-3.20.3 psutil-7.1.2 ptyprocess-0.7.0 pure-eval-0.2.3 pycparser-2.23 pydantic-2.12.3 pydantic-core-2.41.4 pyglm-2.8.2 pygments-2.19.2 pyjwt-2.10.1 pyopengl-3.1.10 pyparsing-3.2.5 pyqtgraph-0.13.7 python-dateutil-2.9.0.post0 requests-2.32.5 rich-14.2.0 scipy-1.16.3 setuptools-80.9.0 shiboken6-6.9.0 simplejson-3.20.2 six-1.17.0 smmap-5.0.2 sniffio-1.3.1 spatial-transform-1.3.3 stack_data-0.6.3 sympy-1.14.0 tabulate-0.9.0 tensorboard-2.19.0 tensorboard-data-server-0.7.2 tensorflow-2.19.1 tensorflow-io-gcs-filesystem-0.37.1 tensorstore-0.1.78 termcolor-3.2.0 tf2onnx-1.16.1 tfp-nightly-0.26.0.dev20251031 toolz-1.1.0 tqdm-4.67.1 traitlets-5.14.3 trimesh-4.9.0 typing-inspection-0.4.2 typing_extensions-4.15.0 urllib3-2.5.0 wadler-lindig-0.1.7 warp-lang-1.9.1 wcwidth-0.2.14 werkzeug-3.1.3 wheel-0.45.1 wrapt-2.0.0 xax-0.3.5 yarl-1.22.0 zipp-3.23.0
+Requirement already satisfied: jax[cuda12] in ./ksim-env/lib/python3.11/site-packages (0.7.1)
+Requirement already satisfied: jaxlib<=0.7.1,>=0.7.1 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (0.7.1)
+Requirement already satisfied: ml_dtypes>=0.5.0 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (0.5.3)
+Requirement already satisfied: numpy>=1.26 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (1.26.4)
+Requirement already satisfied: opt_einsum in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (3.4.0)
+Requirement already satisfied: scipy>=1.12 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (1.16.3)
 Requirement already satisfied: jax-cuda12-plugin<=0.7.1,>=0.7.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (0.7.1)
 Requirement already satisfied: jax-cuda12-pjrt==0.7.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin<=0.7.1,>=0.7.1->jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (0.7.1)
 Requirement already satisfied: nvidia-cublas-cu12>=12.1.3.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.1.4)
@@ -173,9 +1122,9 @@ Requirement already satisfied: nvidia-cuda-nvrtc-cu12>=12.1.55 in /cluster/home/
 Requirement already satisfied: nvidia-nvshmem-cu12>=3.2.5 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (3.4.5)
 Installed dependencies:
 absl-py==2.3.1
-aiofiles==24.1.0
+aiofiles==25.1.0
 aiohappyeyeballs==2.6.1
-aiohttp==3.12.15
+aiohttp==3.13.2
 aiosignal==1.4.0
 annotated-types==0.7.0
 antlr4-python3-runtime==4.9.3
@@ -186,15 +1135,15 @@ arrow==1.3.0
 asttokens==3.0.0
 astunparse==1.6.3
 async-lru==2.0.5
-attrs==25.3.0
+attrs==25.4.0
 babel==2.17.0
 beautifulsoup4==4.14.2
 bleach==6.2.0
-bvhio==1.5.3
-certifi==2025.8.3
+bvhio==1.5.4
+certifi==2025.10.5
 cffi==2.0.0
 cfgv==3.4.0
-charset-normalizer==3.4.3
+charset-normalizer==3.4.4
 chex==0.1.91
 click==8.3.0
 cloudpickle==3.1.1
@@ -202,7 +1151,7 @@ coloredlogs==15.0.1
 colorlogging==0.0.2
 comm==0.2.3
 contourpy==1.3.3
-cryptography==46.0.1
+cryptography==46.0.3
 cycler==0.12.1
 debugpy==1.8.17
 decorator==5.2.1
@@ -221,22 +1170,22 @@ filelock==3.19.1
 flatbuffers==25.9.23
 fonttools==4.60.1
 fqdn==1.5.1
-frozenlist==1.7.0
-fsspec==2025.9.0
+frozenlist==1.8.0
+fsspec==2025.10.0
 gast==0.6.0
 gitdb==4.0.12
 GitPython==3.1.45
 glfw==2.10.0
 google-pasta==0.2.0
-grpcio==1.75.1
+grpcio==1.76.0
 h11==0.16.0
-h5py==3.14.0
+h5py==3.15.1
 httpcore==1.0.9
 httpx==0.28.1
 humanfriendly==10.0
-humanize==4.13.0
+humanize==4.14.0
 identify==2.6.14
-idna==3.10
+idna==3.11
 importlib_resources==6.5.2
 ipykernel==6.30.1
 ipython==9.6.0
@@ -247,7 +1196,7 @@ jax==0.7.1
 jax-cuda12-pjrt==0.7.1
 jax-cuda12-plugin==0.7.1
 jaxlib==0.7.1
-jaxtyping==0.3.2
+jaxtyping==0.3.3
 jedi==0.19.2
 Jinja2==3.1.6
 json5==0.12.1
@@ -266,10 +1215,10 @@ jupyterlab==4.4.9
 jupyterlab_pygments==0.3.0
 jupyterlab_server==2.27.3
 jupyterlab_widgets==3.0.15
-keras==3.11.3
-kinfer==0.5.6
+keras==3.12.0
+kinfer==0.6.1
 kiwisolver==1.4.9
-kmv==0.3.21
+kmv==0.3.22
 kscale==0.3.18
 ksim==0.1.95
 lark==1.3.0
@@ -277,18 +1226,18 @@ libclang==18.1.1
 Markdown==3.9
 markdown-it-py==4.0.0
 MarkupSafe==3.0.3
-matplotlib==3.10.6
-matplotlib-inline==0.1.7
+matplotlib==3.10.7
+matplotlib-inline==0.2.1
 mdurl==0.1.2
 mediapy==1.2.4
 mistune==3.1.4
 ml_dtypes==0.5.3
 mpmath==1.3.0
-msgpack==1.1.1
-mujoco==3.3.6
-mujoco-mjx==3.3.6
-mujoco-scenes==0.0.16
-multidict==6.6.4
+msgpack==1.1.2
+mujoco==3.3.7
+mujoco-mjx==3.3.7
+mujoco-scenes==0.0.17
+multidict==6.7.0
 namex==0.1.0
 nbclient==0.10.2
 nbconvert==7.16.6
@@ -316,25 +1265,25 @@ onnxruntime==1.20.0
 opt_einsum==3.4.0
 optax==0.2.6
 optree==0.17.0
-orbax-checkpoint==0.11.25
+orbax-checkpoint==0.11.26
 overrides==7.7.0
 packaging==25.0
 pandocfilters==1.5.1
 parso==0.8.5
 pexpect==4.9.0
-pillow==11.3.0
+pillow==12.0.0
 platformdirs==4.4.0
 pre_commit==4.3.0
 prometheus_client==0.23.1
 prompt_toolkit==3.0.52
-propcache==0.3.2
+propcache==0.4.1
 protobuf==3.20.3
-psutil==7.1.0
+psutil==7.1.2
 ptyprocess==0.7.0
 pure_eval==0.2.3
 pycparser==2.23
-pydantic==2.11.9
-pydantic_core==2.33.2
+pydantic==2.12.3
+pydantic_core==2.41.4
 pyglm==2.8.2
 Pygments==2.19.2
 PyJWT==2.10.1
@@ -353,9 +1302,9 @@ requests==2.32.5
 rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 rfc3987-syntax==1.1.0
-rich==14.1.0
+rich==14.2.0
 rpds-py==0.27.1
-scipy==1.16.2
+scipy==1.16.3
 Send2Trash==1.8.3
 shiboken6==6.9.0
 simplejson==3.20.2
@@ -363,7 +1312,7 @@ six==1.17.0
 smmap==5.0.2
 sniffio==1.3.1
 soupsieve==2.8
-spatial-transform==1.3.1
+spatial-transform==1.3.3
 stack-data==0.6.3
 sympy==1.14.0
 tabulate==0.9.0
@@ -371,19 +1320,19 @@ tensorboard==2.19.0
 tensorboard-data-server==0.7.2
 tensorflow==2.19.1
 tensorflow-io-gcs-filesystem==0.37.1
-tensorstore==0.1.77
-termcolor==3.1.0
+tensorstore==0.1.78
+termcolor==3.2.0
 terminado==0.18.1
 tf2onnx==1.16.1
-tfp-nightly==0.26.0.dev20250930
+tfp-nightly==0.26.0.dev20251031
 tinycss2==1.4.0
-toolz==1.0.0
+toolz==1.1.0
 tornado==6.5.2
 tqdm==4.67.1
 traitlets==5.14.3
-trimesh==4.8.3
+trimesh==4.9.0
 types-python-dateutil==2.9.0.20250822
-typing-inspection==0.4.1
+typing-inspection==0.4.2
 typing_extensions==4.15.0
 uri-template==1.3.0
 urllib3==2.5.0
@@ -396,23 +1345,30 @@ webencodings==0.5.1
 websocket-client==1.8.0
 Werkzeug==3.1.3
 widgetsnbextension==4.0.14
-wrapt==1.17.3
+wrapt==2.0.0
 xax==0.3.5
-yarl==1.20.1
+yarl==1.22.0
 zipp==3.23.0
 Checking JAX backend:
 gpu
 Set MUJOCO_GL=osmesa for headless rendering
-  [1;36mINFO[0m  [90m2025-10-31 16:22:36[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX logging level to INFO
-  [1;36mINFO[0m  [90m2025-10-31 16:22:36[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX compilation cache directory to /cluster/home/sebasrb/.cache/jax/jaxcache
-  [1;36mINFO[0m  [90m2025-10-31 16:22:36[0m [[1;34mxax.task.mixins.compile[0m] Configuring JAX compilation cache parameters
- [1;32mSTATUS[0m [90m2025-10-31 16:22:36[0m [[1;34mxax.task.mixins.artifacts[0m] /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_8
-  [1;36mINFO[0m  [90m2025-10-31 16:22:37[0m [[1;34mjax._src.xla_bridge[0m] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
- [1;32mSTATUS[0m [90m2025-10-31 16:22:39[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/zbot-policy-walking/train.py
+  [1;36mINFO[0m  [90m2025-10-31 16:53:20[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX logging level to INFO
+  [1;36mINFO[0m  [90m2025-10-31 16:53:20[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX compilation cache directory to /cluster/home/sebasrb/.cache/jax/jaxcache
+  [1;36mINFO[0m  [90m2025-10-31 16:53:20[0m [[1;34mxax.task.mixins.compile[0m] Configuring JAX compilation cache parameters
+ [1;32mSTATUS[0m [90m2025-10-31 16:53:20[0m [[1;34mxax.task.mixins.artifacts[0m] /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_9
+  [1;36mINFO[0m  [90m2025-10-31 16:53:20[0m [[1;34mjax._src.xla_bridge[0m] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+ [1;32mSTATUS[0m [90m2025-10-31 16:53:21[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/zbot-policy-walking/train.py
 {"status": {"message": "/cluster/work/sebasrb/zbot-policy-walking/train.py", "filename": "train.py", "lineno": 714}}
- [1;32mSTATUS[0m [90m2025-10-31 16:22:39[0m [[1;34mxax.task.mixins.train[0m] zbot_walking_task
+ [1;32mSTATUS[0m [90m2025-10-31 16:53:21[0m [[1;34mxax.task.mixins.train[0m] zbot_walking_task
 {"status": {"message": "zbot_walking_task", "filename": "train.py", "lineno": 715}}
- [1;32mSTATUS[0m [90m2025-10-31 16:22:39[0m [[1;34mxax.task.mixins.train[0m] JAX devices: [CudaDevice(id=0)]
+ [1;32mSTATUS[0m [90m2025-10-31 16:53:21[0m [[1;34mxax.task.mixins.train[0m] JAX devices: [CudaDevice(id=0)]
 {"status": {"message": "JAX devices: [CudaDevice(id=0)]", "filename": "train.py", "lineno": 716}}
-  [1;36mINFO[0m  [90m2025-10-31 16:22:41[0m [[1;34mxax.task.mixins.train[0m] Loading checkpoint from zbot_walking_task/run_6/checkpoints/ckpt.bin
-Job finished
+  [1;36mINFO[0m  [90m2025-10-31 16:53:23[0m [[1;34mxax.task.mixins.train[0m] Starting a new training run
+  [1;35mPING[0m  [90m2025-10-31 16:53:27[0m [[1;34mksim.task.rl[0m] Model size: 1,073,009 parameters
+{"ping": {"message": "Model size: 1,073,009 parameters", "filename": "rl.py", "lineno": 2078}}
+  [1;35mPING[0m  [90m2025-10-31 16:53:27[0m [[1;34mksim.task.rl[0m] Optimizer size: 2,146,018 parameters
+{"ping": {"message": "Optimizer size: 2,146,018 parameters", "filename": "rl.py", "lineno": 2079}}
+  [1;36mINFO[0m  [90m2025-10-31 16:53:27[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
+[1;33mWARNING[0m [90m2025-10-31 16:53:31[0m [[1;34mksim.engine[0m] `max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`
+{"ping": {"message": "`max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`", "filename": "engine.py", "lineno": 358}}
+  [1;36mINFO[0m  [90m2025-10-31 16:53:36[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
