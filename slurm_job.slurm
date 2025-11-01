@@ -52,12 +52,12 @@ export MUJOCO_GL=osmesa
 echo "Set MUJOCO_GL=osmesa for headless rendering"
 
 # Run training (start from scratch for 16-joint zeroth robot)
-# python -m train
+python -m train
 
 
 
 # Example: to load pretrained checkpoint and run in view mode, uncomment:
-python -m train load_from_ckpt_path=zbot_walking_task/run_9/checkpoints/ckpt.bin # run_mode=view
+# python -m train load_from_ckpt_path=zbot_walking_task/run_9/checkpoints/ckpt.bin # run_mode=view
 
 # Find the run directory that was created/used
 RUN_DIR=$(ls -td zbot_walking_task/run_* 2>/dev/null | head -1)
