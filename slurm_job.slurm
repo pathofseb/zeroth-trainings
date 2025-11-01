@@ -7,8 +7,8 @@
 #SBATCH --mem=40GB
 #SBATCH --nodes=1
 #SBATCH --constraint="(a100|h100|h200)&(gpu40g|gpu80g)"
-#SBATCH --output=slurm_outputs/ksim_output.txt
-#SBATCH --error=slurm_outputs/ksim_error.txt
+#SBATCH --output=slurm_outputs/ksim_output_%j.txt
+#SBATCH --error=slurm_outputs/ksim_error_%j.txt
 #SBATCH --mail-user=sebasrb@ntnu.no
 #SBATCH --mail-type=ALL
 
@@ -58,6 +58,26 @@ echo "Set MUJOCO_GL=osmesa for headless rendering"
 
 # Example: to load pretrained checkpoint and run in view mode, uncomment:
 python -m train load_from_ckpt_path=zbot_walking_task/run_9/checkpoints/ckpt.bin # run_mode=view
+
+# Find the run directory that was created/used
+RUN_DIR=$(ls -td zbot_walking_task/run_* 2>/dev/null | head -1)
+if [ -n "$RUN_DIR" ]; then
+  RUN_NUM=$(basename "$RUN_DIR")
+  echo "Training used directory: $RUN_DIR ($RUN_NUM)"
+
+  # Rename SLURM output files to use run number instead of job ID
+  if [ -f "slurm_outputs/ksim_output_${SLURM_JOB_ID}.txt" ]; then
+    mv "slurm_outputs/ksim_output_${SLURM_JOB_ID}.txt" "slurm_outputs/ksim_output_${RUN_NUM}.txt"
+    echo "Renamed output to slurm_outputs/ksim_output_${RUN_NUM}.txt"
+  fi
+
+  if [ -f "slurm_outputs/ksim_error_${SLURM_JOB_ID}.txt" ]; then
+    mv "slurm_outputs/ksim_error_${SLURM_JOB_ID}.txt" "slurm_outputs/ksim_error_${RUN_NUM}.txt"
+    echo "Renamed error to slurm_outputs/ksim_error_${RUN_NUM}.txt"
+  fi
+else
+  echo "Warning: Could not find run directory"
+fi
 
 conda deactivate
 
