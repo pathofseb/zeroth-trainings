@@ -2,3 +2,1442 @@ Running from directory: /cluster/work/sebasrb/zbot-policy-walking
 Job name: ksim-zbot-train
 Job ID: 23195898
 Node(s): idun-07-05
+Collecting ksim==0.1.95 (from -r requirements.txt (line 4))
+  Using cached ksim-0.1.95-py3-none-any.whl
+Collecting xax==0.3.5 (from -r requirements.txt (line 5))
+  Using cached xax-0.3.5-py3-none-any.whl.metadata (1.2 kB)
+Collecting mujoco-scenes (from -r requirements.txt (line 6))
+  Using cached mujoco_scenes-0.0.17-py3-none-any.whl.metadata (1.5 kB)
+Collecting warp-lang (from -r requirements.txt (line 7))
+  Using cached warp_lang-1.9.1-py3-none-manylinux_2_28_x86_64.whl.metadata (32 kB)
+Collecting kinfer[jax] (from -r requirements.txt (line 10))
+  Using cached kinfer-0.6.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (2.1 kB)
+Collecting numpy (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting matplotlib (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting tqdm (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting tabulate (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+Collecting kscale (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached kscale-0.3.18-py3-none-any.whl.metadata (2.4 kB)
+Collecting distrax (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached distrax-0.1.7-py3-none-any.whl.metadata (14 kB)
+Collecting jax (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached jax-0.8.0-py3-none-any.whl.metadata (13 kB)
+Collecting mediapy (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached mediapy-1.2.4-py3-none-any.whl.metadata (4.8 kB)
+Collecting optax (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached optax-0.2.6-py3-none-any.whl.metadata (7.6 kB)
+Collecting scipy (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+Collecting mujoco (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached mujoco-3.3.7-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+Collecting mujoco-mjx (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached mujoco_mjx-3.3.7-py3-none-any.whl.metadata (3.4 kB)
+Collecting kmv (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached kmv-0.3.22-py3-none-any.whl
+Collecting bvhio (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached bvhio-1.5.4-py3-none-any.whl.metadata (20 kB)
+Collecting pyglm (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pyglm-2.8.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+Collecting attrs (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+Collecting chex (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached chex-0.1.91-py3-none-any.whl.metadata (18 kB)
+Collecting dpshdl (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached dpshdl-0.0.21-py3-none-any.whl.metadata (4.2 kB)
+Collecting equinox (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached equinox-0.13.2-py3-none-any.whl.metadata (19 kB)
+Collecting importlib-resources (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached importlib_resources-6.5.2-py3-none-any.whl.metadata (3.9 kB)
+Collecting jaxtyping (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached jaxtyping-0.3.3-py3-none-any.whl.metadata (7.8 kB)
+Collecting orbax-checkpoint (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached orbax_checkpoint-0.11.26-py3-none-any.whl.metadata (2.4 kB)
+Collecting pillow (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+Collecting omegaconf (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached omegaconf-2.3.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting gitpython (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached gitpython-3.1.45-py3-none-any.whl.metadata (13 kB)
+Collecting tensorboard (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached tensorboard-2.20.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting psutil (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+Collecting requests (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting etils (from mujoco-scenes->-r requirements.txt (line 6))
+  Using cached etils-1.13.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting onnx (from kinfer[jax]->-r requirements.txt (line 10))
+  Using cached onnx-1.19.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (7.0 kB)
+Collecting onnxruntime==1.20.0 (from kinfer[jax]->-r requirements.txt (line 10))
+  Using cached onnxruntime-1.20.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (4.4 kB)
+Collecting tensorflow (from kinfer[jax]->-r requirements.txt (line 10))
+  Using cached tensorflow-2.20.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.5 kB)
+Collecting tf2onnx>=1.16.0 (from kinfer[jax]->-r requirements.txt (line 10))
+  Using cached tf2onnx-1.16.1-py3-none-any.whl.metadata (1.3 kB)
+Collecting numpy (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting coloredlogs (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached coloredlogs-15.0.1-py2.py3-none-any.whl.metadata (12 kB)
+Collecting flatbuffers (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached flatbuffers-25.9.23-py2.py3-none-any.whl.metadata (875 bytes)
+Collecting packaging (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting protobuf (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+Collecting sympy (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting six (from tf2onnx>=1.16.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting protobuf (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached protobuf-3.20.3-py2.py3-none-any.whl.metadata (720 bytes)
+INFO: pip is looking at multiple versions of onnx to determine which version is compatible with other requirements. This could take a while.
+Collecting onnx (from kinfer[jax]->-r requirements.txt (line 10))
+  Using cached onnx-1.19.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (7.0 kB)
+  Using cached onnx-1.18.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.9 kB)
+  Using cached onnx-1.17.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (16 kB)
+Collecting spatial-transform==1.3.3 (from bvhio->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached spatial_transform-1.3.3-py3-none-any.whl.metadata (8.7 kB)
+Collecting absl-py>=2.3.1 (from chex->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached absl_py-2.3.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting typing_extensions>=4.15.0 (from chex->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting jaxlib>=0.7.0 (from chex->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached jaxlib-0.8.0-cp311-cp311-manylinux_2_27_x86_64.whl.metadata (1.3 kB)
+Collecting toolz>=1.0.0 (from chex->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached toolz-1.1.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting ml_dtypes>=0.5.0 (from jax->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+INFO: pip is looking at multiple versions of jax to determine which version is compatible with other requirements. This could take a while.
+Collecting jax (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached jax-0.7.2-py3-none-any.whl.metadata (13 kB)
+Collecting jaxlib>=0.7.0 (from chex->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached jaxlib-0.7.2-cp311-cp311-manylinux_2_27_x86_64.whl.metadata (1.3 kB)
+Collecting jax (from ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached jax-0.7.1-py3-none-any.whl.metadata (13 kB)
+Collecting jaxlib>=0.7.0 (from chex->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached jaxlib-0.7.1-cp311-cp311-manylinux_2_27_x86_64.whl.metadata (1.3 kB)
+Collecting opt_einsum (from jax->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting humanfriendly>=9.1 (from coloredlogs->onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached humanfriendly-10.0-py2.py3-none-any.whl.metadata (9.2 kB)
+Collecting tfp-nightly (from distrax->ksim==0.1.95->-r requirements.txt (line 4))
+  Downloading tfp_nightly-0.26.0.dev20251101-py2.py3-none-any.whl.metadata (13 kB)
+Collecting wadler-lindig>=0.1.0 (from equinox->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached wadler_lindig-0.1.7-py3-none-any.whl.metadata (17 kB)
+Collecting equinox (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached equinox-0.13.1-py3-none-any.whl.metadata (19 kB)
+  Using cached equinox-0.13.0-py3-none-any.whl.metadata (18 kB)
+Collecting gitdb<5,>=4.0.1 (from gitpython->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached smmap-5.0.2-py3-none-any.whl.metadata (4.3 kB)
+Collecting PySide6==6.9.0 (from kmv->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached PySide6-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting pyqtgraph (from kmv->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pyqtgraph-0.13.7-py3-none-any.whl.metadata (1.3 kB)
+Collecting colorlogging (from kmv->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached colorlogging-0.0.2-py3-none-any.whl.metadata (2.4 kB)
+Collecting shiboken6==6.9.0 (from PySide6==6.9.0->kmv->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached shiboken6-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting PySide6-Essentials==6.9.0 (from PySide6==6.9.0->kmv->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached PySide6_Essentials-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (3.9 kB)
+Collecting PySide6-Addons==6.9.0 (from PySide6==6.9.0->kmv->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached PySide6_Addons-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (4.2 kB)
+Collecting email_validator (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached email_validator-2.3.0-py3-none-any.whl.metadata (26 kB)
+Collecting aiohttp (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached aiohttp-3.13.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+Collecting cryptography (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+Collecting httpx (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting pydantic (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pydantic-2.12.3-py3-none-any.whl.metadata (87 kB)
+Collecting pyjwt (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting yarl (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (75 kB)
+Collecting aiofiles (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached aiofiles-25.1.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting click (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting async-lru (from kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached async_lru-2.0.5-py3-none-any.whl.metadata (4.5 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+Collecting propcache>=0.2.0 (from aiohttp->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+Collecting idna>=2.0 (from yarl->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting cffi>=2.0.0 (from cryptography->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+Collecting dnspython>=2.0.0 (from email_validator->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting anyio (from httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached anyio-4.11.0-py3-none-any.whl.metadata (4.1 kB)
+Collecting certifi (from httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting sniffio>=1.1 (from anyio->httpx->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting contourpy>=1.0.1 (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+Collecting pyparsing>=3 (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+Collecting python-dateutil>=2.7 (from matplotlib->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting ipython (from mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached ipython-9.6.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting decorator (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting ipython-pygments-lexers (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached ipython_pygments_lexers-1.1.1-py3-none-any.whl.metadata (1.1 kB)
+Collecting jedi>=0.16 (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached jedi-0.19.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting matplotlib-inline (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached matplotlib_inline-0.2.1-py3-none-any.whl.metadata (2.3 kB)
+Collecting pexpect>4.3 (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting prompt_toolkit<3.1.0,>=3.0.41 (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+Collecting pygments>=2.4.0 (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting stack_data (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+Collecting traitlets>=5.13.0 (from ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+Collecting wcwidth (from prompt_toolkit<3.1.0,>=3.0.41->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+Collecting parso<0.9.0,>=0.8.4 (from jedi>=0.16->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached parso-0.8.5-py2.py3-none-any.whl.metadata (8.3 kB)
+Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting glfw (from mujoco->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached glfw-2.10.0-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38.p39.p310.p311.p312.p313-none-manylinux_2_28_x86_64.whl.metadata (5.4 kB)
+Collecting pyopengl (from mujoco->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pyopengl-3.1.10-py3-none-any.whl.metadata (3.3 kB)
+Collecting fsspec (from etils[epath]->mujoco->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached fsspec-2025.10.0-py3-none-any.whl.metadata (10 kB)
+Collecting zipp (from etils[epath]->mujoco->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+Collecting trimesh (from mujoco-mjx->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached trimesh-4.9.0-py3-none-any.whl.metadata (18 kB)
+Collecting antlr4-python3-runtime==4.9.* (from omegaconf->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached antlr4_python3_runtime-4.9.3-py3-none-any.whl
+Collecting PyYAML>=5.1.0 (from omegaconf->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting msgpack (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+Collecting tensorstore>=0.1.71 (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached tensorstore-0.1.78-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (21 kB)
+Collecting nest_asyncio (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting humanize (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached humanize-4.14.0-py3-none-any.whl.metadata (7.8 kB)
+Collecting simplejson>=3.16.0 (from orbax-checkpoint->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached simplejson-3.20.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.2 kB)
+Collecting annotated-types>=0.6.0 (from pydantic->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.41.4 (from pydantic->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pydantic_core-2.41.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+Collecting typing-inspection>=0.4.2 (from pydantic->kscale->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting charset_normalizer<4,>=2 (from requests->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting executing>=1.2.0 (from stack_data->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+{"state": {"num_steps": 567, "num_samples": 307200000, "start_time_s": 1761926016.0, "elapsed_time_s": 53517.875, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 30.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 97.1, "child_percent": 0.0}, "mem": {"percent": 4.784510064856433, "shared": 169738240, "child_percent": 0.21523508394287025, "rss/cur": 6436298752, "rss/total": 8173551616, "vms/cur": 49188880384, "vms/total": 64755777536}, "train": {"advantages": 0.016822172328829765, "grad_norm": 16.509746551513672, "loss_kl": 0.00010116399789694697, "loss_policy": 0.04447474330663681, "loss_value": 5.666568176820874e-05, "off_policy_log_probs": 1.4590611457824707, "off_policy_values": -0.14810091257095337, "on_policy_log_probs": 1.4653840065002441, "on_policy_values": -0.14848047494888306, "value_targets": -0.1485127955675125}, "reward": {"ankle_knee_penalty": -6.765116609130928e-07, "arm_pose_penalty": -0.42226967215538025, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.2762309842837567e-07, "feet_too_close_penalty": -0.16356079280376434, "naive_forward_orientation_reward": 0.13844269514083862, "naive_forward_reward": 0.7960957288742065, "reachability_penalty": -1.380059003829956, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.049146488308906555, "straight_leg_penalty": -0.06869570910930634, "total": -0.9017794728279114, "upright_reward": 0.606199324131012, "y_linear_velocity_penalty": -0.45707806944847107}, "termination": {"episode_length": 0.3980015218257904, "mean_terminations": 4.623046875, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.017259890922919994, "samples/second": 9355.421981530804, "dt": 146.84208512306213}}
+{"state": {"num_steps": 568, "num_samples": 307609600, "start_time_s": 1761926016.0, "elapsed_time_s": 53563.39453125, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 45.0, "util/0": 99.0}, "cpu": {"child_procs": 6, "percent": 94.6, "child_percent": 0.0}, "mem": {"percent": 4.589781824840557, "shared": 169439232, "child_percent": 0.21520514324027948, "rss/cur": 6174343168, "rss/total": 7911354368, "vms/cur": 48926994432, "vms/total": 64493891584}, "train": {"advantages": -0.04143723100423813, "grad_norm": 17.477874755859375, "loss_kl": 9.543792839394882e-05, "loss_policy": 0.09899313747882843, "loss_value": 6.389290501829237e-05, "off_policy_log_probs": 1.4550725221633911, "off_policy_values": -0.1503605842590332, "on_policy_log_probs": 1.461037278175354, "on_policy_values": -0.1479770392179489, "value_targets": -0.15179623663425446}, "reward": {"ankle_knee_penalty": -6.8012491283298e-07, "arm_pose_penalty": -0.4309014081954956, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.2376169656345155e-07, "feet_too_close_penalty": -0.1644616723060608, "naive_forward_orientation_reward": 0.1385834813117981, "naive_forward_reward": 0.7963529825210571, "reachability_penalty": -1.3955925703048706, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.049310311675071716, "straight_leg_penalty": -0.06934527307748795, "total": -0.9297749996185303, "upright_reward": 0.6063238978385925, "y_linear_velocity_penalty": -0.46004438400268555}, "termination": {"episode_length": 0.39846593141555786, "mean_terminations": 4.608154296875, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.017266517307193814, "samples/second": 9354.98080796796, "dt": 45.330644845962524}}
+  [1;36mINFO[0m  [90m2025-11-01 15:19:19[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_13/checkpoints/ckpt.568.bin
+Collecting asttokens>=2.1.0 (from stack_data->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached asttokens-3.0.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting pure-eval (from stack_data->ipython->mediapy->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy->onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting grpcio>=1.48.2 (from tensorboard->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached grpcio-1.76.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+Collecting markdown>=2.6.8 (from tensorboard->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached markdown-3.9-py3-none-any.whl.metadata (5.1 kB)
+Collecting setuptools>=41.0.0 (from tensorboard->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+Collecting werkzeug>=1.0.1 (from tensorboard->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting MarkupSafe>=2.1.1 (from werkzeug>=1.0.1->tensorboard->xax==0.3.5->-r requirements.txt (line 5))
+  Using cached markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting astunparse>=1.6.0 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached gast-0.6.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting google_pasta>=0.1.1 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+Collecting libclang>=13.0.0 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl.metadata (5.2 kB)
+INFO: pip is looking at multiple versions of tensorflow to determine which version is compatible with other requirements. This could take a while.
+Collecting tensorflow (from kinfer[jax]->-r requirements.txt (line 10))
+  Using cached tensorflow-2.19.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting termcolor>=1.1.0 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached termcolor-3.2.0-py3-none-any.whl.metadata (6.4 kB)
+Collecting wrapt>=1.11.0 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.8 kB)
+Collecting tensorboard (from xax==0.3.5->-r requirements.txt (line 5))
+  Using cached tensorboard-2.19.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting keras>=3.5.0 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached keras-3.12.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting h5py>=3.11.0 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting tensorflow-io-gcs-filesystem>=0.23.1 (from tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached tensorflow_io_gcs_filesystem-0.37.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (14 kB)
+Collecting wheel<1.0,>=0.23.0 (from astunparse>=1.6.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached wheel-0.45.1-py3-none-any.whl.metadata (2.3 kB)
+Collecting rich (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+Collecting namex (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+Collecting optree (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (33 kB)
+Collecting markdown-it-py>=2.2.0 (from rich->keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 10))
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting cloudpickle>=1.3 (from tfp-nightly->distrax->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached cloudpickle-3.1.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting dm-tree (from tfp-nightly->distrax->ksim==0.1.95->-r requirements.txt (line 4))
+  Using cached dm_tree-0.1.9-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.2 kB)
+Using cached xax-0.3.5-py3-none-any.whl (109 kB)
+Using cached mujoco_scenes-0.0.17-py3-none-any.whl (6.6 MB)
+Using cached warp_lang-1.9.1-py3-none-manylinux_2_28_x86_64.whl (132.0 MB)
+Using cached kinfer-0.6.1-cp311-cp311-manylinux_2_28_x86_64.whl (685 kB)
+Using cached onnxruntime-1.20.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (13.3 MB)
+Using cached numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+Using cached tf2onnx-1.16.1-py3-none-any.whl (455 kB)
+Using cached protobuf-3.20.3-py2.py3-none-any.whl (162 kB)
+Using cached flatbuffers-25.9.23-py2.py3-none-any.whl (30 kB)
+Using cached onnx-1.17.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.0 MB)
+Using cached attrs-25.4.0-py3-none-any.whl (67 kB)
+Using cached bvhio-1.5.4-py3-none-any.whl (24 kB)
+Using cached pyglm-2.8.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (12.1 MB)
+Using cached spatial_transform-1.3.3-py3-none-any.whl (20 kB)
+Using cached chex-0.1.91-py3-none-any.whl (100 kB)
+Using cached absl_py-2.3.1-py3-none-any.whl (135 kB)
+Using cached jax-0.7.1-py3-none-any.whl (2.8 MB)
+Using cached jaxlib-0.7.1-cp311-cp311-manylinux_2_27_x86_64.whl (81.1 MB)
+Using cached ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.9 MB)
+Using cached scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+Using cached toolz-1.1.0-py3-none-any.whl (58 kB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Using cached coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+Using cached humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+Using cached distrax-0.1.7-py3-none-any.whl (312 kB)
+Using cached dpshdl-0.0.21-py3-none-any.whl (27 kB)
+Using cached equinox-0.13.0-py3-none-any.whl (177 kB)
+Using cached jaxtyping-0.3.3-py3-none-any.whl (55 kB)
+Using cached wadler_lindig-0.1.7-py3-none-any.whl (20 kB)
+Using cached etils-1.13.0-py3-none-any.whl (170 kB)
+Using cached gitpython-3.1.45-py3-none-any.whl (208 kB)
+Using cached gitdb-4.0.12-py3-none-any.whl (62 kB)
+Using cached smmap-5.0.2-py3-none-any.whl (24 kB)
+Using cached importlib_resources-6.5.2-py3-none-any.whl (37 kB)
+Using cached PySide6-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl (558 kB)
+Using cached PySide6_Addons-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl (166.3 MB)
+Using cached PySide6_Essentials-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl (94.2 MB)
+Using cached shiboken6-6.9.0-cp39-abi3-manylinux_2_28_x86_64.whl (206 kB)
+Using cached colorlogging-0.0.2-py3-none-any.whl (6.0 kB)
+Using cached kscale-0.3.18-py3-none-any.whl (30 kB)
+Using cached aiofiles-25.1.0-py3-none-any.whl (14 kB)
+Using cached aiohttp-3.13.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+Using cached multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+Using cached yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (365 kB)
+Using cached aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Using cached frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+Using cached idna-3.11-py3-none-any.whl (71 kB)
+Using cached propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (210 kB)
+Using cached async_lru-2.0.5-py3-none-any.whl (6.1 kB)
+Using cached click-8.3.0-py3-none-any.whl (107 kB)
+Using cached cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+Using cached cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+Using cached email_validator-2.3.0-py3-none-any.whl (35 kB)
+Using cached dnspython-2.8.0-py3-none-any.whl (331 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached anyio-4.11.0-py3-none-any.whl (109 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached certifi-2025.10.5-py3-none-any.whl (163 kB)
+Using cached matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+Using cached contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+Using cached kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+Using cached packaging-25.0-py3-none-any.whl (66 kB)
+Using cached pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+Using cached pyparsing-3.2.5-py3-none-any.whl (113 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached mediapy-1.2.4-py3-none-any.whl (26 kB)
+Using cached ipython-9.6.0-py3-none-any.whl (616 kB)
+Using cached prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+Using cached jedi-0.19.2-py2.py3-none-any.whl (1.6 MB)
+Using cached parso-0.8.5-py2.py3-none-any.whl (106 kB)
+Using cached pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Using cached pygments-2.19.2-py3-none-any.whl (1.2 MB)
+Using cached traitlets-5.14.3-py3-none-any.whl (85 kB)
+Using cached decorator-5.2.1-py3-none-any.whl (9.2 kB)
+Using cached ipython_pygments_lexers-1.1.1-py3-none-any.whl (8.1 kB)
+Using cached matplotlib_inline-0.2.1-py3-none-any.whl (9.5 kB)
+Using cached mujoco-3.3.7-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.8 MB)
+Using cached fsspec-2025.10.0-py3-none-any.whl (200 kB)
+Using cached glfw-2.10.0-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38.p39.p310.p311.p312.p313-none-manylinux_2_28_x86_64.whl (243 kB)
+Using cached mujoco_mjx-3.3.7-py3-none-any.whl (7.0 MB)
+Using cached omegaconf-2.3.0-py3-none-any.whl (79 kB)
+Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+Using cached opt_einsum-3.4.0-py3-none-any.whl (71 kB)
+Using cached optax-0.2.6-py3-none-any.whl (367 kB)
+Using cached orbax_checkpoint-0.11.26-py3-none-any.whl (585 kB)
+Using cached simplejson-3.20.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+Using cached tensorstore-0.1.78-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (20.1 MB)
+Using cached humanize-4.14.0-py3-none-any.whl (132 kB)
+Using cached msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (426 kB)
+Using cached nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+Using cached psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (258 kB)
+Using cached pycparser-2.23-py3-none-any.whl (118 kB)
+Using cached pydantic-2.12.3-py3-none-any.whl (462 kB)
+Using cached pydantic_core-2.41.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+Using cached annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Using cached typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+Using cached PyJWT-2.10.1-py3-none-any.whl (22 kB)
+Using cached pyopengl-3.1.10-py3-none-any.whl (3.2 MB)
+Using cached pyqtgraph-0.13.7-py3-none-any.whl (1.9 MB)
+Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+Using cached charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+Using cached urllib3-2.5.0-py3-none-any.whl (129 kB)
+Using cached stack_data-0.6.3-py3-none-any.whl (24 kB)
+Using cached asttokens-3.0.0-py3-none-any.whl (26 kB)
+Using cached executing-2.2.1-py2.py3-none-any.whl (28 kB)
+Using cached pure_eval-0.2.3-py3-none-any.whl (11 kB)
+Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Using cached tabulate-0.9.0-py3-none-any.whl (35 kB)
+Using cached tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+Using cached grpcio-1.76.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.6 MB)
+Using cached markdown-3.9-py3-none-any.whl (107 kB)
+Using cached setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+Using cached werkzeug-3.1.3-py3-none-any.whl (224 kB)
+Using cached markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Using cached tensorflow-2.19.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (644.9 MB)
+Using cached tensorboard-2.19.0-py3-none-any.whl (5.5 MB)
+Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Using cached wheel-0.45.1-py3-none-any.whl (72 kB)
+Using cached gast-0.6.0-py3-none-any.whl (21 kB)
+Using cached google_pasta-0.2.0-py3-none-any.whl (57 kB)
+Using cached h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+Using cached keras-3.12.0-py3-none-any.whl (1.5 MB)
+Using cached libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl (24.5 MB)
+Using cached tensorflow_io_gcs_filesystem-0.37.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.1 MB)
+Using cached termcolor-3.2.0-py3-none-any.whl (7.7 kB)
+Using cached wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (114 kB)
+Using cached namex-0.1.0-py3-none-any.whl (5.9 kB)
+Using cached optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (402 kB)
+Using cached rich-14.2.0-py3-none-any.whl (243 kB)
+Using cached markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading tfp_nightly-0.26.0.dev20251101-py2.py3-none-any.whl (7.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 62.2 MB/s  0:00:00
+Using cached cloudpickle-3.1.1-py3-none-any.whl (20 kB)
+Using cached dm_tree-0.1.9-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (152 kB)
+Using cached tqdm-4.67.1-py3-none-any.whl (78 kB)
+Using cached trimesh-4.9.0-py3-none-any.whl (736 kB)
+Using cached wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+Using cached zipp-3.23.0-py3-none-any.whl (10 kB)
+Installing collected packages: pyopengl, pyglm, pure-eval, ptyprocess, namex, mpmath, libclang, glfw, flatbuffers, antlr4-python3-runtime, zipp, wrapt, wheel, wcwidth, wadler-lindig, urllib3, typing_extensions, traitlets, tqdm, toolz, termcolor, tensorflow-io-gcs-filesystem, tensorboard-data-server, tabulate, sympy, spatial-transform, sniffio, smmap, six, simplejson, shiboken6, setuptools, PyYAML, pyparsing, pyjwt, pygments, pycparser, psutil, protobuf, propcache, pillow, pexpect, parso, packaging, opt_einsum, numpy, nest_asyncio, multidict, msgpack, mdurl, MarkupSafe, markdown, kiwisolver, importlib-resources, idna, humanize, humanfriendly, h11, gast, fsspec, frozenlist, fonttools, executing, etils, dnspython, decorator, cycler, colorlogging, cloudpickle, click, charset_normalizer, certifi, attrs, async-lru, asttokens, annotated-types, aiohappyeyeballs, aiofiles, absl-py, yarl, werkzeug, warp-lang, typing-inspection, trimesh, stack_data, scipy, requests, python-dateutil, PySide6-Essentials, pyqtgraph, pydantic-core, prompt_toolkit, optree, onnx, omegaconf, ml_dtypes, matplotlib-inline, markdown-it-py, jedi, jaxtyping, ipython-pygments-lexers, httpcore, h5py, grpcio, google_pasta, gitdb, email_validator, dm-tree, contourpy, coloredlogs, cffi, bvhio, astunparse, anyio, aiosignal, tfp-nightly, tf2onnx, tensorstore, tensorboard, rich, PySide6-Addons, pydantic, onnxruntime, matplotlib, jaxlib, ipython, httpx, gitpython, dpshdl, cryptography, aiohttp, PySide6, mujoco, mediapy, kscale, kinfer, keras, jax, tensorflow, orbax-checkpoint, mujoco-scenes, mujoco-mjx, kmv, equinox, chex, optax, distrax, xax, ksim
+  Attempting uninstall: pyopengl
+    Found existing installation: PyOpenGL 3.1.10
+    Uninstalling PyOpenGL-3.1.10:
+      Successfully uninstalled PyOpenGL-3.1.10
+  Attempting uninstall: pyglm
+    Found existing installation: pyglm 2.8.2
+    Uninstalling pyglm-2.8.2:
+      Successfully uninstalled pyglm-2.8.2
+  Attempting uninstall: pure-eval
+    Found existing installation: pure_eval 0.2.3
+    Uninstalling pure_eval-0.2.3:
+      Successfully uninstalled pure_eval-0.2.3
+  Attempting uninstall: ptyprocess
+    Found existing installation: ptyprocess 0.7.0
+    Uninstalling ptyprocess-0.7.0:
+      Successfully uninstalled ptyprocess-0.7.0
+  Attempting uninstall: namex
+    Found existing installation: namex 0.1.0
+    Uninstalling namex-0.1.0:
+      Successfully uninstalled namex-0.1.0
+  Attempting uninstall: mpmath
+    Found existing installation: mpmath 1.3.0
+    Uninstalling mpmath-1.3.0:
+      Successfully uninstalled mpmath-1.3.0
+  Attempting uninstall: libclang
+    Found existing installation: libclang 18.1.1
+    Uninstalling libclang-18.1.1:
+      Successfully uninstalled libclang-18.1.1
+  Attempting uninstall: glfw
+    Found existing installation: glfw 2.10.0
+    Uninstalling glfw-2.10.0:
+      Successfully uninstalled glfw-2.10.0
+  Attempting uninstall: flatbuffers
+    Found existing installation: flatbuffers 25.9.23
+    Uninstalling flatbuffers-25.9.23:
+      Successfully uninstalled flatbuffers-25.9.23
+  Attempting uninstall: antlr4-python3-runtime
+    Found existing installation: antlr4-python3-runtime 4.9.3
+    Uninstalling antlr4-python3-runtime-4.9.3:
+      Successfully uninstalled antlr4-python3-runtime-4.9.3
+  Attempting uninstall: zipp
+    Found existing installation: zipp 3.23.0
+    Uninstalling zipp-3.23.0:
+      Successfully uninstalled zipp-3.23.0
+  Attempting uninstall: wrapt
+    Found existing installation: wrapt 2.0.0
+    Uninstalling wrapt-2.0.0:
+      Successfully uninstalled wrapt-2.0.0
+  Attempting uninstall: wheel
+    Found existing installation: wheel 0.45.1
+    Uninstalling wheel-0.45.1:
+      Successfully uninstalled wheel-0.45.1
+  Attempting uninstall: wcwidth
+    Found existing installation: wcwidth 0.2.14
+    Uninstalling wcwidth-0.2.14:
+      Successfully uninstalled wcwidth-0.2.14
+  Attempting uninstall: wadler-lindig
+    Found existing installation: wadler_lindig 0.1.7
+    Uninstalling wadler_lindig-0.1.7:
+      Successfully uninstalled wadler_lindig-0.1.7
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 2.5.0
+    Uninstalling urllib3-2.5.0:
+      Successfully uninstalled urllib3-2.5.0
+  Attempting uninstall: typing_extensions
+    Found existing installation: typing_extensions 4.15.0
+    Uninstalling typing_extensions-4.15.0:
+      Successfully uninstalled typing_extensions-4.15.0
+  Attempting uninstall: traitlets
+    Found existing installation: traitlets 5.14.3
+    Uninstalling traitlets-5.14.3:
+      Successfully uninstalled traitlets-5.14.3
+  Attempting uninstall: tqdm
+    Found existing installation: tqdm 4.67.1
+    Uninstalling tqdm-4.67.1:
+      Successfully uninstalled tqdm-4.67.1
+  Attempting uninstall: toolz
+    Found existing installation: toolz 1.1.0
+    Uninstalling toolz-1.1.0:
+      Successfully uninstalled toolz-1.1.0
+  Attempting uninstall: termcolor
+    Found existing installation: termcolor 3.2.0
+    Uninstalling termcolor-3.2.0:
+      Successfully uninstalled termcolor-3.2.0
+  Attempting uninstall: tensorflow-io-gcs-filesystem
+    Found existing installation: tensorflow-io-gcs-filesystem 0.37.1
+    Uninstalling tensorflow-io-gcs-filesystem-0.37.1:
+      Successfully uninstalled tensorflow-io-gcs-filesystem-0.37.1
+  Attempting uninstall: tensorboard-data-server
+    Found existing installation: tensorboard-data-server 0.7.2
+    Uninstalling tensorboard-data-server-0.7.2:
+      Successfully uninstalled tensorboard-data-server-0.7.2
+  Attempting uninstall: tabulate
+    Found existing installation: tabulate 0.9.0
+    Uninstalling tabulate-0.9.0:
+      Successfully uninstalled tabulate-0.9.0
+  Attempting uninstall: sympy
+    Found existing installation: sympy 1.14.0
+{"state": {"num_steps": 569, "num_samples": 308019200, "start_time_s": 1761926016.0, "elapsed_time_s": 53607.93359375, "phase": "valid"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 49.0, "util/0": 99.0}, "cpu": {"child_procs": 6, "percent": 99.2, "child_percent": 0.0}, "mem": {"percent": 4.589781824840557, "shared": 169439232, "child_percent": 0.21520514324027948, "rss/cur": 6174343168, "rss/total": 7911354368, "vms/cur": 48926994432, "vms/total": 64493891584}, "train": {"advantages": 0.18736687302589417, "grad_norm": 14.85269546508789, "loss_kl": 5.3846033551963046e-05, "loss_policy": -0.15308897197246552, "loss_value": 7.385126082226634e-05, "off_policy_log_probs": 1.4507590532302856, "off_policy_values": -0.15478447079658508, "on_policy_log_probs": 1.4541245698928833, "on_policy_values": -0.15417024493217468, "value_targets": -0.1542719602584839}, "reward": {"ankle_knee_penalty": -6.778481065339292e-07, "arm_pose_penalty": -0.43163734674453735, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.244328468099411e-07, "feet_too_close_penalty": -0.16511718928813934, "naive_forward_orientation_reward": 0.13896900415420532, "naive_forward_reward": 0.7952850461006165, "reachability_penalty": -1.4016625881195068, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.04911426454782486, "straight_leg_penalty": -0.06965755671262741, "total": -0.9367929100990295, "upright_reward": 0.6062232851982117, "y_linear_velocity_penalty": -0.45830944180488586}, "termination": {"episode_length": 0.3974512219429016, "mean_terminations": 4.6259765625, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 0.9999999403953552}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.017397245347436086, "samples/second": 9421.760005648366, "dt": 192.12981915473938}}
+  [1;36mINFO[0m  [90m2025-11-01 15:21:02[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_13/checkpoints/ckpt.569.bin
+    Uninstalling sympy-1.14.0:
+      Successfully uninstalled sympy-1.14.0
+  Attempting uninstall: spatial-transform
+    Found existing installation: spatial-transform 1.3.3
+    Uninstalling spatial-transform-1.3.3:
+      Successfully uninstalled spatial-transform-1.3.3
+  Attempting uninstall: sniffio
+    Found existing installation: sniffio 1.3.1
+    Uninstalling sniffio-1.3.1:
+      Successfully uninstalled sniffio-1.3.1
+  Attempting uninstall: smmap
+    Found existing installation: smmap 5.0.2
+    Uninstalling smmap-5.0.2:
+      Successfully uninstalled smmap-5.0.2
+  Attempting uninstall: six
+    Found existing installation: six 1.17.0
+    Uninstalling six-1.17.0:
+      Successfully uninstalled six-1.17.0
+  Attempting uninstall: simplejson
+    Found existing installation: simplejson 3.20.2
+    Uninstalling simplejson-3.20.2:
+      Successfully uninstalled simplejson-3.20.2
+  Attempting uninstall: shiboken6
+    Found existing installation: shiboken6 6.9.0
+    Uninstalling shiboken6-6.9.0:
+      Successfully uninstalled shiboken6-6.9.0
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 80.9.0
+    Uninstalling setuptools-80.9.0:
+      Successfully uninstalled setuptools-80.9.0
+  Attempting uninstall: PyYAML
+    Found existing installation: PyYAML 6.0.3
+    Uninstalling PyYAML-6.0.3:
+      Successfully uninstalled PyYAML-6.0.3
+  Attempting uninstall: pyparsing
+    Found existing installation: pyparsing 3.2.5
+    Uninstalling pyparsing-3.2.5:
+      Successfully uninstalled pyparsing-3.2.5
+  Attempting uninstall: pyjwt
+    Found existing installation: PyJWT 2.10.1
+    Uninstalling PyJWT-2.10.1:
+      Successfully uninstalled PyJWT-2.10.1
+  Attempting uninstall: pygments
+    Found existing installation: Pygments 2.19.2
+    Uninstalling Pygments-2.19.2:
+      Successfully uninstalled Pygments-2.19.2
+  Attempting uninstall: pycparser
+    Found existing installation: pycparser 2.23
+    Uninstalling pycparser-2.23:
+      Successfully uninstalled pycparser-2.23
+  Attempting uninstall: psutil
+    Found existing installation: psutil 7.1.2
+    Uninstalling psutil-7.1.2:
+      Successfully uninstalled psutil-7.1.2
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 3.20.3
+    Uninstalling protobuf-3.20.3:
+      Successfully uninstalled protobuf-3.20.3
+  Attempting uninstall: propcache
+    Found existing installation: propcache 0.4.1
+    Uninstalling propcache-0.4.1:
+      Successfully uninstalled propcache-0.4.1
+  Attempting uninstall: pillow
+    Found existing installation: pillow 12.0.0
+    Uninstalling pillow-12.0.0:
+      Successfully uninstalled pillow-12.0.0
+  Attempting uninstall: pexpect
+    Found existing installation: pexpect 4.9.0
+    Uninstalling pexpect-4.9.0:
+      Successfully uninstalled pexpect-4.9.0
+  Attempting uninstall: parso
+    Found existing installation: parso 0.8.5
+    Uninstalling parso-0.8.5:
+      Successfully uninstalled parso-0.8.5
+  Attempting uninstall: packaging
+    Found existing installation: packaging 25.0
+    Uninstalling packaging-25.0:
+      Successfully uninstalled packaging-25.0
+  Attempting uninstall: opt_einsum
+    Found existing installation: opt_einsum 3.4.0
+    Uninstalling opt_einsum-3.4.0:
+      Successfully uninstalled opt_einsum-3.4.0
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.26.4
+    Uninstalling numpy-1.26.4:
+      Successfully uninstalled numpy-1.26.4
+  Attempting uninstall: nest_asyncio
+    Found existing installation: nest-asyncio 1.6.0
+    Uninstalling nest-asyncio-1.6.0:
+      Successfully uninstalled nest-asyncio-1.6.0
+  Attempting uninstall: multidict
+    Found existing installation: multidict 6.7.0
+    Uninstalling multidict-6.7.0:
+      Successfully uninstalled multidict-6.7.0
+  Attempting uninstall: msgpack
+    Found existing installation: msgpack 1.1.2
+    Uninstalling msgpack-1.1.2:
+      Successfully uninstalled msgpack-1.1.2
+  Attempting uninstall: mdurl
+    Found existing installation: mdurl 0.1.2
+    Uninstalling mdurl-0.1.2:
+      Successfully uninstalled mdurl-0.1.2
+  Attempting uninstall: MarkupSafe
+    Found existing installation: MarkupSafe 3.0.3
+    Uninstalling MarkupSafe-3.0.3:
+      Successfully uninstalled MarkupSafe-3.0.3
+  Attempting uninstall: markdown
+    Found existing installation: Markdown 3.9
+    Uninstalling Markdown-3.9:
+      Successfully uninstalled Markdown-3.9
+  Attempting uninstall: kiwisolver
+    Found existing installation: kiwisolver 1.4.9
+    Uninstalling kiwisolver-1.4.9:
+      Successfully uninstalled kiwisolver-1.4.9
+  Attempting uninstall: importlib-resources
+    Found existing installation: importlib_resources 6.5.2
+    Uninstalling importlib_resources-6.5.2:
+      Successfully uninstalled importlib_resources-6.5.2
+  Attempting uninstall: idna
+    Found existing installation: idna 3.11
+    Uninstalling idna-3.11:
+      Successfully uninstalled idna-3.11
+  Attempting uninstall: humanize
+    Found existing installation: humanize 4.14.0
+    Uninstalling humanize-4.14.0:
+      Successfully uninstalled humanize-4.14.0
+  Attempting uninstall: humanfriendly
+    Found existing installation: humanfriendly 10.0
+    Uninstalling humanfriendly-10.0:
+      Successfully uninstalled humanfriendly-10.0
+  Attempting uninstall: h11
+    Found existing installation: h11 0.16.0
+    Uninstalling h11-0.16.0:
+      Successfully uninstalled h11-0.16.0
+  Attempting uninstall: gast
+    Found existing installation: gast 0.6.0
+    Uninstalling gast-0.6.0:
+      Successfully uninstalled gast-0.6.0
+  Attempting uninstall: fsspec
+    Found existing installation: fsspec 2025.10.0
+    Uninstalling fsspec-2025.10.0:
+      Successfully uninstalled fsspec-2025.10.0
+  Attempting uninstall: frozenlist
+    Found existing installation: frozenlist 1.8.0
+    Uninstalling frozenlist-1.8.0:
+      Successfully uninstalled frozenlist-1.8.0
+  Attempting uninstall: fonttools
+    Found existing installation: fonttools 4.60.1
+    Uninstalling fonttools-4.60.1:
+      Successfully uninstalled fonttools-4.60.1
+  Attempting uninstall: executing
+    Found existing installation: executing 2.2.1
+    Uninstalling executing-2.2.1:
+      Successfully uninstalled executing-2.2.1
+  Attempting uninstall: etils
+    Found existing installation: etils 1.13.0
+    Uninstalling etils-1.13.0:
+      Successfully uninstalled etils-1.13.0
+  Attempting uninstall: dnspython
+    Found existing installation: dnspython 2.8.0
+    Uninstalling dnspython-2.8.0:
+      Successfully uninstalled dnspython-2.8.0
+  Attempting uninstall: decorator
+    Found existing installation: decorator 5.2.1
+    Uninstalling decorator-5.2.1:
+      Successfully uninstalled decorator-5.2.1
+  Attempting uninstall: cycler
+    Found existing installation: cycler 0.12.1
+    Uninstalling cycler-0.12.1:
+      Successfully uninstalled cycler-0.12.1
+  Attempting uninstall: colorlogging
+    Found existing installation: colorlogging 0.0.2
+    Uninstalling colorlogging-0.0.2:
+      Successfully uninstalled colorlogging-0.0.2
+  Attempting uninstall: cloudpickle
+    Found existing installation: cloudpickle 3.1.1
+    Uninstalling cloudpickle-3.1.1:
+      Successfully uninstalled cloudpickle-3.1.1
+  Attempting uninstall: click
+    Found existing installation: click 8.3.0
+    Uninstalling click-8.3.0:
+      Successfully uninstalled click-8.3.0
+  Attempting uninstall: charset_normalizer
+    Found existing installation: charset-normalizer 3.4.4
+    Uninstalling charset-normalizer-3.4.4:
+      Successfully uninstalled charset-normalizer-3.4.4
+  Attempting uninstall: certifi
+    Found existing installation: certifi 2025.10.5
+    Uninstalling certifi-2025.10.5:
+      Successfully uninstalled certifi-2025.10.5
+  Attempting uninstall: attrs
+    Found existing installation: attrs 25.4.0
+    Uninstalling attrs-25.4.0:
+      Successfully uninstalled attrs-25.4.0
+  Attempting uninstall: async-lru
+    Found existing installation: async-lru 2.0.5
+    Uninstalling async-lru-2.0.5:
+      Successfully uninstalled async-lru-2.0.5
+  Attempting uninstall: asttokens
+    Found existing installation: asttokens 3.0.0
+    Uninstalling asttokens-3.0.0:
+      Successfully uninstalled asttokens-3.0.0
+  Attempting uninstall: annotated-types
+    Found existing installation: annotated-types 0.7.0
+    Uninstalling annotated-types-0.7.0:
+      Successfully uninstalled annotated-types-0.7.0
+  Attempting uninstall: aiohappyeyeballs
+    Found existing installation: aiohappyeyeballs 2.6.1
+    Uninstalling aiohappyeyeballs-2.6.1:
+      Successfully uninstalled aiohappyeyeballs-2.6.1
+  Attempting uninstall: aiofiles
+    Found existing installation: aiofiles 25.1.0
+    Uninstalling aiofiles-25.1.0:
+      Successfully uninstalled aiofiles-25.1.0
+  Attempting uninstall: absl-py
+    Found existing installation: absl-py 2.3.1
+    Uninstalling absl-py-2.3.1:
+      Successfully uninstalled absl-py-2.3.1
+  Attempting uninstall: yarl
+    Found existing installation: yarl 1.22.0
+{"state": {"num_steps": 570, "num_samples": 308428800, "start_time_s": 1761926016.0, "elapsed_time_s": 53710.96484375, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 31.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 97.6, "child_percent": 0.0}, "mem": {"percent": 4.691225999913405, "shared": 169734144, "child_percent": 0.21520514324027948, "rss/cur": 6310809600, "rss/total": 8047820800, "vms/cur": 49063297024, "vms/total": 64630194176}, "train": {"advantages": 0.057823654264211655, "grad_norm": 15.647705078125, "loss_kl": 0.00019355484982952476, "loss_policy": 0.04059183970093727, "loss_value": 7.631703920196742e-05, "off_policy_log_probs": 1.446656584739685, "off_policy_values": -0.15434616804122925, "on_policy_log_probs": 1.4587537050247192, "on_policy_values": -0.1547132432460785, "value_targets": -0.15506881475448608}, "reward": {"ankle_knee_penalty": -6.815321853537171e-07, "arm_pose_penalty": -0.43689170479774475, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.1803162414689723e-07, "feet_too_close_penalty": -0.16637328267097473, "naive_forward_orientation_reward": 0.13889345526695251, "naive_forward_reward": 0.7954536080360413, "reachability_penalty": -1.4060598611831665, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.049197521060705185, "straight_leg_penalty": -0.07029251754283905, "total": -0.9573817253112793, "upright_reward": 0.6047528982162476, "y_linear_velocity_penalty": -0.4660615026950836}, "termination": {"episode_length": 0.3971676230430603, "mean_terminations": 4.618408203125, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.017249775069259645, "samples/second": 9337.894408361033, "dt": 147.81547236442566}}
+{"state": {"num_steps": 571, "num_samples": 308838400, "start_time_s": 1761926016.0, "elapsed_time_s": 53756.5078125, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 44.0, "util/0": 100.0}, "cpu": {"child_procs": 6, "percent": 97.5, "child_percent": 0.0}, "mem": {"percent": 4.610063352293816, "shared": 169734144, "child_percent": 0.21520514324027948, "rss/cur": 6201626624, "rss/total": 7938637824, "vms/cur": 48953982976, "vms/total": 64520880128}, "train": {"advantages": 0.10338132083415985, "grad_norm": 17.876657485961914, "loss_kl": 4.293396705179475e-05, "loss_policy": -0.07437676191329956, "loss_value": 8.490143954986706e-05, "off_policy_log_probs": 1.4488955736160278, "off_policy_values": -0.15377071499824524, "on_policy_log_probs": 1.451578974723816, "on_policy_values": -0.15414665639400482, "value_targets": -0.15394431352615356}, "reward": {"ankle_knee_penalty": -6.781212960049743e-07, "arm_pose_penalty": -0.4371158182621002, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.2451899301122467e-07, "feet_too_close_penalty": -0.16530151665210724, "naive_forward_orientation_reward": 0.13887758553028107, "naive_forward_reward": 0.794495165348053, "reachability_penalty": -1.4089246988296509, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.04924854263663292, "straight_leg_penalty": -0.0702320858836174, "total": -0.9508275985717773, "upright_reward": 0.6062362194061279, "y_linear_velocity_penalty": -0.45811060070991516}, "termination": {"episode_length": 0.39728909730911255, "mean_terminations": 4.61376953125, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.017256389044750117, "samples/second": 9337.486608333349, "dt": 45.30680298805237}}
+  [1;36mINFO[0m  [90m2025-11-01 15:22:32[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_13/checkpoints/ckpt.571.bin
+    Uninstalling yarl-1.22.0:
+      Successfully uninstalled yarl-1.22.0
+  Attempting uninstall: werkzeug
+    Found existing installation: Werkzeug 3.1.3
+    Uninstalling Werkzeug-3.1.3:
+      Successfully uninstalled Werkzeug-3.1.3
+  Attempting uninstall: warp-lang
+    Found existing installation: warp-lang 1.9.1
+    Uninstalling warp-lang-1.9.1:
+      Successfully uninstalled warp-lang-1.9.1
+  Attempting uninstall: typing-inspection
+    Found existing installation: typing-inspection 0.4.2
+    Uninstalling typing-inspection-0.4.2:
+      Successfully uninstalled typing-inspection-0.4.2
+  Attempting uninstall: trimesh
+    Found existing installation: trimesh 4.9.0
+    Uninstalling trimesh-4.9.0:
+      Successfully uninstalled trimesh-4.9.0
+  Attempting uninstall: stack_data
+    Found existing installation: stack-data 0.6.3
+    Uninstalling stack-data-0.6.3:
+      Successfully uninstalled stack-data-0.6.3
+  Attempting uninstall: scipy
+    Found existing installation: scipy 1.16.3
+    Uninstalling scipy-1.16.3:
+      Successfully uninstalled scipy-1.16.3
+  Attempting uninstall: requests
+    Found existing installation: requests 2.32.5
+    Uninstalling requests-2.32.5:
+      Successfully uninstalled requests-2.32.5
+  Attempting uninstall: python-dateutil
+    Found existing installation: python-dateutil 2.9.0.post0
+    Uninstalling python-dateutil-2.9.0.post0:
+      Successfully uninstalled python-dateutil-2.9.0.post0
+  Attempting uninstall: PySide6-Essentials
+    Found existing installation: PySide6_Essentials 6.9.0
+    Uninstalling PySide6_Essentials-6.9.0:
+      Successfully uninstalled PySide6_Essentials-6.9.0
+  Attempting uninstall: pyqtgraph
+    Found existing installation: pyqtgraph 0.13.7
+    Uninstalling pyqtgraph-0.13.7:
+      Successfully uninstalled pyqtgraph-0.13.7
+  Attempting uninstall: pydantic-core
+    Found existing installation: pydantic_core 2.41.4
+    Uninstalling pydantic_core-2.41.4:
+      Successfully uninstalled pydantic_core-2.41.4
+  Attempting uninstall: prompt_toolkit
+    Found existing installation: prompt_toolkit 3.0.52
+    Uninstalling prompt_toolkit-3.0.52:
+      Successfully uninstalled prompt_toolkit-3.0.52
+  Attempting uninstall: optree
+    Found existing installation: optree 0.17.0
+    Uninstalling optree-0.17.0:
+      Successfully uninstalled optree-0.17.0
+  Attempting uninstall: onnx
+    Found existing installation: onnx 1.17.0
+{"state": {"num_steps": 572, "num_samples": 309248000, "start_time_s": 1761926016.0, "elapsed_time_s": 53801.046875, "phase": "valid"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 49.0, "util/0": 99.0}, "cpu": {"child_procs": 6, "percent": 98.1, "child_percent": 0.0}, "mem": {"percent": 4.610063352293816, "shared": 169734144, "child_percent": 0.21520514324027948, "rss/cur": 6201626624, "rss/total": 7938637824, "vms/cur": 48953982976, "vms/total": 64520880128}, "train": {"advantages": 0.12326560914516449, "grad_norm": 11.604070663452148, "loss_kl": 7.003587961662561e-05, "loss_policy": -0.083112932741642, "loss_value": 7.12829059921205e-05, "off_policy_log_probs": 1.4474742412567139, "off_policy_values": -0.15186521410942078, "on_policy_log_probs": 1.4518513679504395, "on_policy_values": -0.1530729979276657, "value_targets": -0.15144646167755127}, "reward": {"ankle_knee_penalty": -6.817349458287936e-07, "arm_pose_penalty": -0.43869951367378235, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.239191812554054e-07, "feet_too_close_penalty": -0.16407470405101776, "naive_forward_orientation_reward": 0.13843025267124176, "naive_forward_reward": 0.7954521179199219, "reachability_penalty": -1.395995855331421, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.04905518516898155, "straight_leg_penalty": -0.0708625465631485, "total": -0.9395273923873901, "upright_reward": 0.6047800183296204, "y_linear_velocity_penalty": -0.4576118290424347}, "termination": {"episode_length": 0.3975845277309418, "mean_terminations": 4.63134765625, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.017386260578470758, "samples/second": 9403.75639197477, "dt": 193.17782711982727}}
+  [1;36mINFO[0m  [90m2025-11-01 15:24:15[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_13/checkpoints/ckpt.572.bin
+    Uninstalling onnx-1.17.0:
+      Successfully uninstalled onnx-1.17.0
+  Attempting uninstall: omegaconf
+    Found existing installation: omegaconf 2.3.0
+    Uninstalling omegaconf-2.3.0:
+      Successfully uninstalled omegaconf-2.3.0
+  Attempting uninstall: ml_dtypes
+    Found existing installation: ml_dtypes 0.5.3
+    Uninstalling ml_dtypes-0.5.3:
+      Successfully uninstalled ml_dtypes-0.5.3
+  Attempting uninstall: matplotlib-inline
+    Found existing installation: matplotlib-inline 0.2.1
+    Uninstalling matplotlib-inline-0.2.1:
+      Successfully uninstalled matplotlib-inline-0.2.1
+  Attempting uninstall: markdown-it-py
+    Found existing installation: markdown-it-py 4.0.0
+    Uninstalling markdown-it-py-4.0.0:
+      Successfully uninstalled markdown-it-py-4.0.0
+  Attempting uninstall: jedi
+    Found existing installation: jedi 0.19.2
+    Uninstalling jedi-0.19.2:
+      Successfully uninstalled jedi-0.19.2
+  Attempting uninstall: jaxtyping
+    Found existing installation: jaxtyping 0.3.3
+    Uninstalling jaxtyping-0.3.3:
+      Successfully uninstalled jaxtyping-0.3.3
+  Attempting uninstall: ipython-pygments-lexers
+    Found existing installation: ipython_pygments_lexers 1.1.1
+    Uninstalling ipython_pygments_lexers-1.1.1:
+      Successfully uninstalled ipython_pygments_lexers-1.1.1
+  Attempting uninstall: httpcore
+    Found existing installation: httpcore 1.0.9
+    Uninstalling httpcore-1.0.9:
+      Successfully uninstalled httpcore-1.0.9
+  Attempting uninstall: h5py
+    Found existing installation: h5py 3.15.1
+    Uninstalling h5py-3.15.1:
+      Successfully uninstalled h5py-3.15.1
+  Attempting uninstall: grpcio
+    Found existing installation: grpcio 1.76.0
+    Uninstalling grpcio-1.76.0:
+      Successfully uninstalled grpcio-1.76.0
+  Attempting uninstall: google_pasta
+    Found existing installation: google-pasta 0.2.0
+    Uninstalling google-pasta-0.2.0:
+      Successfully uninstalled google-pasta-0.2.0
+  Attempting uninstall: gitdb
+    Found existing installation: gitdb 4.0.12
+    Uninstalling gitdb-4.0.12:
+      Successfully uninstalled gitdb-4.0.12
+  Attempting uninstall: email_validator
+    Found existing installation: email-validator 2.3.0
+    Uninstalling email-validator-2.3.0:
+      Successfully uninstalled email-validator-2.3.0
+  Attempting uninstall: dm-tree
+    Found existing installation: dm-tree 0.1.9
+    Uninstalling dm-tree-0.1.9:
+      Successfully uninstalled dm-tree-0.1.9
+  Attempting uninstall: contourpy
+    Found existing installation: contourpy 1.3.3
+    Uninstalling contourpy-1.3.3:
+      Successfully uninstalled contourpy-1.3.3
+  Attempting uninstall: coloredlogs
+    Found existing installation: coloredlogs 15.0.1
+    Uninstalling coloredlogs-15.0.1:
+      Successfully uninstalled coloredlogs-15.0.1
+  Attempting uninstall: cffi
+    Found existing installation: cffi 2.0.0
+    Uninstalling cffi-2.0.0:
+      Successfully uninstalled cffi-2.0.0
+  Attempting uninstall: bvhio
+    Found existing installation: bvhio 1.5.4
+    Uninstalling bvhio-1.5.4:
+      Successfully uninstalled bvhio-1.5.4
+  Attempting uninstall: astunparse
+    Found existing installation: astunparse 1.6.3
+    Uninstalling astunparse-1.6.3:
+      Successfully uninstalled astunparse-1.6.3
+  Attempting uninstall: anyio
+    Found existing installation: anyio 4.11.0
+    Uninstalling anyio-4.11.0:
+      Successfully uninstalled anyio-4.11.0
+  Attempting uninstall: aiosignal
+    Found existing installation: aiosignal 1.4.0
+    Uninstalling aiosignal-1.4.0:
+      Successfully uninstalled aiosignal-1.4.0
+  Attempting uninstall: tfp-nightly
+    Found existing installation: tfp-nightly 0.26.0.dev20251031
+    Uninstalling tfp-nightly-0.26.0.dev20251031:
+      Successfully uninstalled tfp-nightly-0.26.0.dev20251031
+  Attempting uninstall: tf2onnx
+    Found existing installation: tf2onnx 1.16.1
+{"state": {"num_steps": 573, "num_samples": 309657600, "start_time_s": 1761926016.0, "elapsed_time_s": 53903.82421875, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 31.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 98.1, "child_percent": 0.0}, "mem": {"percent": 4.722752037332869, "shared": 168849408, "child_percent": 0.21520514324027948, "rss/cur": 6353219584, "rss/total": 8090230784, "vms/cur": 49106800640, "vms/total": 64673697792}, "train": {"advantages": -0.02288261242210865, "grad_norm": 16.324304580688477, "loss_kl": 0.00013325116015039384, "loss_policy": 0.09597598016262054, "loss_value": 7.458813342964277e-05, "off_policy_log_probs": 1.442015528678894, "off_policy_values": -0.15248601138591766, "on_policy_log_probs": 1.4503437280654907, "on_policy_values": -0.1503259837627411, "value_targets": -0.15416446328163147}, "reward": {"ankle_knee_penalty": -6.796506681894243e-07, "arm_pose_penalty": -0.4375554323196411, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.2302580166287953e-07, "feet_too_close_penalty": -0.16496947407722473, "naive_forward_orientation_reward": 0.13929219543933868, "naive_forward_reward": 0.795408308506012, "reachability_penalty": -1.4174515008926392, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.049283456057310104, "straight_leg_penalty": -0.07067658007144928, "total": -0.9626978635787964, "upright_reward": 0.6062246561050415, "y_linear_velocity_penalty": -0.4622531831264496}, "termination": {"episode_length": 0.39723700284957886, "mean_terminations": 4.610595703125, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.017239908904647414, "samples/second": 9320.642220778464, "dt": 147.58543944358826}}
+{"state": {"num_steps": 574, "num_samples": 310067200, "start_time_s": 1761926016.0, "elapsed_time_s": 53949.37890625, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 46.0, "util/0": 93.0}, "cpu": {"child_procs": 6, "percent": 96.5, "child_percent": 0.0}, "mem": {"percent": 4.531881580725381, "shared": 169439232, "child_percent": 0.21527821885338236, "rss/cur": 6096453632, "rss/total": 7834054656, "vms/cur": 48849104896, "vms/total": 64416002048}, "train": {"advantages": 0.22880801558494568, "grad_norm": 15.34010124206543, "loss_kl": 3.3869386243168265e-05, "loss_policy": -0.20742660760879517, "loss_value": 8.238040027208626e-05, "off_policy_log_probs": 1.4415974617004395, "off_policy_values": -0.15691432356834412, "on_policy_log_probs": 1.4437142610549927, "on_policy_values": -0.15595901012420654, "value_targets": -0.15626303851604462}, "reward": {"ankle_knee_penalty": -6.807973136346845e-07, "arm_pose_penalty": -0.43700629472732544, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.237787495891098e-07, "feet_too_close_penalty": -0.16465209424495697, "naive_forward_orientation_reward": 0.13883964717388153, "naive_forward_reward": 0.7954475283622742, "reachability_penalty": -1.4205657243728638, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.04908740893006325, "straight_leg_penalty": -0.07088828831911087, "total": -0.963936448097229, "upright_reward": 0.6051521897315979, "y_linear_velocity_penalty": -0.45935046672821045}, "termination": {"episode_length": 0.3970677852630615, "mean_terminations": 4.62841796875, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.017246491475382996, "samples/second": 9320.25682378515, "dt": 45.319247007369995}}
+  [1;36mINFO[0m  [90m2025-11-01 15:25:45[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_13/checkpoints/ckpt.574.bin
+    Uninstalling tf2onnx-1.16.1:
+      Successfully uninstalled tf2onnx-1.16.1
+  Attempting uninstall: tensorstore
+    Found existing installation: tensorstore 0.1.78
+    Uninstalling tensorstore-0.1.78:
+      Successfully uninstalled tensorstore-0.1.78
+  Attempting uninstall: tensorboard
+    Found existing installation: tensorboard 2.19.0
+    Uninstalling tensorboard-2.19.0:
+      Successfully uninstalled tensorboard-2.19.0
+  Attempting uninstall: rich
+    Found existing installation: rich 14.2.0
+    Uninstalling rich-14.2.0:
+      Successfully uninstalled rich-14.2.0
+  Attempting uninstall: PySide6-Addons
+    Found existing installation: PySide6_Addons 6.9.0
+    Uninstalling PySide6_Addons-6.9.0:
+      Successfully uninstalled PySide6_Addons-6.9.0
+  Attempting uninstall: pydantic
+    Found existing installation: pydantic 2.12.3
+    Uninstalling pydantic-2.12.3:
+      Successfully uninstalled pydantic-2.12.3
+  Attempting uninstall: onnxruntime
+    Found existing installation: onnxruntime 1.20.0
+    Uninstalling onnxruntime-1.20.0:
+      Successfully uninstalled onnxruntime-1.20.0
+  Attempting uninstall: matplotlib
+    Found existing installation: matplotlib 3.10.7
+    Uninstalling matplotlib-3.10.7:
+      Successfully uninstalled matplotlib-3.10.7
+  Attempting uninstall: jaxlib
+    Found existing installation: jaxlib 0.7.1
+    Uninstalling jaxlib-0.7.1:
+      Successfully uninstalled jaxlib-0.7.1
+  Attempting uninstall: ipython
+    Found existing installation: ipython 9.6.0
+    Uninstalling ipython-9.6.0:
+      Successfully uninstalled ipython-9.6.0
+  Attempting uninstall: httpx
+    Found existing installation: httpx 0.28.1
+    Uninstalling httpx-0.28.1:
+      Successfully uninstalled httpx-0.28.1
+  Attempting uninstall: gitpython
+    Found existing installation: GitPython 3.1.45
+    Uninstalling GitPython-3.1.45:
+      Successfully uninstalled GitPython-3.1.45
+  Attempting uninstall: dpshdl
+    Found existing installation: dpshdl 0.0.21
+    Uninstalling dpshdl-0.0.21:
+      Successfully uninstalled dpshdl-0.0.21
+  Attempting uninstall: cryptography
+    Found existing installation: cryptography 46.0.3
+    Uninstalling cryptography-46.0.3:
+      Successfully uninstalled cryptography-46.0.3
+  Attempting uninstall: aiohttp
+    Found existing installation: aiohttp 3.13.2
+    Uninstalling aiohttp-3.13.2:
+      Successfully uninstalled aiohttp-3.13.2
+  Attempting uninstall: PySide6
+    Found existing installation: PySide6 6.9.0
+    Uninstalling PySide6-6.9.0:
+      Successfully uninstalled PySide6-6.9.0
+  Attempting uninstall: mujoco
+    Found existing installation: mujoco 3.3.7
+    Uninstalling mujoco-3.3.7:
+      Successfully uninstalled mujoco-3.3.7
+  Attempting uninstall: mediapy
+    Found existing installation: mediapy 1.2.4
+    Uninstalling mediapy-1.2.4:
+      Successfully uninstalled mediapy-1.2.4
+  Attempting uninstall: kscale
+    Found existing installation: kscale 0.3.18
+    Uninstalling kscale-0.3.18:
+      Successfully uninstalled kscale-0.3.18
+  Attempting uninstall: kinfer
+    Found existing installation: kinfer 0.6.1
+    Uninstalling kinfer-0.6.1:
+      Successfully uninstalled kinfer-0.6.1
+  Attempting uninstall: keras
+    Found existing installation: keras 3.12.0
+    Uninstalling keras-3.12.0:
+      Successfully uninstalled keras-3.12.0
+  Attempting uninstall: jax
+    Found existing installation: jax 0.7.1
+    Uninstalling jax-0.7.1:
+      Successfully uninstalled jax-0.7.1
+  Attempting uninstall: tensorflow
+    Found existing installation: tensorflow 2.19.1
+{"state": {"num_steps": 575, "num_samples": 310476800, "start_time_s": 1761926016.0, "elapsed_time_s": 53993.921875, "phase": "valid"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 49.0, "util/0": 99.0}, "cpu": {"child_procs": 6, "percent": 98.2, "child_percent": 0.0}, "mem": {"percent": 4.531881580725381, "shared": 169439232, "child_percent": 0.21527821885338236, "rss/cur": 6096453632, "rss/total": 7834054656, "vms/cur": 48849104896, "vms/total": 64416002048}, "train": {"advantages": 0.16122199594974518, "grad_norm": 17.593345642089844, "loss_kl": 0.00010908844706136733, "loss_policy": -0.0910833477973938, "loss_value": 8.817778143566102e-05, "off_policy_log_probs": 1.445223331451416, "off_policy_values": -0.15661443769931793, "on_policy_log_probs": 1.4520412683486938, "on_policy_values": -0.15761509537696838, "value_targets": -0.1567137986421585}, "reward": {"ankle_knee_penalty": -6.791871101086144e-07, "arm_pose_penalty": -0.43724721670150757, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.2088374268823827e-07, "feet_too_close_penalty": -0.16613280773162842, "naive_forward_orientation_reward": 0.1393086165189743, "naive_forward_reward": 0.7951585054397583, "reachability_penalty": -1.4228626489639282, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.049127690494060516, "straight_leg_penalty": -0.07051389664411545, "total": -0.9739213585853577, "upright_reward": 0.6053375601768494, "y_linear_velocity_penalty": -0.46609678864479065}, "termination": {"episode_length": 0.3975420296192169, "mean_terminations": 4.624755859375, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.017375560886740814, "samples/second": 9386.04793268102, "dt": 192.88007807731628}}
+  [1;36mINFO[0m  [90m2025-11-01 15:27:27[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_13/checkpoints/ckpt.575.bin
+    Uninstalling tensorflow-2.19.1:
+      Successfully uninstalled tensorflow-2.19.1
+{"state": {"num_steps": 576, "num_samples": 310886400, "start_time_s": 1761926016.0, "elapsed_time_s": 54096.21875, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 30.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 98.4, "child_percent": 0.0}, "mem": {"percent": 4.754189775053167, "shared": 169734144, "child_percent": 0.21527821885338236, "rss/cur": 6395510784, "rss/total": 8133111808, "vms/cur": 49148096512, "vms/total": 64714993664}, "train": {"advantages": 0.07989311218261719, "grad_norm": 13.64987850189209, "loss_kl": 4.6660297812195495e-05, "loss_policy": -0.05350550264120102, "loss_value": 8.36146209621802e-05, "off_policy_log_probs": 1.441699504852295, "off_policy_values": -0.15512312948703766, "on_policy_log_probs": 1.4446157217025757, "on_policy_values": -0.15509599447250366, "value_targets": -0.15571431815624237}, "reward": {"ankle_knee_penalty": -6.809198112023296e-07, "arm_pose_penalty": -0.43402302265167236, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.2445390729662904e-07, "feet_too_close_penalty": -0.16480101644992828, "naive_forward_orientation_reward": 0.13961103558540344, "naive_forward_reward": 0.7955690622329712, "reachability_penalty": -1.4351649284362793, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.04909277707338333, "straight_leg_penalty": -0.07106298953294754, "total": -0.9776832461357117, "upright_reward": 0.6059266924858093, "y_linear_velocity_penalty": -0.4628305435180664}, "termination": {"episode_length": 0.3970545828342438, "mean_terminations": 4.6279296875, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.01723039175503513, "samples/second": 9303.716341195468, "dt": 147.11792635917664}}
+{"state": {"num_steps": 577, "num_samples": 311296000, "start_time_s": 1761926016.0, "elapsed_time_s": 54141.78515625, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 45.0, "util/0": 99.0}, "cpu": {"child_procs": 6, "percent": 97.2, "child_percent": 0.0}, "mem": {"percent": 4.564902623396241, "shared": 169734144, "child_percent": 0.21527821885338236, "rss/cur": 6140874752, "rss/total": 7878475776, "vms/cur": 48893231104, "vms/total": 64460128256}, "train": {"advantages": 0.0889975056052208, "grad_norm": 16.4171142578125, "loss_kl": 0.00011417207133490592, "loss_policy": -0.021931111812591553, "loss_value": 9.41542093642056e-05, "off_policy_log_probs": 1.4380385875701904, "off_policy_values": -0.15782395005226135, "on_policy_log_probs": 1.4451743364334106, "on_policy_values": -0.1555447280406952, "value_targets": -0.1586766093969345}, "reward": {"ankle_knee_penalty": -6.832406143075787e-07, "arm_pose_penalty": -0.43664413690567017, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.2048671982920496e-07, "feet_too_close_penalty": -0.16578735411167145, "naive_forward_orientation_reward": 0.1398208886384964, "naive_forward_reward": 0.796668529510498, "reachability_penalty": -1.4487042427062988, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.049178723245859146, "straight_leg_penalty": -0.07118865102529526, "total": -0.9988296031951904, "upright_reward": 0.6056837439537048, "y_linear_velocity_penalty": -0.46785661578178406}, "termination": {"episode_length": 0.3977040648460388, "mean_terminations": 4.6201171875, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.01723695942995336, "samples/second": 9303.361571983358, "dt": 45.29965806007385}}
+  [1;36mINFO[0m  [90m2025-11-01 15:28:57[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_13/checkpoints/ckpt.577.bin
+  Attempting uninstall: orbax-checkpoint
+    Found existing installation: orbax-checkpoint 0.11.26
+    Uninstalling orbax-checkpoint-0.11.26:
+      Successfully uninstalled orbax-checkpoint-0.11.26
+  Attempting uninstall: mujoco-scenes
+    Found existing installation: mujoco-scenes 0.0.17
+    Uninstalling mujoco-scenes-0.0.17:
+      Successfully uninstalled mujoco-scenes-0.0.17
+  Attempting uninstall: mujoco-mjx
+    Found existing installation: mujoco-mjx 3.3.7
+    Uninstalling mujoco-mjx-3.3.7:
+      Successfully uninstalled mujoco-mjx-3.3.7
+  Attempting uninstall: kmv
+    Found existing installation: kmv 0.3.22
+    Uninstalling kmv-0.3.22:
+      Successfully uninstalled kmv-0.3.22
+  Attempting uninstall: equinox
+    Found existing installation: equinox 0.13.0
+    Uninstalling equinox-0.13.0:
+      Successfully uninstalled equinox-0.13.0
+  Attempting uninstall: chex
+    Found existing installation: chex 0.1.91
+    Uninstalling chex-0.1.91:
+      Successfully uninstalled chex-0.1.91
+  Attempting uninstall: optax
+    Found existing installation: optax 0.2.6
+    Uninstalling optax-0.2.6:
+      Successfully uninstalled optax-0.2.6
+  Attempting uninstall: distrax
+    Found existing installation: distrax 0.1.7
+    Uninstalling distrax-0.1.7:
+      Successfully uninstalled distrax-0.1.7
+  Attempting uninstall: xax
+    Found existing installation: xax 0.3.5
+    Uninstalling xax-0.3.5:
+      Successfully uninstalled xax-0.3.5
+  Attempting uninstall: ksim
+    Found existing installation: ksim 0.1.95
+    Uninstalling ksim-0.1.95:
+      Successfully uninstalled ksim-0.1.95
+
+Successfully installed MarkupSafe-3.0.3 PySide6-6.9.0 PySide6-Addons-6.9.0 PySide6-Essentials-6.9.0 PyYAML-6.0.3 absl-py-2.3.1 aiofiles-25.1.0 aiohappyeyeballs-2.6.1 aiohttp-3.13.2 aiosignal-1.4.0 annotated-types-0.7.0 antlr4-python3-runtime-4.9.3 anyio-4.11.0 asttokens-3.0.0 astunparse-1.6.3 async-lru-2.0.5 attrs-25.4.0 bvhio-1.5.4 certifi-2025.10.5 cffi-2.0.0 charset_normalizer-3.4.4 chex-0.1.91 click-8.3.0 cloudpickle-3.1.1 coloredlogs-15.0.1 colorlogging-0.0.2 contourpy-1.3.3 cryptography-46.0.3 cycler-0.12.1 decorator-5.2.1 distrax-0.1.7 dm-tree-0.1.9 dnspython-2.8.0 dpshdl-0.0.21 email_validator-2.3.0 equinox-0.13.0 etils-1.13.0 executing-2.2.1 flatbuffers-25.9.23 fonttools-4.60.1 frozenlist-1.8.0 fsspec-2025.10.0 gast-0.6.0 gitdb-4.0.12 gitpython-3.1.45 glfw-2.10.0 google_pasta-0.2.0 grpcio-1.76.0 h11-0.16.0 h5py-3.15.1 httpcore-1.0.9 httpx-0.28.1 humanfriendly-10.0 humanize-4.14.0 idna-3.11 importlib-resources-6.5.2 ipython-9.6.0 ipython-pygments-lexers-1.1.1 jax-0.7.1 jaxlib-0.7.1 jaxtyping-0.3.3 jedi-0.19.2 keras-3.12.0 kinfer-0.6.1 kiwisolver-1.4.9 kmv-0.3.22 kscale-0.3.18 ksim-0.1.95 libclang-18.1.1 markdown-3.9 markdown-it-py-4.0.0 matplotlib-3.10.7 matplotlib-inline-0.2.1 mdurl-0.1.2 mediapy-1.2.4 ml_dtypes-0.5.3 mpmath-1.3.0 msgpack-1.1.2 mujoco-3.3.7 mujoco-mjx-3.3.7 mujoco-scenes-0.0.17 multidict-6.7.0 namex-0.1.0 nest_asyncio-1.6.0 numpy-1.26.4 omegaconf-2.3.0 onnx-1.17.0 onnxruntime-1.20.0 opt_einsum-3.4.0 optax-0.2.6 optree-0.17.0 orbax-checkpoint-0.11.26 packaging-25.0 parso-0.8.5 pexpect-4.9.0 pillow-12.0.0 prompt_toolkit-3.0.52 propcache-0.4.1 protobuf-3.20.3 psutil-7.1.2 ptyprocess-0.7.0 pure-eval-0.2.3 pycparser-2.23 pydantic-2.12.3 pydantic-core-2.41.4 pyglm-2.8.2 pygments-2.19.2 pyjwt-2.10.1 pyopengl-3.1.10 pyparsing-3.2.5 pyqtgraph-0.13.7 python-dateutil-2.9.0.post0 requests-2.32.5 rich-14.2.0 scipy-1.16.3 setuptools-80.9.0 shiboken6-6.9.0 simplejson-3.20.2 six-1.17.0 smmap-5.0.2 sniffio-1.3.1 spatial-transform-1.3.3 stack_data-0.6.3 sympy-1.14.0 tabulate-0.9.0 tensorboard-2.19.0 tensorboard-data-server-0.7.2 tensorflow-2.19.1 tensorflow-io-gcs-filesystem-0.37.1 tensorstore-0.1.78 termcolor-3.2.0 tf2onnx-1.16.1 tfp-nightly-0.26.0.dev20251101 toolz-1.1.0 tqdm-4.67.1 traitlets-5.14.3 trimesh-4.9.0 typing-inspection-0.4.2 typing_extensions-4.15.0 urllib3-2.5.0 wadler-lindig-0.1.7 warp-lang-1.9.1 wcwidth-0.2.14 werkzeug-3.1.3 wheel-0.45.1 wrapt-2.0.0 xax-0.3.5 yarl-1.22.0 zipp-3.23.0
+Requirement already satisfied: jax[cuda12] in ./ksim-env/lib/python3.11/site-packages (0.7.1)
+Requirement already satisfied: jaxlib<=0.7.1,>=0.7.1 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (0.7.1)
+Requirement already satisfied: ml_dtypes>=0.5.0 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (0.5.3)
+Requirement already satisfied: numpy>=1.26 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (1.26.4)
+Requirement already satisfied: opt_einsum in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (3.4.0)
+Requirement already satisfied: scipy>=1.12 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (1.16.3)
+Requirement already satisfied: jax-cuda12-plugin<=0.7.1,>=0.7.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (0.7.1)
+Requirement already satisfied: jax-cuda12-pjrt==0.7.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin<=0.7.1,>=0.7.1->jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (0.7.1)
+Requirement already satisfied: nvidia-cublas-cu12>=12.1.3.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.1.4)
+Requirement already satisfied: nvidia-cuda-cupti-cu12>=12.1.105 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.79)
+Requirement already satisfied: nvidia-cuda-nvcc-cu12>=12.6.85 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.86)
+Requirement already satisfied: nvidia-cuda-runtime-cu12>=12.1.105 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.79)
+Requirement already satisfied: nvidia-cudnn-cu12<10.0,>=9.8 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (9.13.1.26)
+Requirement already satisfied: nvidia-cufft-cu12>=11.0.2.54 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (11.4.1.4)
+Requirement already satisfied: nvidia-cusolver-cu12>=11.4.5.107 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (11.7.5.82)
+Requirement already satisfied: nvidia-cusparse-cu12>=12.1.0.106 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.5.10.65)
+Requirement already satisfied: nvidia-nccl-cu12>=2.18.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (2.28.3)
+Requirement already satisfied: nvidia-nvjitlink-cu12>=12.1.105 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.86)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12>=12.1.55 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.86)
+Requirement already satisfied: nvidia-nvshmem-cu12>=3.2.5 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (3.4.5)
+Installed dependencies:
+absl-py==2.3.1
+aiofiles==25.1.0
+aiohappyeyeballs==2.6.1
+aiohttp==3.13.2
+aiosignal==1.4.0
+annotated-types==0.7.0
+antlr4-python3-runtime==4.9.3
+anyio==4.11.0
+argon2-cffi==25.1.0
+argon2-cffi-bindings==25.1.0
+arrow==1.3.0
+asttokens==3.0.0
+astunparse==1.6.3
+async-lru==2.0.5
+attrs==25.4.0
+babel==2.17.0
+beautifulsoup4==4.14.2
+bleach==6.2.0
+bvhio==1.5.4
+certifi==2025.10.5
+cffi==2.0.0
+cfgv==3.4.0
+charset-normalizer==3.4.4
+chex==0.1.91
+click==8.3.0
+cloudpickle==3.1.1
+coloredlogs==15.0.1
+colorlogging==0.0.2
+comm==0.2.3
+contourpy==1.3.3
+cryptography==46.0.3
+cycler==0.12.1
+debugpy==1.8.17
+decorator==5.2.1
+defusedxml==0.7.1
+distlib==0.4.0
+distrax==0.1.7
+dm-tree==0.1.9
+dnspython==2.8.0
+dpshdl==0.0.21
+email-validator==2.3.0
+equinox==0.13.0
+etils==1.13.0
+executing==2.2.1
+fastjsonschema==2.21.2
+filelock==3.19.1
+flatbuffers==25.9.23
+fonttools==4.60.1
+fqdn==1.5.1
+frozenlist==1.8.0
+fsspec==2025.10.0
+gast==0.6.0
+gitdb==4.0.12
+GitPython==3.1.45
+glfw==2.10.0
+google-pasta==0.2.0
+grpcio==1.76.0
+h11==0.16.0
+h5py==3.15.1
+httpcore==1.0.9
+httpx==0.28.1
+humanfriendly==10.0
+humanize==4.14.0
+identify==2.6.14
+idna==3.11
+importlib_resources==6.5.2
+ipykernel==6.30.1
+ipython==9.6.0
+ipython_pygments_lexers==1.1.1
+ipywidgets==8.1.7
+isoduration==20.11.0
+jax==0.7.1
+jax-cuda12-pjrt==0.7.1
+jax-cuda12-plugin==0.7.1
+jaxlib==0.7.1
+jaxtyping==0.3.3
+jedi==0.19.2
+Jinja2==3.1.6
+json5==0.12.1
+jsonpointer==3.0.0
+jsonschema==4.25.1
+jsonschema-specifications==2025.9.1
+jupyter==1.1.1
+jupyter-console==6.6.3
+jupyter-events==0.12.0
+jupyter-lsp==2.3.0
+jupyter_client==8.6.3
+jupyter_core==5.8.1
+jupyter_server==2.17.0
+jupyter_server_terminals==0.5.3
+jupyterlab==4.4.9
+jupyterlab_pygments==0.3.0
+jupyterlab_server==2.27.3
+jupyterlab_widgets==3.0.15
+keras==3.12.0
+kinfer==0.6.1
+kiwisolver==1.4.9
+kmv==0.3.22
+kscale==0.3.18
+ksim==0.1.95
+lark==1.3.0
+libclang==18.1.1
+Markdown==3.9
+markdown-it-py==4.0.0
+MarkupSafe==3.0.3
+matplotlib==3.10.7
+matplotlib-inline==0.2.1
+mdurl==0.1.2
+mediapy==1.2.4
+mistune==3.1.4
+ml_dtypes==0.5.3
+mpmath==1.3.0
+msgpack==1.1.2
+mujoco==3.3.7
+mujoco-mjx==3.3.7
+mujoco-scenes==0.0.17
+multidict==6.7.0
+namex==0.1.0
+nbclient==0.10.2
+nbconvert==7.16.6
+nbformat==5.10.4
+nest-asyncio==1.6.0
+nodeenv==1.9.1
+notebook==7.4.7
+notebook_shim==0.2.4
+numpy==1.26.4
+nvidia-cublas-cu12==12.9.1.4
+nvidia-cuda-cupti-cu12==12.9.79
+nvidia-cuda-nvcc-cu12==12.9.86
+nvidia-cuda-nvrtc-cu12==12.9.86
+nvidia-cuda-runtime-cu12==12.9.79
+nvidia-cudnn-cu12==9.13.1.26
+nvidia-cufft-cu12==11.4.1.4
+nvidia-cusolver-cu12==11.7.5.82
+nvidia-cusparse-cu12==12.5.10.65
+nvidia-nccl-cu12==2.28.3
+nvidia-nvjitlink-cu12==12.9.86
+nvidia-nvshmem-cu12==3.4.5
+omegaconf==2.3.0
+onnx==1.17.0
+onnxruntime==1.20.0
+opt_einsum==3.4.0
+optax==0.2.6
+optree==0.17.0
+orbax-checkpoint==0.11.26
+overrides==7.7.0
+packaging==25.0
+pandocfilters==1.5.1
+parso==0.8.5
+pexpect==4.9.0
+pillow==12.0.0
+platformdirs==4.4.0
+pre_commit==4.3.0
+prometheus_client==0.23.1
+prompt_toolkit==3.0.52
+propcache==0.4.1
+protobuf==3.20.3
+psutil==7.1.2
+ptyprocess==0.7.0
+pure_eval==0.2.3
+pycparser==2.23
+pydantic==2.12.3
+pydantic_core==2.41.4
+pyglm==2.8.2
+Pygments==2.19.2
+PyJWT==2.10.1
+PyOpenGL==3.1.10
+pyparsing==3.2.5
+pyqtgraph==0.13.7
+PySide6==6.9.0
+PySide6_Addons==6.9.0
+PySide6_Essentials==6.9.0
+python-dateutil==2.9.0.post0
+python-json-logger==3.3.0
+PyYAML==6.0.3
+pyzmq==27.1.0
+referencing==0.36.2
+requests==2.32.5
+rfc3339-validator==0.1.4
+rfc3986-validator==0.1.1
+rfc3987-syntax==1.1.0
+rich==14.2.0
+rpds-py==0.27.1
+scipy==1.16.3
+Send2Trash==1.8.3
+shiboken6==6.9.0
+simplejson==3.20.2
+six==1.17.0
+smmap==5.0.2
+sniffio==1.3.1
+soupsieve==2.8
+spatial-transform==1.3.3
+stack-data==0.6.3
+sympy==1.14.0
+tabulate==0.9.0
+tensorboard==2.19.0
+tensorboard-data-server==0.7.2
+tensorflow==2.19.1
+tensorflow-io-gcs-filesystem==0.37.1
+tensorstore==0.1.78
+termcolor==3.2.0
+terminado==0.18.1
+tf2onnx==1.16.1
+tfp-nightly==0.26.0.dev20251101
+tinycss2==1.4.0
+toolz==1.1.0
+tornado==6.5.2
+tqdm==4.67.1
+traitlets==5.14.3
+trimesh==4.9.0
+types-python-dateutil==2.9.0.20250822
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+uri-template==1.3.0
+urllib3==2.5.0
+virtualenv==20.34.0
+wadler_lindig==0.1.7
+warp-lang==1.9.1
+wcwidth==0.2.14
+webcolors==24.11.1
+webencodings==0.5.1
+websocket-client==1.8.0
+Werkzeug==3.1.3
+widgetsnbextension==4.0.14
+wrapt==2.0.0
+xax==0.3.5
+yarl==1.22.0
+zipp==3.23.0
+Checking JAX backend:
+gpu
+Set MUJOCO_GL=osmesa for headless rendering
+  [1;36mINFO[0m  [90m2025-11-01 15:30:14[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX logging level to INFO
+  [1;36mINFO[0m  [90m2025-11-01 15:30:14[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX compilation cache directory to /cluster/home/sebasrb/.cache/jax/jaxcache
+  [1;36mINFO[0m  [90m2025-11-01 15:30:14[0m [[1;34mxax.task.mixins.compile[0m] Configuring JAX compilation cache parameters
+ [1;32mSTATUS[0m [90m2025-11-01 15:30:14[0m [[1;34mxax.task.mixins.artifacts[0m] /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_14
+  [1;36mINFO[0m  [90m2025-11-01 15:30:14[0m [[1;34mjax._src.xla_bridge[0m] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+ [1;32mSTATUS[0m [90m2025-11-01 15:30:15[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/zbot-policy-walking/train.py
+{"status": {"message": "/cluster/work/sebasrb/zbot-policy-walking/train.py", "filename": "train.py", "lineno": 714}}
+ [1;32mSTATUS[0m [90m2025-11-01 15:30:15[0m [[1;34mxax.task.mixins.train[0m] zbot_walking_task
+{"status": {"message": "zbot_walking_task", "filename": "train.py", "lineno": 715}}
+ [1;32mSTATUS[0m [90m2025-11-01 15:30:15[0m [[1;34mxax.task.mixins.train[0m] JAX devices: [CudaDevice(id=0)]
+{"status": {"message": "JAX devices: [CudaDevice(id=0)]", "filename": "train.py", "lineno": 716}}
+  [1;36mINFO[0m  [90m2025-11-01 15:30:16[0m [[1;34mxax.task.mixins.train[0m] Loading checkpoint from zbot_walking_task/run_9/checkpoints/ckpt.bin
+[1;33mWARNING[0m [90m2025-11-01 15:30:17[0m [[1;34mxax.task.mixins.train[0m] Loaded config differs from current config:
+ ↪ [32m+[0m rollout_length_seconds=8.0
+ ↪ [32m+[0m batch_size=256
+ ↪ [32m+[0m num_passes=4
+ ↪ [32m+[0m load_from_ckpt_path= ... (<class 'NoneType'>)
+ ↪ [31m-[0m rollout_length_seconds=2.0
+ ↪ [31m-[0m batch_size=2048
+ ↪ [31m-[0m num_passes=2
+ ↪ [31m-[0m load_from_ckpt_path=zbot_walking_task/run_9/checkpoints/ckpt.bin
+{"ping": {"message": "Loaded config differs from current config:\n \u21aa \u001b[32m+\u001b[0m rollout_length_seconds=8.0\n \u21aa \u001b[32m+\u001b[0m batch_size=256\n \u21aa \u001b[32m+\u001b[0m num_passes=4\n \u21aa \u001b[32m+\u001b[0m load_from_ckpt_path= ... (<class 'NoneType'>)\n \u21aa \u001b[31m-\u001b[0m rollout_length_seconds=2.0\n \u21aa \u001b[31m-\u001b[0m batch_size=2048\n \u21aa \u001b[31m-\u001b[0m num_passes=2\n \u21aa \u001b[31m-\u001b[0m load_from_ckpt_path=zbot_walking_task/run_9/checkpoints/ckpt.bin", "filename": "train.py", "lineno": 382}}
+  [1;35mPING[0m  [90m2025-11-01 15:30:17[0m [[1;34mksim.task.rl[0m] Model size: 1,073,009 parameters
+{"ping": {"message": "Model size: 1,073,009 parameters", "filename": "rl.py", "lineno": 2078}}
+  [1;35mPING[0m  [90m2025-11-01 15:30:17[0m [[1;34mksim.task.rl[0m] Optimizer size: 2,146,018 parameters
+{"ping": {"message": "Optimizer size: 2,146,018 parameters", "filename": "rl.py", "lineno": 2079}}
+  [1;36mINFO[0m  [90m2025-11-01 15:30:17[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
+[1;33mWARNING[0m [90m2025-11-01 15:30:22[0m [[1;34mksim.engine[0m] `max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`
+{"ping": {"message": "`max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`", "filename": "engine.py", "lineno": 358}}
+  [1;36mINFO[0m  [90m2025-11-01 15:30:23[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
+{"state": {"num_steps": 578, "num_samples": 311705600, "start_time_s": 1761926016.0, "elapsed_time_s": 54186.3125, "phase": "valid"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 49.0, "util/0": 99.0}, "cpu": {"child_procs": 6, "percent": 98.2, "child_percent": 0.0}, "mem": {"percent": 4.564902623396241, "shared": 169734144, "child_percent": 0.21527821885338236, "rss/cur": 6140874752, "rss/total": 7878475776, "vms/cur": 48893231104, "vms/total": 64460128256}, "train": {"advantages": 0.23943710327148438, "grad_norm": 13.938735961914062, "loss_kl": 5.662340117851272e-05, "loss_policy": -0.20460917055606842, "loss_value": 0.00010049304546555504, "off_policy_log_probs": 1.4389612674713135, "off_policy_values": -0.16128608584403992, "on_policy_log_probs": 1.4425002336502075, "on_policy_values": -0.16126593947410583, "value_targets": -0.16059193015098572}, "reward": {"ankle_knee_penalty": -6.840986088718637e-07, "arm_pose_penalty": -0.43696677684783936, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.2163529795070644e-07, "feet_too_close_penalty": -0.16666381061077118, "naive_forward_orientation_reward": 0.13982939720153809, "naive_forward_reward": 0.7949606776237488, "reachability_penalty": -1.4516143798828125, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.049108896404504776, "straight_leg_penalty": -0.07112634181976318, "total": -1.0036089420318604, "upright_reward": 0.6061124205589294, "y_linear_velocity_penalty": -0.4672488272190094}, "termination": {"episode_length": 0.3968437910079956, "mean_terminations": 4.62646484375, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 0.9999999403953552}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.01736522917005273, "samples/second": 9368.67656931802, "dt": 192.413658618927}}
+  [1;36mINFO[0m  [90m2025-11-01 15:30:39[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_13/checkpoints/ckpt.578.bin
+Caught exception during training loop:
+
+  Traceback (most recent call last):
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py[0m", line 2197, in run_training
+      carry, metrics, logged_traj = self._rl_train_loop_step(
+                                    [1;35m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/utils/jax.py[0m", line 139, in wrapped
+      res = jitted_fn(*args, **kwargs)
+            [1;35m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py[0m", line 1504, in _rl_train_loop_step
+      carry, (metrics, logged_traj) = xax.scan(single_step_fn, carry, rngs, jit_level=JitLevel.OUTER_LOOP)
+                                      [1;35m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/utils/jax.py[0m", line 217, in scan
+      return jax.lax.scan(f, init, xs, length, reverse, unroll)
+             [1;35m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py[0m", line 1459, in single_step_fn
+      trajectories, rewards, env_state = vmapped_unroll(
+                                         [1;35m^^^^^^^^^^^^^^^[0m
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/utils/jax.py[0m", line 139, in wrapped
+      res = jitted_fn(*args, **kwargs)
+            [1;35m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py[0m", line 1403, in _single_unroll
+      env_state, trajectory = xax.scan(
+                              [1;35m^^^^^^^^^[0m
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/utils/jax.py[0m", line 217, in scan
+      return jax.lax.scan(f, init, xs, length, reverse, unroll)
+             [1;35m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py[0m", line 1395, in scan_fn
+      trajectory, env_state = self.step_engine(
+                              [1;35m^^^^^^^^^^^^^^^^^[0m
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/utils/jax.py[0m", line 139, in wrapped
+      res = jitted_fn(*args, **kwargs)
+            [1;35m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py[0m", line 900, in step_engine
+      observations, next_obs_carry = get_observation(
+                                     [1;35m^^^^^^^^^^^^^^^^[0m
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py[0m", line 147, in get_observation
+      observation_val, new_carry = observation.observe_stateful(observation_state, curriculum_level, obs_rng)
+                                   [1;35m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/train.py[0m", line 852, in observe_stateful
+      heading_yaw_cmd = state.commands[COMMAND_NAME][3]
+                        ~~~~~~~~~~~~~~[1;35m^^^^^^^^^^^^^^[0m
+    File "[36m/cluster/work/sebasrb/zbot-policy-walking/ksim-env/lib/python3.11/site-packages/xax/utils/types/frozen_dict.py[0m", line 60, in __getitem__
+      v = self._dict[key]
+          ~~~~~~~~~~[1;35m^^^^^[0m
+  [1;31mKeyError[0m: 'unified'
+  --------------------
+  For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.
+
+  [1;36mINFO[0m  [90m2025-11-01 15:31:18[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_14/checkpoints/ckpt.61.bin
+[36m┌─────────────────────────────────────────────────────────────────────────────────────────────┐[0m
+[36m│[0m [1;96mExiting training job for /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_14[0m [36m│[0m
+[36m└─────────────────────────────────────────────────────────────────────────────────────────────┘[0m
+Job finished
+{"state": {"num_steps": 579, "num_samples": 312115200, "start_time_s": 1761926016.0, "elapsed_time_s": 54288.2890625, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 30.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 97.8, "child_percent": 0.0}, "mem": {"percent": 4.787704078112472, "shared": 169734144, "child_percent": 0.21535129446648518, "rss/cur": 6440595456, "rss/total": 8178786304, "vms/cur": 49193230336, "vms/total": 64760127488}, "train": {"advantages": 0.13316725194454193, "grad_norm": 13.76927661895752, "loss_kl": 0.00015254554455168545, "loss_policy": -0.05284583941102028, "loss_value": 9.361319098388776e-05, "off_policy_log_probs": 1.440531611442566, "off_policy_values": -0.158735990524292, "on_policy_log_probs": 1.4500657320022583, "on_policy_values": -0.16042430698871613, "value_targets": -0.15890899300575256}, "reward": {"ankle_knee_penalty": -6.871424602650222e-07, "arm_pose_penalty": -0.4391551911830902, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.201104163963464e-07, "feet_too_close_penalty": -0.16626952588558197, "naive_forward_orientation_reward": 0.13974571228027344, "naive_forward_reward": 0.7958317399024963, "reachability_penalty": -1.4494765996932983, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.04904981330037117, "straight_leg_penalty": -0.07123053073883057, "total": -1.006269097328186, "upright_reward": 0.6053199768066406, "y_linear_velocity_penalty": -0.4700840711593628}, "termination": {"episode_length": 0.39710313081741333, "mean_terminations": 4.6318359375, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.01722116850519707, "samples/second": 9287.08419195182, "dt": 146.77740859985352}}
+{"state": {"num_steps": 580, "num_samples": 312524800, "start_time_s": 1761926016.0, "elapsed_time_s": 54333.84375, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 45.0, "util/0": 99.0}, "cpu": {"child_procs": 6, "percent": 96.9, "child_percent": 0.0}, "mem": {"percent": 4.5975613328188, "shared": 169734144, "child_percent": 0.21535129446648518, "rss/cur": 6184808448, "rss/total": 7922999296, "vms/cur": 48937164800, "vms/total": 64504061952}, "train": {"advantages": 0.08695276081562042, "grad_norm": 13.282697677612305, "loss_kl": 4.923129017697647e-05, "loss_policy": -0.05578784644603729, "loss_value": 0.00011889167944900692, "off_policy_log_probs": 1.442167043685913, "off_policy_values": -0.15817953646183014, "on_policy_log_probs": 1.4452439546585083, "on_policy_values": -0.15673023462295532, "value_targets": -0.1595984399318695}, "reward": {"ankle_knee_penalty": -6.838100716777262e-07, "arm_pose_penalty": -0.43623510003089905, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.176817244820995e-07, "feet_too_close_penalty": -0.1679431051015854, "naive_forward_orientation_reward": 0.14021523296833038, "naive_forward_reward": 0.7954354882240295, "reachability_penalty": -1.4641202688217163, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.0490712970495224, "straight_leg_penalty": -0.07167759537696838, "total": -1.022125244140625, "upright_reward": 0.6055426001548767, "y_linear_velocity_penalty": -0.47241324186325073}, "termination": {"episode_length": 0.39639484882354736, "mean_terminations": 4.6298828125, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.01722771284652521, "samples/second": 9286.754822056722, "dt": 45.29620552062988}}
+  [1;36mINFO[0m  [90m2025-11-01 15:32:09[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_13/checkpoints/ckpt.580.bin
+{"state": {"num_steps": 581, "num_samples": 312934400, "start_time_s": 1761926016.0, "elapsed_time_s": 54378.3671875, "phase": "valid"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 49.0, "util/0": 99.0}, "cpu": {"child_procs": 6, "percent": 98.2, "child_percent": 0.0}, "mem": {"percent": 4.5975613328188, "shared": 169734144, "child_percent": 0.21535129446648518, "rss/cur": 6184808448, "rss/total": 7922999296, "vms/cur": 48937164800, "vms/total": 64504061952}, "train": {"advantages": 0.26845884323120117, "grad_norm": 16.105403900146484, "loss_kl": 0.00024251933791674674, "loss_policy": -0.15203437209129333, "loss_value": 0.00012712369789369404, "off_policy_log_probs": 1.435888409614563, "off_policy_values": -0.16133104264736176, "on_policy_log_probs": 1.4510457515716553, "on_policy_values": -0.16071876883506775, "value_targets": -0.16097217798233032}, "reward": {"ankle_knee_penalty": -6.87827423462295e-07, "arm_pose_penalty": -0.4362623393535614, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.115738138603774e-07, "feet_too_close_penalty": -0.1704126000404358, "naive_forward_orientation_reward": 0.1404256671667099, "naive_forward_reward": 0.7944506406784058, "reachability_penalty": -1.4611748456954956, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.048843029886484146, "straight_leg_penalty": -0.07241791486740112, "total": -1.0309396982192993, "upright_reward": 0.6041051745414734, "y_linear_velocity_penalty": -0.47849616408348083}, "termination": {"episode_length": 0.3960297703742981, "mean_terminations": 4.650634765625, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.01735517797906692, "samples/second": 9351.592289045162, "dt": 192.10256028175354}}
+  [1;36mINFO[0m  [90m2025-11-01 15:33:52[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_13/checkpoints/ckpt.581.bin
+{"state": {"num_steps": 582, "num_samples": 313344000, "start_time_s": 1761926016.0, "elapsed_time_s": 54481.4921875, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 31.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 97.8, "child_percent": 0.0}, "mem": {"percent": 4.69375319819988, "shared": 170029056, "child_percent": 0.21535129446648518, "rss/cur": 6314209280, "rss/total": 8052400128, "vms/cur": 49066500096, "vms/total": 64633397248}, "train": {"advantages": 0.29193270206451416, "grad_norm": 11.803597450256348, "loss_kl": 7.669119804631919e-05, "loss_policy": -0.23688983917236328, "loss_value": 0.00010256358655169606, "off_policy_log_probs": 1.4556512832641602, "off_policy_values": -0.15700125694274902, "on_policy_log_probs": 1.460444450378418, "on_policy_values": -0.16188442707061768, "value_targets": -0.15527169406414032}, "reward": {"ankle_knee_penalty": -6.841456183792616e-07, "arm_pose_penalty": -0.4298240542411804, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.2022319373936625e-07, "feet_too_close_penalty": -0.16738158464431763, "naive_forward_orientation_reward": 0.1408134549856186, "naive_forward_reward": 0.7946737408638, "reachability_penalty": -1.4363998174667358, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.04909546673297882, "straight_leg_penalty": -0.07182378321886063, "total": -0.9875984191894531, "upright_reward": 0.6059240102767944, "y_linear_velocity_penalty": -0.47267550230026245}, "termination": {"episode_length": 0.39680516719818115, "mean_terminations": 4.627685546875, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.017211464167912555, "samples/second": 9270.325669257578, "dt": 147.93023800849915}}
+{"state": {"num_steps": 583, "num_samples": 313753600, "start_time_s": 1761926016.0, "elapsed_time_s": 54527.109375, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 45.0, "util/0": 99.0}, "cpu": {"child_procs": 6, "percent": 93.0, "child_percent": 0.0}, "mem": {"percent": 4.604403037095556, "shared": 170029056, "child_percent": 0.21535129446648518, "rss/cur": 6194012160, "rss/total": 7932203008, "vms/cur": 48946073600, "vms/total": 64512970752}, "train": {"advantages": -0.016680780798196793, "grad_norm": 12.162710189819336, "loss_kl": 0.00016741201397962868, "loss_policy": 0.09861698746681213, "loss_value": 9.08360379980877e-05, "off_policy_log_probs": 1.4540390968322754, "off_policy_values": -0.14954042434692383, "on_policy_log_probs": 1.464502215385437, "on_policy_values": -0.14952702820301056, "value_targets": -0.15097972750663757}, "reward": {"ankle_knee_penalty": -6.821024385317287e-07, "arm_pose_penalty": -0.425794392824173, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.1658876764595334e-07, "feet_too_close_penalty": -0.168365478515625, "naive_forward_orientation_reward": 0.1401243805885315, "naive_forward_reward": 0.7940559387207031, "reachability_penalty": -1.4255237579345703, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.04887256398797035, "straight_leg_penalty": -0.07206528633832932, "total": -0.9766609072685242, "upright_reward": 0.6036206483840942, "y_linear_velocity_penalty": -0.4715850055217743}, "termination": {"episode_length": 0.3957669734954834, "mean_terminations": 4.64794921875, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 0.9999999403953552}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.017217943815653735, "samples/second": 9269.99894897611, "dt": 45.37529706954956}}
+  [1;36mINFO[0m  [90m2025-11-01 15:35:22[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_13/checkpoints/ckpt.583.bin
+{"state": {"num_steps": 584, "num_samples": 314163200, "start_time_s": 1761926016.0, "elapsed_time_s": 54571.66796875, "phase": "valid"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 49.0, "util/0": 99.0}, "cpu": {"child_procs": 6, "percent": 98.7, "child_percent": 0.0}, "mem": {"percent": 4.604403037095556, "shared": 170029056, "child_percent": 0.21535129446648518, "rss/cur": 6194012160, "rss/total": 7932203008, "vms/cur": 48946073600, "vms/total": 64512970752}, "train": {"advantages": 0.13998666405677795, "grad_norm": 21.449604034423828, "loss_kl": 5.935143053648062e-05, "loss_policy": -0.09111395478248596, "loss_value": 0.00010895711602643132, "off_policy_log_probs": 1.4558336734771729, "off_policy_values": -0.15574397146701813, "on_policy_log_probs": 1.459542989730835, "on_policy_values": -0.15131324529647827, "value_targets": -0.15666228532791138}, "reward": {"ankle_knee_penalty": -6.802019925089553e-07, "arm_pose_penalty": -0.4243900179862976, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.0604422818214516e-07, "feet_too_close_penalty": -0.1726391613483429, "naive_forward_orientation_reward": 0.1405782550573349, "naive_forward_reward": 0.793671727180481, "reachability_penalty": -1.4412297010421753, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.04877588525414467, "straight_leg_penalty": -0.07286015897989273, "total": -1.0071593523025513, "upright_reward": 0.6022149324417114, "y_linear_velocity_penalty": -0.48128095269203186}, "termination": {"episode_length": 0.39465805888175964, "mean_terminations": 4.65673828125, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.017344629578047128, "samples/second": 9334.373879160845, "dt": 193.2887318134308}}
+  [1;36mINFO[0m  [90m2025-11-01 15:37:05[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_13/checkpoints/ckpt.584.bin
+{"state": {"num_steps": 585, "num_samples": 314572800, "start_time_s": 1761926016.0, "elapsed_time_s": 54673.859375, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 31.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 98.1, "child_percent": 0.0}, "mem": {"percent": 4.724103936175272, "shared": 170029056, "child_percent": 0.21535129446648518, "rss/cur": 6355038208, "rss/total": 8093229056, "vms/cur": 49107230720, "vms/total": 64674127872}, "train": {"advantages": 0.3869648575782776, "grad_norm": 14.641544342041016, "loss_kl": 0.00013686507008969784, "loss_policy": -0.3009875416755676, "loss_value": 9.269657311961055e-05, "off_policy_log_probs": 1.4561216831207275, "off_policy_values": -0.15945522487163544, "on_policy_log_probs": 1.4646756649017334, "on_policy_values": -0.1619870364665985, "value_targets": -0.15715301036834717}, "reward": {"ankle_knee_penalty": -6.839985076112498e-07, "arm_pose_penalty": -0.4253939092159271, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.0987888521849527e-07, "feet_too_close_penalty": -0.1712646484375, "naive_forward_orientation_reward": 0.14140179753303528, "naive_forward_reward": 0.7943826913833618, "reachability_penalty": -1.4302250146865845, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.048826914280653, "straight_leg_penalty": -0.07303187996149063, "total": -0.9927235841751099, "upright_reward": 0.6039503216743469, "y_linear_velocity_penalty": -0.4813694357872009}, "termination": {"episode_length": 0.3950579762458801, "mean_terminations": 4.652099609375, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.01720230351894224, "samples/second": 9253.990962689279, "dt": 146.9961540699005}}
+{"state": {"num_steps": 586, "num_samples": 314982400, "start_time_s": 1761926016.0, "elapsed_time_s": 54719.41015625, "phase": "train"}, "gpu": {"mem/0": 75.36376953125, "temp/0": 46.0, "util/0": 99.0}, "cpu": {"child_procs": 6, "percent": 98.9, "child_percent": 0.16666666666666666}, "mem": {"percent": 4.583348126070291, "shared": 170029056, "child_percent": 0.21522696443030323, "rss/cur": 6165688320, "rss/total": 7902875648, "vms/cur": 48917749760, "vms/total": 64483581952}, "train": {"advantages": -0.07575996220111847, "grad_norm": 18.37898063659668, "loss_kl": 7.776792335789651e-05, "loss_policy": 0.1268596351146698, "loss_value": 9.317731019109488e-05, "off_policy_log_probs": 1.458852767944336, "off_policy_values": -0.15419386327266693, "on_policy_log_probs": 1.46371328830719, "on_policy_values": -0.15438584983348846, "value_targets": -0.15666940808296204}, "reward": {"ankle_knee_penalty": -6.829894800830516e-07, "arm_pose_penalty": -0.4246966540813446, "contact_force_penalty": 0.0, "feet_airtime_reward": 0.0, "feet_orientation_reward": 3.026708554898505e-07, "feet_too_close_penalty": -0.1748095601797104, "naive_forward_orientation_reward": 0.14162056148052216, "naive_forward_reward": 0.7936013340950012, "reachability_penalty": -1.4468281269073486, "simple_single_foot_contact_reward": 0.0, "stay_alive_reward": 0.04873828962445259, "straight_leg_penalty": -0.07354018837213516, "total": -1.02181077003479, "upright_reward": 0.6031815409660339, "y_linear_velocity_penalty": -0.48907750844955444}, "termination": {"episode_length": 0.3946385383605957, "mean_terminations": 4.66015625, "prct/bad_ztermination": 0.0, "prct/episode_length_termination": 0.0, "prct/not_upright_termination": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.01720879365351661, "samples/second": 9253.706676132982, "dt": 45.3063018321991}}
+  [1;36mINFO[0m  [90m2025-11-01 15:38:35[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking/zbot_walking_task/run_13/checkpoints/ckpt.586.bin
