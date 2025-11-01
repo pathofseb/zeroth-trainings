@@ -1817,11 +1817,11 @@ if __name__ == "__main__":
         ZbotWalkingTaskConfig(
             # Training parameters.
             num_envs=4096,
-            batch_size=512,
+            batch_size=2048,  # INCREASED 4x for speed
             learning_rate=1e-3,
-            num_passes=4,
+            num_passes=2,  # REDUCED 2x for speed
             epochs_per_log_step=1,
-            rollout_length_seconds=8.0,
+            rollout_length_seconds=2.0,  # REDUCED 4x for speed
             # Simulation parameters.
             dt=0.001,
             ctrl_dt=0.02,
