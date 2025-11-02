@@ -30,38 +30,41 @@ ENV_PATH="/cluster/work/$USER/zeroth-trainings/ksim-env/"
 module purge
 module load Anaconda3/2024.02-1
 
-# Initialize conda for bash
-eval "$(conda shell.bash hook)"
-
-# Create conda environment if it doesn't exist
-if [ ! -d "$ENV_PATH" ]; then
-  conda create -y --prefix ${ENV_PATH} python=3.11
+# Remove old environment if it exists (to ensure Python 3.11)
+if [ -d "$ENV_PATH" ]; then
+  echo "Removing old environment..."
+  rm -rf ${ENV_PATH}
 fi
 
-# Activate environment
-conda activate ${ENV_PATH}
+# Create fresh conda environment with Python 3.11
+echo "Creating Python 3.11 environment..."
+conda create -y --prefix ${ENV_PATH} python=3.11
+
+# Use Python directly from the environment (don't rely on activation)
+PYTHON_BIN="${ENV_PATH}/bin/python"
+PIP_BIN="${ENV_PATH}/bin/pip"
 
 # Verify we're using the right Python
-echo "Python version: $(python --version)"
-echo "Python path: $(which python)"
+echo "Python version: $(${PYTHON_BIN} --version)"
+echo "Python path: ${PYTHON_BIN}"
 
-# Install dependencies (force reinstall to ensure correct versions)
-pip install --force-reinstall -r requirements.txt
-pip install 'jax[cuda12]'  # If using GPU machine, install JAX CUDA libraries
+# Install dependencies
+${PIP_BIN} install --force-reinstall -r requirements.txt
+${PIP_BIN} install 'jax[cuda12]'  # If using GPU machine, install JAX CUDA libraries
 
 echo "Installed dependencies:"
 pip freeze
 
 # Verify GPU backend
 echo "Checking JAX backend:"
-python -c "import jax; print(jax.default_backend())"  # Should print "gpu"
+${PYTHON_BIN} -c "import jax; print(jax.default_backend())"  # Should print "gpu"
 
 # Set MuJoCo to use headless rendering backend (osmesa)
 export MUJOCO_GL=osmesa
 echo "Set MUJOCO_GL=osmesa for headless rendering"
 
 # Run training (WALKING AGILE variant)
-python -m training.train_walking_agile
+${PYTHON_BIN} -m training.train_walking_agile
 
 
 
