@@ -5,6 +5,7 @@ ksim==0.1.95
 xax==0.3.5
 mujoco-scenes
 warp-lang
+distrax
 
 # Inference dependencies
 kinfer[jax]
