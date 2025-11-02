@@ -207,3 +207,11 @@ Traceback (most recent call last):
 RuntimeError: Tensorboard failed to start:
 /cluster/apps/eb/software/Anaconda3/2024.02-1/bin/python: Error while finding module specification for 'tensorboard.main' (ModuleNotFoundError: No module named 'tensorboard')
 
+2025-11-02 17:59:43.898414: I external/xla/xla/stream_executor/cuda/subprocess_compilation.cc:349] ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_select_fusion_2', 112 bytes spill stores, 112 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_transpose_fusion_43', 8 bytes spill stores, 4 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_transpose_fusion_20', 16 bytes spill stores, 16 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_reduce_fusion_96', 4 bytes spill stores, 4 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_transpose_fusion_14', 16 bytes spill stores, 16 bytes spill loads
+
+/var/slurm_spool/job23197147/slurm_script: line 67: 232666 Bus error               (core dumped) ${PYTHON_BIN} -m training_variants.train_walk1
+Closing CPU stats monitor
