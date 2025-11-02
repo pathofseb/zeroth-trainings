@@ -12,9 +12,10 @@
 #SBATCH --mail-user=sebasrb@ntnu.no
 #SBATCH --mail-type=ALL
 
-WORKDIR=${SLURM_SUBMIT_DIR}
+# Get the project root directory (parent of slurms folder)
+WORKDIR=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 cd ${WORKDIR}
-echo "Running from directory: $SLURM_SUBMIT_DIR"
+echo "Running from directory: $WORKDIR"
 echo "Job name: $SLURM_JOB_NAME"
 echo "Job ID: $SLURM_JOB_ID"
 echo "Node(s): $SLURM_JOB_NODELIST"
