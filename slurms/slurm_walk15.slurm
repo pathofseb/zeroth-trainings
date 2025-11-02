@@ -13,8 +13,9 @@
 #SBATCH --mail-type=ALL
 
 # Get the project root directory (parent of slurms folder)
-WORKDIR=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
-cd ${WORKDIR}
+# SLURM_SUBMIT_DIR is the directory where sbatch was called from
+cd ${SLURM_SUBMIT_DIR}/..
+WORKDIR=$(pwd)
 echo "Running from directory: $WORKDIR"
 echo "Job name: $SLURM_JOB_NAME"
 echo "Job ID: $SLURM_JOB_ID"
@@ -24,7 +25,7 @@ echo "Node(s): $SLURM_JOB_NODELIST"
 mkdir -p slurm_outputs
 
 # Path to your conda env (change if needed)
-ENV_PATH="/cluster/work/$USER/zbot-policy-walking/ksim-env/"
+ENV_PATH="/cluster/work/$USER/zeroth-trainings/ksim-env/"
 
 module purge
 module load Anaconda3/2024.02-1

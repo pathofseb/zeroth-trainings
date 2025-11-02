@@ -13,8 +13,9 @@
 #SBATCH --mail-type=ALL
 
 # Get the project root directory (parent of slurms folder)
-WORKDIR=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
-cd ${WORKDIR}
+# SLURM_SUBMIT_DIR is the directory where sbatch was called from
+cd ${SLURM_SUBMIT_DIR}/..
+WORKDIR=$(pwd)
 echo "Running from directory: $WORKDIR"
 echo "Job name: $SLURM_JOB_NAME"
 echo "Job ID: $SLURM_JOB_ID"
