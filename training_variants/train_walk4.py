@@ -5,7 +5,7 @@ import asyncio
 import logging
 import math
 from dataclasses import dataclass
-from typing import Self, TypedDict
+from typing_extensions import Self, TypedDict
 
 import attrs
 import distrax

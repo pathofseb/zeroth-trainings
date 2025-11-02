@@ -1,0 +1,79 @@
+Starting Python 3.10 compatibility fix...
+Working directory: /cluster/work/sebasrb/zeroth-trainings/slurms
+
+Fixing training_variants files...
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk10.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk10.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk11.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk11.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk12.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk12.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk13.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk13.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk14.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk14.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk15.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk15.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk16.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk16.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk17.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk17.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk18.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk18.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk19.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk19.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk1.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk1.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk20.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk20.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk2.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk2.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk3.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk3.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk4.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk4.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk5.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk5.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk6.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk6.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk7.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk7.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk8.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk8.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk9.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk9.py
+
+Fixing training files...
+Processing: /cluster/work/sebasrb/zeroth-trainings/training/train_old.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training/train_old.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training/train_standing.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training/train_standing.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training/train_standstill.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training/train_standstill.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training/train_walking_agile.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training/train_walking_agile.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training/train_walking_balanced.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training/train_walking_balanced.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training/train_walking_dynamic.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training/train_walking_dynamic.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training/train_walking_efficient.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training/train_walking_efficient.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training/train_walking_fast.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training/train_walking_fast.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training/train_walking_forward.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training/train_walking_forward.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training/train_walking_lateral.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training/train_walking_lateral.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training/train_walking_smooth.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training/train_walking_smooth.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/training/train_walking_stable.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/training/train_walking_stable.py
+
+Fixing main training files...
+Processing: /cluster/work/sebasrb/zeroth-trainings/train.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/train.py
+Processing: /cluster/work/sebasrb/zeroth-trainings/train_old.py
+  ✓ Fixed import in /cluster/work/sebasrb/zeroth-trainings/train_old.py
+
+Python 3.10 compatibility fix complete!
+All files have been updated to use typing_extensions.Self
