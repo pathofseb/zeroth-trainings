@@ -90,3 +90,11 @@ has an incorrect size.
   actual size: 0 bytes
 
 
+Traceback (most recent call last):
+  File "/cluster/apps/eb/software/Anaconda3/2024.02-1/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/cluster/apps/eb/software/Anaconda3/2024.02-1/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/cluster/work/sebasrb/zeroth-trainings/training_variants/train_walk1.py", line 11, in <module>
+    import distrax
+ModuleNotFoundError: No module named 'distrax'

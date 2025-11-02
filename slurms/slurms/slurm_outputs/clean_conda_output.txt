@@ -1,0 +1,5 @@
+Cleaning corrupted conda cache...
+This will remove all cached packages and force re-download on next install
+
+Conda cache cleaned successfully!
+The next environment creation will download fresh packages.
