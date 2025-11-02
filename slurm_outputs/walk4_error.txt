@@ -1,0 +1,27 @@
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/include/ncursesw': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/include/openssl': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/include/ncurses': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/include/lzma': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/share/terminfo/d': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/share/terminfo/a': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/share/terminfo/c': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/share/terminfo/q': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/share/terminfo/r': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/share/terminfo/t': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/share/doc': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/lib/tk8.6/ttk': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/lib/python3.11/site-packages/setuptools/_distutils': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/lib/python3.11/site-packages/setuptools/_vendor': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/lib/python3.11/site-packages/setuptools/__pycache__': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/lib/pkgconfig': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/lib/tcl8.6/msgs': Directory not empty
+rm: cannot remove '/cluster/work/sebasrb/zeroth-trainings/ksim-env/lib/tcl8.6/encoding': Directory not empty
+WARNING conda.gateways.disk.delete:unlink_or_rename_to_trash(184): Could not remove or rename /cluster/work/sebasrb/zeroth-trainings/ksim-env/lib/python3.11/site-packages/pip-25.2.dist-info/top_level.txt.  Please remove this file manually (you may need to reboot to free file handles)
+
+CondaValueError: prefix already exists: /cluster/work/sebasrb/zeroth-trainings/ksim-env
+
+/var/slurm_spool/job23197166/slurm_script: line 48: /cluster/work/sebasrb/zeroth-trainings/ksim-env//bin/python: No such file or directory
+/var/slurm_spool/job23197166/slurm_script: line 52: /cluster/work/sebasrb/zeroth-trainings/ksim-env//bin/pip: No such file or directory
+/var/slurm_spool/job23197166/slurm_script: line 53: /cluster/work/sebasrb/zeroth-trainings/ksim-env//bin/pip: No such file or directory
+/var/slurm_spool/job23197166/slurm_script: line 60: /cluster/work/sebasrb/zeroth-trainings/ksim-env//bin/python: No such file or directory
+/var/slurm_spool/job23197166/slurm_script: line 67: /cluster/work/sebasrb/zeroth-trainings/ksim-env//bin/python: No such file or directory
