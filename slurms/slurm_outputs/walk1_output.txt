@@ -1,7 +1,9 @@
 Running from directory: /cluster/work/sebasrb/zeroth-trainings
 Job name: zbot-train-walk1
-Job ID: 23196913
-Node(s): idun-09-18
+Job ID: 23196985
+Node(s): idun-07-04
+Python version: Python 3.10.13
+Python path: /cluster/apps/eb/software/Anaconda3/2024.02-1/bin/python
 Defaulting to user installation because normal site-packages is not writeable
 Defaulting to user installation because normal site-packages is not writeable
 Requirement already satisfied: jax[cuda12] in /cluster/home/sebasrb/.local/lib/python3.10/site-packages (0.6.2)
